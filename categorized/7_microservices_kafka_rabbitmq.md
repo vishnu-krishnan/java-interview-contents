@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-Apache Kafka vs RabbitMQ
+## Apache Kafka vs RabbitMQ
 
 Kafka and RabbitMQ both handle messages, but they solve different problems.
 
@@ -14,9 +12,7 @@ The common mistake is using Kafka like a queue or RabbitMQ like an event log. Th
 
 ---
 
-### ITEM 2 ###
-
-🚀 Day 76/100 - Spring Boot - Messaging with RabbitMQ
+## 🚀 Day 76/100 - Spring Boot - Messaging with RabbitMQ
 
 RabbitMQ is a popular message broker that enables reliable, asynchronous communication using AMQP (Advanced Message Queuing Protocol).
 
@@ -42,14 +38,9 @@ See attached images 👇 for code
 2️⃣ RabbitMQ stores it safely
 3️⃣ Consumer listens and processes it asynchronously
 
-
-
-
 ---
 
-### ITEM 3 ###
-
-12 Architectural Concepts Developers Should Know
+## 12 Architectural Concepts Developers Should Know
 
 1 - Load Balancing: Distributes incoming traffic across multiple servers to ensure no single node is overwhelmed.
 2 - Caching: Stores frequently accessed data in memory to reduce latency.
@@ -68,9 +59,7 @@ See attached images 👇 for code
 
 ---
 
-### ITEM 4 ###
-
-🚀 Day 75/100 - Spring Boot - Messaging (Overview)
+## 🚀 Day 75/100 - Spring Boot - Messaging (Overview)
 
 Modern applications often rely on asynchronous communication instead of direct calls.
 
@@ -101,18 +90,13 @@ A Java standard API for messaging.
 Starting from RabbitMQ, we'll dive deep into each in the next posts.
 
 
-👉 Key Takeaway
+- Key Takeaway
 
 Messaging enables systems to communicate asynchronously and stay decoupled, which is a key principle in microservices architecture.
 
-
-
-
 ---
 
-### ITEM 5 ###
-
-🚀 Sharing My Interview Journey: Microservices and Kafka Questions 🚀
+## 🚀 Sharing My Interview Journey: Microservices and Kafka Questions 🚀
 In my journey as a Java Fullstack Developer candidate, I faced some fascinating questions on microservices and event-driven systems. Here are a few that stood out—great for anyone brushing up on system design and Kafka concepts...
 
 What are microservices? Difference from monolithic architecture. which is better ?
@@ -153,12 +137,9 @@ How are offsets managed in consumer groups?
 What happens to offsets during rebalance?
 What is partition reassignment?
 
-
 ---
 
-### ITEM 6 ###
-
-🚀 Top 10 Microservices Interview Questions (Kafka | Docker | Zipkin | CI/CD)
+## 🚀 Top 10 Microservices Interview Questions (Kafka | Docker | Zipkin | CI/CD)
 
 Preparing for Java Microservices Interviews (2–3 Years Experience)?
 Here are the most asked questions with answers 👇
@@ -195,8 +176,8 @@ Automates workflow: Code → Build → Test → Deploy.
 
 ---
 
-🔥 Most Asked Real Interview Question:
-👉 Explain your project architecture using Kafka, Docker, and CI/CD pipeline
+## 🔥 Most Asked Real Interview Question:
+- Explain your project architecture using Kafka, Docker, and CI/CD pipeline
 
 💡 Pro Tip:
 Always explain flow clearly:
@@ -204,16 +185,13 @@ Client → API Gateway → Microservices → Kafka → Database → Docker → J
 
 ---
 
-🎯 Perfect for TCS | Infosys | Capgemini interviews
+## 🎯 Perfect for TCS | Infosys | Capgemini interviews
 
-👉 Comment "MICRO" if you want real-time scenario questions & answers
-
+- Comment "MICRO" if you want real-time scenario questions & answers
 
 ---
 
-### ITEM 7 ###
-
-Saga Pattern in Microservices: 2 Ways to Handle Distributed Transactions
+## Saga Pattern in Microservices: 2 Ways to Handle Distributed Transactions
 In microservices, a single business operation often spans multiple services.
 For example: creating an order may involve payment, inventory, and delivery services.
 But there’s a problem — we don’t have a single database transaction across services.
@@ -239,9 +217,7 @@ Choosing the right one depends on system complexity and team preferences.
 
 ---
 
-### ITEM 8 ###
-
-🚀 Apache Kafka Interview Questions & Answers (Must-Know for Backend Developers)
+## 🚀 Apache Kafka Interview Questions & Answers (Must-Know for Backend Developers)
 Preparing for backend or microservices interviews? Here are some commonly asked Apache Kafka questions with crisp answers 👇
 🔹 1. What is Apache Kafka?
 A distributed event streaming platform used for building real-time data pipelines and streaming applications.
@@ -278,9 +254,7 @@ Focus on real-world use cases like order processing, notifications, and microser
 
 ---
 
-### ITEM 9 ###
-
-.
+## .
 📌 DAY 5/30 – JSON WEB TOKEN (JWT) IN SYSTEM DESIGN
 
 A JWT is an open standard used to securely authenticate users and transmit information between a client and a server.
@@ -320,7 +294,7 @@ A JWT has three parts: header.payload.signature
 1. Header
  Contains metadata about the token, such as the signing algorithm.
 
-👉 Example:
+- Example:
 
 {
  "alg": "HS256",
@@ -330,7 +304,7 @@ A JWT has three parts: header.payload.signature
 2. Payload
  Contains the claims or data about the user.
 
-👉 Example:
+- Example:
 
 {
  "sub": "1234567890",
@@ -350,12 +324,12 @@ Claims can be:
 3. Signature
  This is what makes the token trustworthy.
 
-👉 The signature is created using:
+- The signature is created using:
  1)encoded header
  2)encoded payload
  3)secret key or private key
 
-👉 It helps the server confirm:
+- It helps the server confirm:
  i)the token is authentic
  ii)the content has not been altered
 
@@ -368,25 +342,23 @@ Claims can be:
 3️⃣ Server generates a JWT with claims like userId and role
 4️⃣ Client stores the token
 5️⃣ For each next request, the client sends:
- 👉 Authorization: Bearer <JWT_TOKEN>
+ - Authorization: Bearer <JWT_TOKEN>
 6️⃣ Server verifies the signature and expiration
 7️⃣ If valid, access is granted
  This allows backend services to authenticate the user without maintaining session state.
 
 ---
 
-### ITEM 10 ###
-
-🔐 JWT Authentication & Authorization — Explained Clearly
+## 🔐 JWT Authentication & Authorization — Explained Clearly
 
 JWT (JSON Web Token) is a stateless token-based security mechanism widely used in APIs, microservices, and cloud-native applications.
 
 🧩 JWT Structure
 
 A JWT has 3 parts:
- • Header → Token type & signing algorithm
- • Payload (Claims) → userId, roles, expiry, issuer
- • Signature → Ensures token integrity & trust
+ - Header → Token type & signing algorithm
+ - Payload (Claims) → userId, roles, expiry, issuer
+ - Signature → Ensures token integrity & trust
 
 ⸻
 
@@ -434,12 +406,9 @@ Server:
 
 🎯 JWT combines authentication and authorization in a scalable way.
 
-
 ---
 
-### ITEM 11 ###
-
-𝐓𝐨𝐩 𝐌𝐢𝐜𝐫𝐨𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐃𝐞𝐬𝐢𝐠𝐧 𝐏𝐚𝐭𝐭𝐞𝐫𝐧𝐬 🤷
+## 𝐓𝐨𝐩 𝐌𝐢𝐜𝐫𝐨𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐃𝐞𝐬𝐢𝐠𝐧 𝐏𝐚𝐭𝐭𝐞𝐫𝐧𝐬 🤷
 ➡ API Gateway Pattern: Centralizes external access to your microservices, simplifying communication and providing a single entry point for client requests.
 
 ➡ Backends for Frontends Pattern (BFF): Creates dedicated backend services for each frontend, optimizing performance and user experience tailored to each platform.
@@ -458,9 +427,7 @@ Server:
 
 ---
 
-### ITEM 12 ###
-
-🚀 #Microservices #Architecture
+## 🚀 #Microservices #Architecture
 
 
 🧩 #What #Are #Microservices?
@@ -508,6 +475,3 @@ Each service:
 
 Image preview
 Microservice Architecture Guide
-
----
-

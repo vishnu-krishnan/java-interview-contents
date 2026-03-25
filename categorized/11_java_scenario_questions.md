@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-Most Spring Boot apps I review have the same problems.
+## Most Spring Boot apps I review have the same problems.
 
 Not complex architecture issues. Basic mistakes that compound over time and make the codebase painful to work with.
 
@@ -27,45 +25,43 @@ Spring Boot Mistakes
 
 ---
 
-### ITEM 2 ###
-
-JAVA INTERVIEW SCENARIO:
+## JAVA INTERVIEW SCENARIO:
 
 The interviewer says:
 
 “Let’s see how you think about real Java behavior, not just code.”
 
-1) Your HashMap suddenly starts behaving incorrectly in production. Why?
+- Your HashMap suddenly starts behaving incorrectly in production. Why?
 
 Answer:
-• equals() and hashCode() not implemented properly
-• Mutable keys being modified after insertion
-• High hash collisions degrading performance
-• Using non-thread-safe HashMap in concurrent environment
+- equals() and hashCode() not implemented properly
+- Mutable keys being modified after insertion
+- High hash collisions degrading performance
+- Using non-thread-safe HashMap in concurrent environment
 
 ---
 
-2) Your Java application shows high GC activity and performance drops. Why?
+## 2) Your Java application shows high GC activity and performance drops. Why?
 
 Answer:
-• Excessive object creation increasing GC pressure
-• Short-lived objects flooding the heap
-• Improper memory allocation patterns
-• Large objects frequently created and discarded
+- Excessive object creation increasing GC pressure
+- Short-lived objects flooding the heap
+- Improper memory allocation patterns
+- Large objects frequently created and discarded
 
 ---
 
-3) Your application sometimes processes the same request twice. Why?
+## 3) Your application sometimes processes the same request twice. Why?
 
 Answer:
-• Retry logic without idempotency
-• Duplicate message processing in async systems
-• Network timeouts causing re-execution
-• Missing request deduplication logic
+- Retry logic without idempotency
+- Duplicate message processing in async systems
+- Network timeouts causing re-execution
+- Missing request deduplication logic
 
 ---
 
-This is what real Java interviews look like.
+## This is what real Java interviews look like.
 
 They don’t test syntax.
 They test how you reason about real-world problems.
@@ -77,9 +73,7 @@ I’ll share the detailed Java and Spring boot Questions and Answers PDF with in
 
 ---
 
-### ITEM 3 ###
-
-𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝘄𝗮𝘀 𝘀𝗹𝗼𝘄.
+## 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝘄𝗮𝘀 𝘀𝗹𝗼𝘄.
 API latency went from 180ms to 14s.
 No memory leak. No deadlock. Logs looked clean.
 
@@ -125,9 +119,7 @@ Image preview
 
 ---
 
-### ITEM 4 ###
-
-Most Java developers think AI integration is complex.
+## Most Java developers think AI integration is complex.
 It’s actually much simpler than it looks.
 Here’s a minimal example using Spring AI to call an LLM from a Java application:
 
@@ -158,45 +150,43 @@ If you’re exploring this, what are you building?
 
 ---
 
-### ITEM 5 ###
-
-JAVA INTERVIEW SCENARIO:
+## JAVA INTERVIEW SCENARIO:
 
 The interviewer says:
 
 “Let’s see how you debug real problems in Java.”
 
-1) Your Java service starts throwing OutOfMemoryError even though heap size looks sufficient. Why?
+- Your Java service starts throwing OutOfMemoryError even though heap size looks sufficient. Why?
 
 Answer:
-• Memory leak due to objects being referenced (not eligible for GC)
-• Large number of objects created and retained in collections
-• Improper use of caches without eviction
-• High GC pressure causing memory not being freed efficiently
+- Memory leak due to objects being referenced (not eligible for GC)
+- Large number of objects created and retained in collections
+- Improper use of caches without eviction
+- High GC pressure causing memory not being freed efficiently
 
 ---
 
-2) Multiple threads update shared data and results become inconsistent. Why?
+## 2) Multiple threads update shared data and results become inconsistent. Why?
 
 Answer:
-• Lack of synchronization (race condition)
-• Non-thread-safe data structures used
-• Missing locks or improper concurrency control
-• Visibility issues (no use of volatile or proper synchronization)
+- Lack of synchronization (race condition)
+- Non-thread-safe data structures used
+- Missing locks or improper concurrency control
+- Visibility issues (no use of volatile or proper synchronization)
 
 ---
 
-3) Your application becomes slower after increasing thread pool size. Why?
+## 3) Your application becomes slower after increasing thread pool size. Why?
 
 Answer:
-• Context switching overhead increases
-• Threads competing for limited resources (CPU, DB connections)
-• Lock contention increases
-• More threads ≠ better performance in CPU-bound tasks
+- Context switching overhead increases
+- Threads competing for limited resources (CPU, DB connections)
+- Lock contention increases
+- More threads ≠ better performance in CPU-bound tasks
 
 ---
 
-This is what real Java interviews look like.
+## This is what real Java interviews look like.
 
 They don’t test syntax.
 They test how you think when systems behave unexpectedly.
@@ -208,9 +198,7 @@ Which one have you faced in real scenarios?
 
 ---
 
-### ITEM 6 ###
-
-Java Backend Developer - 1st Round Interview
+## Java Backend Developer - 1st Round Interview
 
 These 20 questions are being asked in interviews right now.
 
@@ -243,9 +231,7 @@ Stay Hungry, Stay FoolisH!
 
 ---
 
-### ITEM 7 ###
-
-🚨 Questions asked in my Mastercard First Round Interview (for Backend Developer) — and trust me, this was NOT basic 👇
+## 🚨 Questions asked in my Mastercard First Round Interview (for Backend Developer) — and trust me, this was NOT basic 👇
 
 If you’re preparing for product-based companies, this is your reality check.
 💡 They didn’t just test theory — they went deep into real-world system design, Kafka, and clean code practices.
@@ -282,8 +268,8 @@ Default methods conflict in interfaces
 Abstract class vs Interface (when to use what)
 
 💬 What I realized:
-👉 Interviews are no longer about “what you know”
-👉 They are about “how you think in production systems”
+- Interviews are no longer about “what you know”
+- They are about “how you think in production systems”
 
 🎯 If you’re preparing for companies like Mastercard, JPMorgan, etc:
 Focus on:
@@ -294,12 +280,9 @@ Focus on:
 
 💬 Comment “PREP” if you want a mock interview or detailed answers
 
-
 ---
 
-### ITEM 8 ###
-
-I’m sharing my recent interview experience for a Java Developer role (Java, Spring Boot, Microservices).
+## I’m sharing my recent interview experience for a Java Developer role (Java, Spring Boot, Microservices).
 
 Sharing some of the questions that were asked 👇
 
@@ -347,9 +330,7 @@ Stay Hungry, Stay FoolisH!
 
 ---
 
-### ITEM 9 ###
-
-You’re in a Java interview.
+## You’re in a Java interview.
 
 The interviewer asks:
 
@@ -365,13 +346,13 @@ What could be happening?"
 
 Possible things to investigate:
 
-• Thread deadlock between synchronized resources
-• All request threads blocked waiting for I/O (DB, API, file)
-• Thread pool exhaustion where all worker threads are busy
-• Infinite waiting caused by improper wait() / notify() usage
-• Long synchronized block blocking other threads
-• Blocking external service calls freezing request threads
-• Unhandled exception killing worker threads silently
+- Thread deadlock between synchronized resources
+- All request threads blocked waiting for I/O (DB, API, file)
+- Thread pool exhaustion where all worker threads are busy
+- Infinite waiting caused by improper wait() / notify() usage
+- Long synchronized block blocking other threads
+- Blocking external service calls freezing request threads
+- Unhandled exception killing worker threads silently
 
 This is why Java interviews often include runtime scenarios.
 
@@ -388,35 +369,33 @@ I’ll share the detailed Java and Spring boot Questions and Answers PDF individ
 
 ---
 
-### ITEM 10 ###
-
-SPRING BOOT INTERVIEWS ARE RARELY ABOUT ANNOTATIONS.
+## SPRING BOOT INTERVIEWS ARE RARELY ABOUT ANNOTATIONS.
 
 INTERVIEWERS WANT TO SEE
 HOW YOU THINK WHEN APPLICATIONS FAIL IN PRODUCTION.
 
 Here are scenario-based questions they often ask:
 
-1) Your Spring Boot API is fast locally but slow in production. What do you check first?
-2) Application fails to start with BeanCreationException after deployment. Why?
-3) application.properties change didn’t reflect after redeployment. What could be wrong?
-4) CPU is low but requests keep timing out. Where could the bottleneck be?
-5) Database connection pool gets exhausted under load. Why does this happen?
-6) @Transactional is present but rollback doesn't occur after an exception. Why?
-7) Scheduled jobs start affecting API response times. How would you isolate them?
-8) Logs appear locally but are missing in production. Where would you investigate?
-9) Adding more application instances didn’t improve performance. Why?
-10) API works in Postman but fails when called from another service. What might be wrong?
-11) Application behaves differently in Docker compared to local environment. Why?
-12) Multiple beans of the same type cause application startup failure. How do you fix it?
-13) Async processing was added but system performance dropped. Why?
-14) Circuit breaker stays open even when downstream service is healthy. Why?
-15) Users still see old behavior after a new deployment. What could cause this?
-16) Memory usage keeps increasing even with GC running. What do you investigate?
-17) API gateway calls your service but headers are missing. Why?
-18) Background tasks start blocking request threads. How can this happen?
-19) Cache improves performance but sometimes returns outdated data. Why?
-20) Application works in staging but fails in production. What would you check first?
+- Your Spring Boot API is fast locally but slow in production. What do you check first?
+- Application fails to start with BeanCreationException after deployment. Why?
+- application.properties change didn’t reflect after redeployment. What could be wrong?
+- CPU is low but requests keep timing out. Where could the bottleneck be?
+- Database connection pool gets exhausted under load. Why does this happen?
+- @Transactional is present but rollback doesn't occur after an exception. Why?
+- Scheduled jobs start affecting API response times. How would you isolate them?
+- Logs appear locally but are missing in production. Where would you investigate?
+- Adding more application instances didn’t improve performance. Why?
+- API works in Postman but fails when called from another service. What might be wrong?
+- Application behaves differently in Docker compared to local environment. Why?
+- Multiple beans of the same type cause application startup failure. How do you fix it?
+- Async processing was added but system performance dropped. Why?
+- Circuit breaker stays open even when downstream service is healthy. Why?
+- Users still see old behavior after a new deployment. What could cause this?
+- Memory usage keeps increasing even with GC running. What do you investigate?
+- API gateway calls your service but headers are missing. Why?
+- Background tasks start blocking request threads. How can this happen?
+- Cache improves performance but sometimes returns outdated data. Why?
+- Application works in staging but fails in production. What would you check first?
 
 These questions test whether you understand
 how Spring Boot applications behave in real environments.
@@ -429,9 +408,7 @@ also comment "pdf" for 200+ Java and Spring boot Questions and Answers PDF...I'l
 
 ---
 
-### ITEM 11 ###
-
-YOU'RE IN A JAVA INTERVIEW.
+## YOU'RE IN A JAVA INTERVIEW.
 
 The interviewer says:
 
@@ -440,26 +417,26 @@ But production systems fail for different reasons."
 
 Then the interviewer starts asking questions like these:
 
-1) Your Java service becomes slow over time but no errors appear in logs. What could be happening?
-2) CPU usage is low but request latency is very high. What would you investigate?
-3) OutOfMemoryError occurs even though heap size seems sufficient. Why?
-4) Increasing heap size made performance worse. Explain how that happens.
-5) Threads are available in the pool but requests are still queued. Why?
-6) Parallel streams were introduced but system throughput dropped. Why?
-7) GC pauses suddenly increased after a small code change. What might have changed?
-8) JVM does not exit even after main() finishes. What could keep it alive?
-9) Deadlock occurs rarely in production but never in testing. Why?
-10) Memory usage slowly increases over time. What could indicate a memory leak?
-11) Logging level change suddenly slows down the application. Why?
-12) ThreadLocal solved one issue but introduced memory problems. How?
-13) Retry logic causes system overload during failure scenarios. Why?
-14) Thread pool size was increased but throughput didn’t improve. Why?
-15) Application works fine locally but fails under production traffic. Why?
-16) High GC frequency starts affecting response times. What might cause this?
-17) Cached data improves performance but sometimes returns inconsistent results. Why?
-18) A background task starts affecting API performance. How could that happen?
-19) CPU spikes appear after a deployment even though code change was small. Why?
-20) Scaling the service to more instances did not improve performance. What could be wrong?
+- Your Java service becomes slow over time but no errors appear in logs. What could be happening?
+- CPU usage is low but request latency is very high. What would you investigate?
+- OutOfMemoryError occurs even though heap size seems sufficient. Why?
+- Increasing heap size made performance worse. Explain how that happens.
+- Threads are available in the pool but requests are still queued. Why?
+- Parallel streams were introduced but system throughput dropped. Why?
+- GC pauses suddenly increased after a small code change. What might have changed?
+- JVM does not exit even after main() finishes. What could keep it alive?
+- Deadlock occurs rarely in production but never in testing. Why?
+- Memory usage slowly increases over time. What could indicate a memory leak?
+- Logging level change suddenly slows down the application. Why?
+- ThreadLocal solved one issue but introduced memory problems. How?
+- Retry logic causes system overload during failure scenarios. Why?
+- Thread pool size was increased but throughput didn’t improve. Why?
+- Application works fine locally but fails under production traffic. Why?
+- High GC frequency starts affecting response times. What might cause this?
+- Cached data improves performance but sometimes returns inconsistent results. Why?
+- A background task starts affecting API performance. How could that happen?
+- CPU spikes appear after a deployment even though code change was small. Why?
+- Scaling the service to more instances did not improve performance. What could be wrong?
 
 These questions are asked to see
 whether you understand how Java behaves in real systems,
@@ -473,9 +450,7 @@ I’ll share the detailed resource individually with interested folks.
 
 ---
 
-### ITEM 12 ###
-
-I’m sharing my recent interview experience for Java Developer role (Java, Spring Boot, Microservices)
+## I’m sharing my recent interview experience for Java Developer role (Java, Spring Boot, Microservices)
 
 Sharing some of the questions that were asked 👇
 
@@ -524,9 +499,7 @@ Stay Hungry, Stay FoolisH!
 
 ---
 
-### ITEM 13 ###
-
-Java Backend Developer - 1st Round Interview
+## Java Backend Developer - 1st Round Interview
 
 These 20 questions are being asked in interviews right now.
 
@@ -555,12 +528,9 @@ Here are 20 questions candidates are encountering in Round 1:
 19. How would you Dockerize a Spring Boot application?
 20. If two microservices fail during communication, how would you implement fault tolerance?
 
-
 ---
 
-### ITEM 14 ###
-
-INTERVIEWER:
+## INTERVIEWER:
 “Let’s forget theory for a moment.
 
 I’ll give you real situations from Java production systems.
@@ -568,26 +538,26 @@ Tell me what might be happening.”
 
 Here are the kinds of questions interviewers ask:
 
-1) Your HashMap suddenly starts performing very slowly with large data. What internal behavior could cause this?
-2) A ConcurrentModificationException appears randomly in production. What coding mistake might cause it?
-3) Your API response time increased after switching from ArrayList to LinkedList. Why?
-4) A static variable starts causing inconsistent data across requests. Why can static state be dangerous?
-5) Your application crashes with StackOverflowError. What kind of bug usually leads to this?
-6) An API endpoint creates thousands of objects per request and performance drops. What JVM behavior might explain this?
-7) Two threads updating the same object sometimes produce wrong values. What concurrency issue could this be?
-8) A HashSet suddenly starts allowing duplicates. What mistake might exist in the object class?
-9) Your application becomes slow after adding heavy logging statements. Why can logging affect performance?
-10) An API endpoint blocks the entire service during heavy traffic. What coding pattern might cause this?
-11) A Java Stream pipeline produces unexpected results in parallel execution. Why might this happen?
-12) Your application becomes unstable after introducing caching. What design mistake might exist?
-13) A background thread silently dies and stops processing tasks. Why might this happen?
-14) Your application creates too many threads and the server becomes unstable. What should be used instead?
-15) An API occasionally returns stale data even though the database is updated. What could be wrong?
-16) Your equals() method works but HashMap lookups fail. What method might be missing?
-17) After deploying on a multi-core machine performance actually drops. Why might that happen?
-18) A scheduled job suddenly runs multiple times instead of once. What configuration issue might cause this?
-19) A memory leak appears even though objects are no longer used. What references might still hold them?
-20) Your service becomes slower after introducing synchronized blocks. Why?
+- Your HashMap suddenly starts performing very slowly with large data. What internal behavior could cause this?
+- A ConcurrentModificationException appears randomly in production. What coding mistake might cause it?
+- Your API response time increased after switching from ArrayList to LinkedList. Why?
+- A static variable starts causing inconsistent data across requests. Why can static state be dangerous?
+- Your application crashes with StackOverflowError. What kind of bug usually leads to this?
+- An API endpoint creates thousands of objects per request and performance drops. What JVM behavior might explain this?
+- Two threads updating the same object sometimes produce wrong values. What concurrency issue could this be?
+- A HashSet suddenly starts allowing duplicates. What mistake might exist in the object class?
+- Your application becomes slow after adding heavy logging statements. Why can logging affect performance?
+- An API endpoint blocks the entire service during heavy traffic. What coding pattern might cause this?
+- A Java Stream pipeline produces unexpected results in parallel execution. Why might this happen?
+- Your application becomes unstable after introducing caching. What design mistake might exist?
+- A background thread silently dies and stops processing tasks. Why might this happen?
+- Your application creates too many threads and the server becomes unstable. What should be used instead?
+- An API occasionally returns stale data even though the database is updated. What could be wrong?
+- Your equals() method works but HashMap lookups fail. What method might be missing?
+- After deploying on a multi-core machine performance actually drops. Why might that happen?
+- A scheduled job suddenly runs multiple times instead of once. What configuration issue might cause this?
+- A memory leak appears even though objects are no longer used. What references might still hold them?
+- Your service becomes slower after introducing synchronized blocks. Why?
 
 These questions test whether you understand
 how Java behaves in real systems — not just syntax.
@@ -600,9 +570,7 @@ I’ll share the detailed Java and Spring boot Questions and Answers PDF individ
 
 ---
 
-### ITEM 15 ###
-
-How to Improve API Performance in Production
+## How to Improve API Performance in Production
 
 Many APIs work perfectly in development.
 But once traffic grows, performance problems start to appear: slow responses, database overload, and high infrastructure costs.
@@ -679,25 +647,22 @@ They are solved with better architecture.
 
 Small improvements like caching, pagination, and connection pooling can transform the performance of your system.
 
-
 ---
 
-### ITEM 16 ###
-
-A Common Production Issue in Java Systems: Connection Pool Misconfiguration
+## A Common Production Issue in Java Systems: Connection Pool Misconfiguration
 One issue I’ve seen more than once in backend systems is database connection pool misconfiguration.
 In many cases, everything works perfectly in development and QA.
 But once real traffic hits production, APIs suddenly start slowing down.
 The database is usually blamed first.
 But often the real issue is how the application manages database connections.
 Here are a few things that usually cause problems:
-1) Thread pool vs connection pool mismatch
+- Thread pool vs connection pool mismatch
 If an application can handle hundreds of concurrent requests but the database pool only allows a small number of connections, many requests end up waiting. Over time this leads to latency and timeouts.
-2) Connection leaks
+- Connection leaks
 If connections are not properly released back to the pool, even a small leak can gradually exhaust available connections.
-3) Missing or poorly configured timeouts
+- Missing or poorly configured timeouts
 Without proper timeouts, threads may block indefinitely waiting for a connection, which can affect the entire service.
-4) Lack of monitoring
+- Lack of monitoring
 Metrics like active connections, idle connections, and connection wait time can often reveal problems much earlier than CPU or memory metrics.
 In many production systems, performance issues are not caused by complex bugs.
 They happen when traffic, thread pools, and database connection pools are not balanced correctly.
@@ -706,9 +671,7 @@ What kind of resource bottlenecks have you encountered most often in production?
 
 ---
 
-### ITEM 17 ###
-
-INTERVIEWER:
+## INTERVIEWER:
 “Pretend you’re the engineer on-call tonight.
 
 Production just broke.
@@ -717,26 +680,26 @@ Let’s see how you think.”
 
 Then the interviewer asks questions like these:
 
-1) Your Java API suddenly starts returning very slow responses after a traffic spike. What internal issue could cause this?
-2) A HashMap in your service sometimes loses data unexpectedly. What coding mistake could lead to this?
-3) After deploying a small change, the JVM memory usage suddenly doubles. What could explain this?
-4) Your application becomes unstable when too many threads are created dynamically. What is the underlying problem?
-5) A REST endpoint works fine with few users but crashes when thousands of requests arrive. Why might that happen?
-6) Your system occasionally returns partially updated data during concurrent requests. What concurrency issue might exist?
-7) A background job sometimes runs twice even though it was scheduled once. What might cause this?
-8) After adding caching, users start seeing outdated responses. What design issue might exist?
-9) Your Java service suddenly throws ClassCastException in production but not in testing. Why?
-10) An API endpoint suddenly starts consuming huge memory for a simple operation. What might be happening?
-11) A synchronized block added for safety starts slowing down the entire application. Why?
-12) Your application throws IllegalStateException under heavy traffic. What situation might cause this?
-13) A thread pool keeps growing but tasks are still delayed. What could be misconfigured?
-14) A microservice call blocks your main request threads for a long time. What should be investigated?
-15) Your application logs suddenly increase disk I/O and slow down the service. Why?
-16) A long-running loop accidentally blocks an important worker thread. What kind of issue is this?
-17) After enabling parallel processing, CPU usage spikes but throughput doesn’t improve. Why?
-18) Your service sometimes processes the same request twice. What design issue might cause this?
-19) A Java service deployed on multiple instances starts behaving inconsistently. What shared-state issue could exist?
-20) A small bug causes a recursive method to run indefinitely until the application crashes. What error does this lead to?
+- Your Java API suddenly starts returning very slow responses after a traffic spike. What internal issue could cause this?
+- A HashMap in your service sometimes loses data unexpectedly. What coding mistake could lead to this?
+- After deploying a small change, the JVM memory usage suddenly doubles. What could explain this?
+- Your application becomes unstable when too many threads are created dynamically. What is the underlying problem?
+- A REST endpoint works fine with few users but crashes when thousands of requests arrive. Why might that happen?
+- Your system occasionally returns partially updated data during concurrent requests. What concurrency issue might exist?
+- A background job sometimes runs twice even though it was scheduled once. What might cause this?
+- After adding caching, users start seeing outdated responses. What design issue might exist?
+- Your Java service suddenly throws ClassCastException in production but not in testing. Why?
+- An API endpoint suddenly starts consuming huge memory for a simple operation. What might be happening?
+- A synchronized block added for safety starts slowing down the entire application. Why?
+- Your application throws IllegalStateException under heavy traffic. What situation might cause this?
+- A thread pool keeps growing but tasks are still delayed. What could be misconfigured?
+- A microservice call blocks your main request threads for a long time. What should be investigated?
+- Your application logs suddenly increase disk I/O and slow down the service. Why?
+- A long-running loop accidentally blocks an important worker thread. What kind of issue is this?
+- After enabling parallel processing, CPU usage spikes but throughput doesn’t improve. Why?
+- Your service sometimes processes the same request twice. What design issue might cause this?
+- A Java service deployed on multiple instances starts behaving inconsistently. What shared-state issue could exist?
+- A small bug causes a recursive method to run indefinitely until the application crashes. What error does this lead to?
 
 These questions test whether you can reason about
 how Java systems behave in real production situations.
@@ -749,9 +712,7 @@ I’ll share the detailed Java and Spring boot Questions and Answers PDF with in
 
 ---
 
-### ITEM 18 ###
-
-Java was always the "it starts slow but runs fast" language.
+## Java was always the "it starts slow but runs fast" language.
 
 For years, that was the trade-off we accepted. You build your Spring Boot microservice, deploy it to AWS, and watch the JVM spend 10+ seconds warming up before it can handle its first request properly.
 
@@ -777,12 +738,9 @@ The warm-up tax is over. Java 25 doesn't just catch up — it makes the JVM a ge
 
 If you're still on Java 21 and running cloud-native workloads, the migration path is clear.
 
-
 ---
 
-### ITEM 19 ###
-
-Java behaves differently in Kubernetes than it does on your laptop.
+## Java behaves differently in Kubernetes than it does on your laptop.
 I recently explored a few subtle JVM traps that can cause:
 Unexpected latency spikes
 Silent OOMKills
@@ -830,9 +788,9 @@ This is why many developers with 5–10 years experience still fail backend inte
 
 Most developers prepare only coding questions, but real interviews evaluate engineering thinking and system understanding.
 At Prominent Academy, we focus on:
-• Scenario-based interview preparation
-• Java + Spring Boot + Microservices depth
-• Pay After Placement
+- Scenario-based interview preparation
+- Java + Spring Boot + Microservices depth
+- Pay After Placement
 So developers don’t just learn concepts - they learn how to apply them in real interviews and real systems.
 📞 Call / WhatsApp: +91 93594 45862
 
@@ -841,9 +799,7 @@ Image preview
 
 ---
 
-### ITEM 20 ###
-
-🚀 Spring Boot 4.0: Writing Safer Code with Null Safety
+## 🚀 Spring Boot 4.0: Writing Safer Code with Null Safety
 
 One of the biggest causes of production bugs in Java applications is the infamous NullPointerException.
 
@@ -869,12 +825,9 @@ Modern Java practices combined with Spring Boot, Optional, and clear API design 
 
 Small improvements in code safety can prevent big problems in production. 🚀
 
-
 ---
 
-### ITEM 21 ###
-
-Spring Data Interview Question - Identify & Optimize Slow SQL Queries
+## Spring Data Interview Question - Identify & Optimize Slow SQL Queries
 
 Scenario
 
@@ -908,101 +861,94 @@ Subscribe and join 6200 Java & Spring Boot devs :
 
 ---
 
-### ITEM 22 ###
-
-🚀 Accenture Interview Experience | Java Backend Developer
+## 🚀 Accenture Interview Experience | Java Backend Developer
 Recently, I had the opportunity to interview with Accenture for a Java Backend Developer role. It was a valuable learning experience with discussions covering Java fundamentals, Spring Boot, System Design, SQL, AWS, and a coding round.
 Here are some of the topics/questions discussed during the interview:
 🔹 Java & OOP Concepts
- • Aggregation vs Composition
- • this vs super keyword
- • Why runtime polymorphism is used in method overriding
- • Fail-Fast vs Fail-Safe iterators
- • sleep() vs wait() in multithreading
- • Liskov Substitution Principle (SOLID principles)
+ - Aggregation vs Composition
+ - this vs super keyword
+ - Why runtime polymorphism is used in method overriding
+ - Fail-Fast vs Fail-Safe iterators
+ - sleep() vs wait() in multithreading
+ - Liskov Substitution Principle (SOLID principles)
 🔹 Java 8 Features
- • map() vs flatMap()
+ - map() vs flatMap()
 🔹 Concurrency / Multithreading
- • ExecutorService and its important methods
- • Thread lifecycle and thread pool concepts
+ - ExecutorService and its important methods
+ - Thread lifecycle and thread pool concepts
 🔹 Spring / Backend Concepts
- • IoC Container (Inversion of Control)
- • Spring Bean Lifecycle
- • AOP and how it was implemented in my project
+ - IoC Container (Inversion of Control)
+ - Spring Bean Lifecycle
+ - AOP and how it was implemented in my project
 🔹 Database
- • Normalization and its types
- • Writing optimized SQL queries
+ - Normalization and its types
+ - Writing optimized SQL queries
 🔹 System Design / Architecture
- • Design patterns used in real projects
- • Saga Design Pattern in microservices
+ - Design patterns used in real projects
+ - Saga Design Pattern in microservices
 🔹 Cloud
- • Discussion on AWS services used in backend applications
+ - Discussion on AWS services used in backend applications
 🔹 Coding Question
- • Convert Infix Expression to Postfix Expression
+ - Convert Infix Expression to Postfix Expression
 🔹 Project Discussion
- • Detailed questions about project architecture, implementation approach, and real-world scenarios.
+ - Detailed questions about project architecture, implementation approach, and real-world scenarios.
 Overall, the interview focused on core Java concepts, practical backend development knowledge, and real project experience.
 Grateful for the opportunity and the learning from this experience. Looking forward to more such technical discussions and growth opportunities!
 
 ---
 
-### ITEM 23 ###
-
-🚀 Deloitte Interview Experience | Java Backend Developer
+## 🚀 Deloitte Interview Experience | Java Backend Developer
 
 Recently, I had the opportunity to interview with Deloitte for a Java Backend Developer role. It was a great learning experience with discussions covering Java, Spring Boot, System Design, SQL, and AWS, along with a coding round.
 
 Here are some of the topics/questions discussed during the interview:
 
 🔹 Java & OOP Concepts
- • Aggregation vs Composition
- • this vs super
- • Why runtime polymorphism is used in method overriding
- • Fail-Fast vs Fail-Safe iterators
- • Sleep vs Wait in multithreading
- • Liskov Substitution Principle (SOLID principle)
+ - Aggregation vs Composition
+ - this vs super
+ - Why runtime polymorphism is used in method overriding
+ - Fail-Fast vs Fail-Safe iterators
+ - Sleep vs Wait in multithreading
+ - Liskov Substitution Principle (SOLID principle)
 
 🔹 Java 8
- • Map vs FlatMap
+ - Map vs FlatMap
 
 🔹 Concurrency
- • ExecutorService and its important methods
+ - ExecutorService and its important methods
 
 🔹Testing
- • Which version for Junit used in your project.
+ - Which version for Junit used in your project.
 
 🔹 Spring / Backend
- • IoC Container (Inversion of Control)
- • Spring Bean Lifecycle
- • AOP and how it was implemented in my project
+ - IoC Container (Inversion of Control)
+ - Spring Bean Lifecycle
+ - AOP and how it was implemented in my project
 
 🔹 Database
- • Normalization and its types
- • Difference between View and Procedure
+ - Normalization and its types
+ - Difference between View and Procedure
 
 🔹 System Design / Architecture
- • Design patterns used in projects
- • Saga Design Pattern
+ - Design patterns used in projects
+ - Saga Design Pattern
 
 🔹 Cloud
- • AWS related discussion
+ - AWS related discussion
 
 🔹 Coding Question
- • Convert Infix Expression to Postfix Expression
+ - Convert Infix Expression to Postfix Expression
 
 🔹 Project Discussion
- • Detailed questions about project architecture, implementation, and real-world scenarios
+ - Detailed questions about project architecture, implementation, and real-world scenarios
 
 Overall, it was a very insightful interview focusing on practical understanding, real project experience, and core fundamentals.
 
 Grateful for the opportunity and the learning from this experience. Looking forward to more such discussions!
 
-
 ---
 
-### ITEM 24 ###
-
-When a HashMap Quietly Turns Into a Red-Black Tree
+## When a HashMap Quietly Turns Into a Red-Black Tree
 
 Most developers learn that HashMap operations run in O(1) time.
 
@@ -1021,9 +967,9 @@ When the number of entries in a single bucket grows beyond 8, the structure auto
 
 This small internal change has a big impact:
 
-• Worst-case lookup improves from O(n) → O(log n)
-• Systems become more resilient to hash collision attacks
-• Performance stays predictable even with poor hash distribution
+- Worst-case lookup improves from O(n) → O(log n)
+- Systems become more resilient to hash collision attacks
+- Performance stays predictable even with poor hash distribution
 
 But there’s an important detail many engineers miss.
 
@@ -1043,12 +989,9 @@ Most engineers use HashMap every day.
 
 Very few understand what happens inside the bucket when things go wrong.
 
-
 ---
 
-### ITEM 25 ###
-
-Only for backend engineers:
+## Only for backend engineers:
 
 ☕ Java:
 - OOPs & SOLID principles.
@@ -1094,77 +1037,70 @@ JAVA from Basics to Advanced (All Videos are in English)
 
 JUnit5:
 
-
 ---
 
-### ITEM 26 ###
-
-🚀 Java Backend Interview Experience (4+ Years Experience)
+## 🚀 Java Backend Interview Experience (4+ Years Experience)
 
 Today I attended a technical interview for a Java Backend / Microservices role, and these were the key topics the interviewer focused on.
 
 Sharing this for developers preparing for Java + Spring Boot interviews.
 
 📌 Core Java
-• OOPs with real-world examples
-• HashMap internal working
-• Thread Lifecycle in Java
-• Runnable vs Callable
-• Deadlock & How to avoid Deadlock
-• Garbage Collection
-• Checked vs Unchecked Exceptions
-• Custom Exception
+- OOPs with real-world examples
+- HashMap internal working
+- Thread Lifecycle in Java
+- Runnable vs Callable
+- Deadlock & How to avoid Deadlock
+- Garbage Collection
+- Checked vs Unchecked Exceptions
+- Custom Exception
 
 📌 Spring Framework
-• Spring Boot fundamentals
-• @SpringBootApplication annotation
-• @Component vs @Service vs @Repository
-• DispatcherServlet
-• Global Exception Handling
-• Spring Security
+- Spring Boot fundamentals
+- @SpringBootApplication annotation
+- @Component vs @Service vs @Repository
+- DispatcherServlet
+- Global Exception Handling
+- Spring Security
 
 📌 Database & SQL
-• Hibernate / JPA
-• Transaction Management
-• Indexing
-• Pagination
-• Lazy Loading vs Eager Loading
-• Primary Key vs Foreign Key
-• Surrogate Key
-• Function vs Procedure
+- Hibernate / JPA
+- Transaction Management
+- Indexing
+- Pagination
+- Lazy Loading vs Eager Loading
+- Primary Key vs Foreign Key
+- Surrogate Key
+- Function vs Procedure
 
 📌 Microservices Architecture & Design Pattern
-• Microservice vs Monolith Architecture
-• How Distributed Systems Communicate
-• API Gateway
-• Circuit Breaker Pattern
-• Event-Driven Architecture
-• Design Pattern used in your project and sample code (Singleton)
+- Microservice vs Monolith Architecture
+- How Distributed Systems Communicate
+- API Gateway
+- Circuit Breaker Pattern
+- Event-Driven Architecture
+- Design Pattern used in your project and sample code (Singleton)
 
 📌 Messaging Systems
-• Kafka
-• Kafka vs RabbitMQ
+- Kafka
+- Kafka vs RabbitMQ
 
 📌 DevOps
-• Docker
-• Image vs Container
+- Docker
+- Image vs Container
 
 📌 Production Scenario
-• Handling API Slowness in Production
+- Handling API Slowness in Production
 
 💡 Observation: Modern backend interviews are heavily focused on Core Java fundamentals, concurrency, microservices architecture, and real production debugging scenarios.
 
 If you are preparing for Java backend interviews, these topics are must-know.
 
-👉 What are the most challenging questions you faced in your recent interviews?
-
+- What are the most challenging questions you faced in your recent interviews?
 
 ---
 
-### ITEM 27 ###
-
-
-1️⃣ Tell me about yourself.
+## 1️⃣ Tell me about yourself.
 
 2️⃣ Explain your project architecture.
 Which technologies and versions did you use for building the application?
@@ -1216,9 +1152,7 @@ Use load balancers and multiple instances of the service to handle high traffic.
 
 ---
 
-### ITEM 28 ###
-
-YOU'RE IN A JAVA INTERVIEW.
+## YOU'RE IN A JAVA INTERVIEW.
 
 The interviewer asks:
 
@@ -1231,12 +1165,12 @@ What could be happening?"
 
 Possible things to investigate:
 
-• Thread blocking – threads might be waiting on locks or synchronized blocks
-• I/O wait – database calls, APIs, or file operations may be slow
-• Deadlock – two or more threads waiting for each other
-• Thread pool exhaustion – tasks waiting in queue because workers are busy
-• External service latency – downstream service responding slowly
-• Excessive logging – blocking I/O from heavy log writing
+- Thread blocking – threads might be waiting on locks or synchronized blocks
+- I/O wait – database calls, APIs, or file operations may be slow
+- Deadlock – two or more threads waiting for each other
+- Thread pool exhaustion – tasks waiting in queue because workers are busy
+- External service latency – downstream service responding slowly
+- Excessive logging – blocking I/O from heavy log writing
 
 This is why multithreading questions appear in interviews.
 
@@ -1253,9 +1187,7 @@ I’ll share the detailed Java and Spring Boot Question & Answers PDF individual
 
 ---
 
-### ITEM 29 ###
-
-YOU’RE IN A JAVA INTERVIEW.
+## YOU’RE IN A JAVA INTERVIEW.
 
 The interviewer starts with a simple question.
 
@@ -1264,21 +1196,21 @@ Then the questions start getting deeper…
 Below are REAL interview questions
 used to test production-level Java understanding:
 
-1) Your Java application is slow in production, but CPU and memory look normal. What do you check first?
-2) OutOfMemoryError occurs even though heap size seems sufficient. How is that possible?
-3) Threads are available in the pool but requests are still waiting. Why?
-4) Increasing heap size made the application slower. Explain why.
-5) GC pauses suddenly increased after a small deployment. What could have changed?
-6) JVM does not shut down even after the main() method finishes. What might be holding it?
-7) Parallel streams were added but overall throughput dropped. Why?
-8) Memory usage slowly keeps increasing over time. What would you investigate first?
-9) Logging configuration change caused a production slowdown. How can logging impact performance?
-10) ExecutorService tasks fail silently without visible errors. What might be happening?
-11) Application behaves differently on Java 8 vs Java 17. What could cause this?
-12) Retry logic implemented in the application caused system overload. What mistake might have been made?
-13) Deadlock occurs rarely in production but never locally. Why can that happen?
-14) Thread pool size was increased but throughput didn’t improve. Why?
-15) Application works perfectly in testing but fails under real production traffic. What could be the reason?
+- Your Java application is slow in production, but CPU and memory look normal. What do you check first?
+- OutOfMemoryError occurs even though heap size seems sufficient. How is that possible?
+- Threads are available in the pool but requests are still waiting. Why?
+- Increasing heap size made the application slower. Explain why.
+- GC pauses suddenly increased after a small deployment. What could have changed?
+- JVM does not shut down even after the main() method finishes. What might be holding it?
+- Parallel streams were added but overall throughput dropped. Why?
+- Memory usage slowly keeps increasing over time. What would you investigate first?
+- Logging configuration change caused a production slowdown. How can logging impact performance?
+- ExecutorService tasks fail silently without visible errors. What might be happening?
+- Application behaves differently on Java 8 vs Java 17. What could cause this?
+- Retry logic implemented in the application caused system overload. What mistake might have been made?
+- Deadlock occurs rarely in production but never locally. Why can that happen?
+- Thread pool size was increased but throughput didn’t improve. Why?
+- Application works perfectly in testing but fails under real production traffic. What could be the reason?
 
 These questions are used to see
 whether you understand how Java behaves in real systems,
@@ -1288,9 +1220,7 @@ I’ll share the detailed questions with answers pdf individually with intereste
 
 ---
 
-### ITEM 30 ###
-
-Top 10 Advanced Interview Questions for Senior Java Developer (Latest Technologies & Tools)
+## Top 10 Advanced Interview Questions for Senior Java Developer (Latest Technologies & Tools)
 
 If you are preparing for a Senior Java Developer role, modern interviews focus on architecture, cloud, microservices, and AI-driven systems.
 
@@ -1327,12 +1257,9 @@ Follow: Akshay Kumawat
 
 Comment: "Senior Java Developer" and I will share the executive-level answers with you.
 
-
 ---
 
-### ITEM 31 ###
-
-MOST PEOPLE FAIL JAVA & SPRING BOOT INTERVIEWS
+## MOST PEOPLE FAIL JAVA & SPRING BOOT INTERVIEWS
 NOT BECAUSE THEY DON’T KNOW ENOUGH,
 BUT BECAUSE THEY CAN’T THINK WHEN SYSTEMS BREAK.
 
@@ -1341,39 +1268,39 @@ used to test production-level Java & Spring Boot understanding:
 
 Java (Runtime, JVM, Concurrency)
 
-1) Java app slows down over time without errors. What’s happening internally?
-2) OutOfMemoryError occurs even when heap looks sufficient. How?
-3) CPU is low but latency is high. What could be blocking?
-4) Threads are available, yet requests are queued. Why?
-5) Increasing heap size made performance worse. Explain.
-6) GC pauses increased after a small code change. What changed?
-7) JVM doesn’t exit after main() finishes. What’s holding it?
-8) Parallel streams reduced throughput instead of improving it. Why?
-9) Memory keeps growing without static references. What do you suspect?
-10) Logging level change caused production slowdown. Why?
-11) ThreadLocal fixed one issue but created another. How?
-12) ExecutorService tasks fail silently. What went wrong?
-13) App behaves differently on Java 8 vs Java 17. Why?
-14) Retry logic overloaded the system. What was the mistake?
-15) Scaling instances made things worse. Why?
+- Java app slows down over time without errors. What’s happening internally?
+- OutOfMemoryError occurs even when heap looks sufficient. How?
+- CPU is low but latency is high. What could be blocking?
+- Threads are available, yet requests are queued. Why?
+- Increasing heap size made performance worse. Explain.
+- GC pauses increased after a small code change. What changed?
+- JVM doesn’t exit after main() finishes. What’s holding it?
+- Parallel streams reduced throughput instead of improving it. Why?
+- Memory keeps growing without static references. What do you suspect?
+- Logging level change caused production slowdown. Why?
+- ThreadLocal fixed one issue but created another. How?
+- ExecutorService tasks fail silently. What went wrong?
+- App behaves differently on Java 8 vs Java 17. Why?
+- Retry logic overloaded the system. What was the mistake?
+- Scaling instances made things worse. Why?
 
 Spring Boot (Production & Scenarios)
 
-16) App works locally but fails after deployment. What do you check first?
-17) APIs are fast locally but slow only in prod. How do you debug?
-18) application.properties change didn’t reflect. Why?
-19) CPU is low but requests timeout. What’s the bottleneck?
-20) Multiple beans of same type cause startup failure. How to fix?
-21) @Transactional exists but rollback doesn’t happen. Why?
-22) DB connection pool exhausts under load. Why?
-23) Scheduled jobs impact API latency. How do you isolate?
-24) App behaves differently in Docker vs local. Why?
-25) New deployment but users see old behavior. What went wrong?
-26) Logs missing in production but present locally. Where to check?
-27) Async processing made performance worse. How?
-28) Circuit breaker stays open even when service is healthy. Why?
-29) Adding more resources didn’t improve performance. Why?
-30) What Spring Boot decision you made once caused a real production issue?
+- App works locally but fails after deployment. What do you check first?
+- APIs are fast locally but slow only in prod. How do you debug?
+- application.properties change didn’t reflect. Why?
+- CPU is low but requests timeout. What’s the bottleneck?
+- Multiple beans of same type cause startup failure. How to fix?
+- @Transactional exists but rollback doesn’t happen. Why?
+- DB connection pool exhausts under load. Why?
+- Scheduled jobs impact API latency. How do you isolate?
+- App behaves differently in Docker vs local. Why?
+- New deployment but users see old behavior. What went wrong?
+- Logs missing in production but present locally. Where to check?
+- Async processing made performance worse. How?
+- Circuit breaker stays open even when service is healthy. Why?
+- Adding more resources didn’t improve performance. Why?
+- What Spring Boot decision you made once caused a real production issue?
 
 These questions are asked to see
 whether you can OWN systems, not just build them.
@@ -1383,9 +1310,7 @@ I’ll share the detailed resource individually with interested folks.
 
 ---
 
-### ITEM 32 ###
-
-📨 "Design a Notification Service."
+## 📨 "Design a Notification Service."
 This question is quietly showing up in interviews at many product
 companies.
 
@@ -1454,13 +1379,9 @@ If you see improvements or alternative approaches, drop them in the comments.
 
 Comment “Notification” if you want the complete Java implementation zip, I’ll share it.
 
-
-
 ---
 
-### ITEM 33 ###
-
-Code is Easy.
+## Code is Easy.
 Production is Brutal.
 
 Writing Java code is the comfortable part.
@@ -1470,37 +1391,37 @@ But production doesn’t care about your clean code.
 
 Production cares about:
 
-• Timeouts under load
-• Memory leaks at 3AM
-• Race conditions you never saw coming
-• SSL failures
-• Broken deployments
-• Logs you forgot to add
-• CPU spikes you can’t explain
+- Timeouts under load
+- Memory leaks at 3AM
+- Race conditions you never saw coming
+- SSL failures
+- Broken deployments
+- Logs you forgot to add
+- CPU spikes you can’t explain
 
 Anyone can build a microservice.
 
 But can you:
 
-• Trace a request across services?
-• Debug an issue without reproducing it locally?
-• Roll back safely?
-• Handle traffic 10x overnight?
-• Secure APIs properly?
-• Stay calm during an outage?
+- Trace a request across services?
+- Debug an issue without reproducing it locally?
+- Roll back safely?
+- Handle traffic 10x overnight?
+- Secure APIs properly?
+- Stay calm during an outage?
 
 That’s the difference between a Java developer
 and a production-ready engineer.
 
 Building systems means:
 
-• Designing for failure, not perfection
-• Treating observability as a feature
-• Automating deployments
-• Monitoring what actually matters
-• Securing by default
-• Planning for scale early
-• Owning incidents end-to-end
+- Designing for failure, not perfection
+- Treating observability as a feature
+- Automating deployments
+- Monitoring what actually matters
+- Securing by default
+- Planning for scale early
+- Owning incidents end-to-end
 
 Because writing code is just the beginning.
 
@@ -1511,12 +1432,9 @@ That’s real engineering.
 
 Use code 𝗝𝗔𝗩𝗔𝟰𝟬
 
-
 ---
 
-### ITEM 34 ###
-
-What I see in most Java resumes:
+## What I see in most Java resumes:
 - Java
 - Spring
 - Microservices
@@ -1569,6 +1487,3 @@ If you are targeting Senior, Staff, or Lead roles:
 Use code 𝗝𝗔𝗩𝗔𝟰𝟬
 
 Good luck!
-
----
-

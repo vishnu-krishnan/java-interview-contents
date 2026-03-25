@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-𝗠𝗼𝘀𝘁 𝗨𝘀𝗲𝗱 𝗚𝗶𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀
+## 𝗠𝗼𝘀𝘁 𝗨𝘀𝗲𝗱 𝗚𝗶𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀
 
 1. 𝐠𝐢𝐭 𝐝𝐢𝐟𝐟: Show file differences not yet staged.
 2. 𝐠𝐢𝐭 𝐜𝐨𝐦𝐦𝐢𝐭 -𝐚 -𝐦 "𝐜𝐨𝐦𝐦𝐢𝐭 𝐦𝐞𝐬𝐬𝐚𝐠𝐞": Commit all tracked changes with a message.
@@ -31,12 +29,9 @@
 27. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 --𝐡𝐚𝐫𝐝: Resets everything to a previous commit, erasing all uncommitted changes.
 28: 𝐠𝐢𝐭 𝐛𝐫𝐚𝐧𝐜𝐡 --𝐬𝐞𝐭-𝐮𝐩𝐬𝐭𝐫𝐞𝐚𝐦-𝐭𝐨 𝐫𝐞𝐦𝐨𝐭𝐞_𝐛𝐫𝐚𝐧𝐜𝐡: Sets the upstream branch to the specified
 
-
 ---
 
-### ITEM 2 ###
-
-From Idea to Launch: The Software Development Process
+## From Idea to Launch: The Software Development Process
 
 The software development cycle is a structured process used by development teams to design, develop, and deliver high-quality software. This cycle consists of several key stages, each playing a crucial role in ensuring the success of the software project. Here’s an overview of the typical software development cycle:
 
@@ -80,7 +75,3 @@ Use code 𝗝𝗔𝗩𝗔𝟰𝟬
 
 Do save it for future reference and follow &
 Rani Dhage for more! ✨
-
-
----
-

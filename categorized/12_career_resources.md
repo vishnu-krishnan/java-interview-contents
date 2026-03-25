@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-Stop Wasting Searching on Naukri.com , Fiverr , Indeed , Monster and Shine.com
+## Stop Wasting Searching on Naukri.com , Fiverr , Indeed , Monster and Shine.com
 
 It is overcrowded. Instead of try those websites
 
@@ -95,14 +93,9 @@ https://t.me/Hariskumar0
 
 ♻️ Repost to your Job seekers friends it is useful for others
 
-
-
-
 ---
 
-### ITEM 2 ###
-
-This one-page resume got me 𝟖+ 𝐨𝐟𝐟𝐞𝐫𝐬 - American Express, Amazon, NI (National Instruments), JUSPAY, and more 🚀
+## This one-page resume got me 𝟖+ 𝐨𝐟𝐟𝐞𝐫𝐬 - American Express, Amazon, NI (National Instruments), JUSPAY, and more 🚀
 
 
 
@@ -128,12 +121,9 @@ Don'ts Do this Resume
 
 PS: If you want the same one-page resume template that got me these offers, follow me at https://x.com/tanmaygoel1 and DM “𝐑𝐞𝐬𝐮𝐦𝐞” there and I’ll share it with you for free 🚀
 
-
 ---
 
-### ITEM 3 ###
-
-Tried for Google → Failed at the 1st round
+## Tried for Google → Failed at the 1st round
 Tried for Salesforce → Failed at the 2nd round
 Tried for 10+ other MNCs → Failed at every company
 
@@ -155,12 +145,9 @@ Just get on this call and Ajay will identify your gaps and help with everything
 
 100+ people have learnt from him and switched to companies like Meta, Microsoft. Your turn now, go book that call - he only has 20 seats ✨
 
-
 ---
 
-### ITEM 4 ###
-
-Companies List that are HIRING for 100% REMOTE.
+## Companies List that are HIRING for 100% REMOTE.
 
 1. DuckDuckGo - https://duckduckgo.com
 2. TestGorilla - https://testgorilla.com
@@ -171,14 +158,9 @@ Companies List that are HIRING for 100% REMOTE.
 10. Aha! - https://aha.io
 14. Twilio - https://twilio.com
 
-
-
-
 ---
 
-### ITEM 5 ###
-
-Programming interviews aren't just about skill — they're a test of patience, resilience, and strategy.
+## Programming interviews aren't just about skill — they're a test of patience, resilience, and strategy.
 
 Here's how to crack the job interview process 👇
 
@@ -206,7 +188,3 @@ Result: What was the outcome?
 
 You're not just preparing for a job — you're sharpening your mindset.
  Keep going 💪
-
-
----
-

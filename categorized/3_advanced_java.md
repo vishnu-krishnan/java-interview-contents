@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-🚀 30 Days of Java Interview Questions – Day 11
+## 🚀 30 Days of Java Interview Questions – Day 11
 
 💡 Question:
 What is Singleton Design Pattern in Java?
@@ -11,16 +9,16 @@ Singleton Design Pattern ensures that a class has only one instance and provides
 
 🔹 Key Features
 
-• Only one object is created
-• Global access to that instance
-• Controlled object creation
+- Only one object is created
+- Global access to that instance
+- Controlled object creation
 
 🔹 Real World Use Cases
 
-• Logger
-• Database Connection
-• Configuration Manager
-• Caching
+- Logger
+- Database Connection
+- Configuration Manager
+- Caching
 
 🔹 Implementation Example
 
@@ -64,32 +62,28 @@ class Singleton {
 
 ⚡ Quick Facts
 
-• Supports lazy initialization
-• Can be made thread-safe
-• Used when only one instance is required
+- Supports lazy initialization
+- Can be made thread-safe
+- Used when only one instance is required
 
 
 📌 Interview Tip
 
 Singleton can break due to:
 
-• Reflection
-• Serialization
-• Cloning
+- Reflection
+- Serialization
+- Cloning
 
 Always use proper handling to make it robust.
 
-
-
 ---
 
-### ITEM 2 ###
-
-🧠 One Java Pattern That Makes Your Code Flexible: Strategy Pattern
+## 🧠 One Java Pattern That Makes Your Code Flexible: Strategy Pattern
 
 One pattern I’ve found extremely useful in real-world Java applications is the Strategy Pattern.
 It solves a common problem:
-👉 Avoiding large if-else or switch blocks when behavior changes based on conditions.
+- Avoiding large if-else or switch blocks when behavior changes based on conditions.
 
 Example without strategy:-
 if (type.equals("PAYPAL")) {
@@ -130,18 +124,15 @@ I’ve seen this pattern work really well in:
 --> Feature toggles
 
 Instead of asking “which condition?”, you start asking
- 👉 “which behavior?”
+ - “which behavior?”
 
 That shift makes systems easier to scale and evolve.
 
 What’s a place where you replaced condition-heavy code with a pattern?
 
-
 ---
 
-### ITEM 3 ###
-
-What if understanding a Java framework didn’t come from using it but by building it yourself? 😁
+## What if understanding a Java framework didn’t come from using it but by building it yourself? 😁
 
 Aetheris comes from the Greek word “aether”, referring to the pure and invisible air of the gods.
 I chose this name to represent a lightweight and transparent framework, quietly operating in the background and connecting the web to the core of the application. ⚙️
@@ -162,6 +153,3 @@ It is not production-ready but a true learning playground. Building your own too
 
 If you’re curious, a student, or a Java developer, come explore, test, critique, or just share your ideas.
 I’d love to see how you would have built certain features or hear about your own experiments.
-
----
-

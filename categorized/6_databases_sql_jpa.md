@@ -1,6 +1,4 @@
-### ITEM 1 ###
-
-Why “N+1 Query Problem” Can Kill Your Application Performance
+## Why “N+1 Query Problem” Can Kill Your Application Performance
 
 Your API works fine…
 Your database is healthy…
@@ -37,9 +35,9 @@ Slows Down APIs
  Response time increases drastically with data size.
 
 Where It Happens (Java World)
-• Hibernate / JPA lazy loading
-• Improper entity relationships
-• Fetching nested data without optimization
+- Hibernate / JPA lazy loading
+- Improper entity relationships
+- Fetching nested data without optimization
 
 How to Fix It
 Use JOIN FETCH in JPA
@@ -55,12 +53,9 @@ In backend systems, efficiency is not just about code - it’s about how you tal
 
 Have you ever debugged an N+1 issue in production?
 
-
 ---
 
-### ITEM 2 ###
-
-✨ Introducing Reindeer — the Agentic IDE for Databases ✨
+## ✨ Introducing Reindeer — the Agentic IDE for Databases ✨
 
 Proud and excited to share what our team at KeyValue Software Systems has been building with passion — Reindeer, an intelligent IDE designed to transform how developers interact with databases.
 
@@ -75,6 +70,3 @@ Huge thanks to the brilliant team who made this happen:
 Joyal A Johney, Muhammed Muzammil KT, Nikhin Raj, Meenakshi Ravi, Alexander Ouseph, Abheda K P 🦌
 
 Excited to see how Reindeer will help teams move faster, write cleaner queries, and focus more on solving real problems.
-
----
-
