@@ -35,11 +35,7 @@ Preparing for product-based companies? Here are some trending interview question
 2️⃣7️⃣ How do you optimize slow queries?
 2️⃣8️⃣ What is connection pooling?
 🎯 Tip: Focus on System Design + Microservices — most interviews are now based on real-world scenarios.
-Join our developer community 👇
-💬 Comment “JAVA” if you want a full list of 100+ Java + Spring Boot interview questions.
-
 ---
-
 ## Here you go 👍 — a complete Java Backend Developer (3–6 Yrs) :: Interview Questions Asked @ HCL Technologies 🚀
 HCL interviews are usually practical + project-based, focusing on:
  ✔ Core Java
@@ -107,9 +103,7 @@ HCL interviews are usually practical + project-based, focusing on:
  4️⃣ Check palindrome string
  5️⃣ Find second largest number
  6️⃣ Reverse linked list
-
 ---
-
 ## Stop writing manual null-checks in your Spring Boot controllers! 🛡️
 
 Bean Validation with @Valid lets you declare validation rules directly on your model — Spring handles the rest automatically.
@@ -139,9 +133,7 @@ Key annotations to master:
 Pair it with @RestControllerAdvice + MethodArgumentNotValidException handler to return clean, structured error messages to your API consumers.
 
 And if built-in annotations aren't enough? You can create custom constraints with your own business logic (e.g. @UniqueEmail that queries the database).
-
 ---
-
 ## 🚀 DTO Pattern in Spring Boot — Stop Exposing Your Entities!
 
 One of the most common mistakes junior Java developers make is returning JPA entities directly from REST controllers. Here's why DTOs will save your application architecture.
@@ -170,9 +162,7 @@ public interface UserMapper {
 }
 
 Benefits: hide sensitive fields (passwords!), shape your API independently of DB schema, and reduce serialization issues with lazy-loaded relations.
-
 ---
-
 ## Today I attended a face-to-face interview at TCS for the Java Developer role. It was a great experience interacting with the technical panel and discussing real-time development concepts.
 
 Some of the questions asked during the interview:
@@ -191,9 +181,7 @@ Some of the questions asked during the interview:
 It was a valuable learning experience and helped me strengthen my problem-solving and Java concepts.
 
 Looking forward to more such opportunities and continuous learning. 💻
-
 ---
-
 ## When building a Java Spring Boot project, the project structure is often overlooked. How you organize packages directly impacts scalability and maintainability.
 From my experience, a clean, well defined structure makes development smoother, especially as the project grows.
 Here’s how I usually structure my project and how each part connects in the request flow:
@@ -236,9 +224,7 @@ Flow: Request → Controller → DTO → Service → Mapper → Model → Reposi
 This structure keeps responsibilities clear, improves readability, and allows the project to scale without messiness. Avoid putting everything in one package, it becomes hard to manage.
 
 How do you structure your projects? Do you follow a similar flow, or approach it differently?
-
 ---
-
 ## Spring Boot simplified — from startup to production 🚀
 
 Understanding how Spring Boot works internally is a game-changer for backend developers.
@@ -257,11 +243,8 @@ Clean layered architecture (Controller → Service → Repository)
 
 Production-ready apps with minimal setup
 
-
 - Build fast. Scale smart. Ship confidently.
-
 ---
-
 ## Spring Boot: Understanding the Internal Request Flow 🚀
 
 Ever wondered what actually happens inside a Spring Boot application when a request is sent? Here’s a simplified breakdown of the internal flow:
@@ -294,15 +277,12 @@ Finally, the serialized response is sent back to the client in a clean and effic
 💡 Key Insight
 @RestController = @Controller + @ResponseBody
 This is why Spring Boot directly returns data instead of resolving views—making REST APIs lightweight and high-performing.
-
 ---
-
 ## 🚀 Day 71/100 - Spring Boot - Redis as a Cache
 
 When your application scales beyond a single instance, in-memory caches are no longer enough.
 
 That’s where we need Redis - a distributed cache.
-
 
 ➡️ Why Redis?
 
@@ -314,7 +294,6 @@ Unlike in-memory caches (like Caffeine or Ehcache):
 
 Useful for microservices architectures❗
 
-
 ➡️ How to Configure
 
 🔹Add Dependency
@@ -324,15 +303,12 @@ See attached image 👇
 
 Now, Spring Boot will automatically use Redis as the cache provider.
 
-
 ➡️ How It Works
 
 🔹Your application stores cache data in Redis
 🔹All instances of your app access the same cache
 🔹Cached data survives if application restarts (if Redis is running)
-
 ---
-
 ## 🚀 Day 69/100 - Spring Boot - @Cacheable & @CacheEvict
 
 Caching is not just about storing data...
@@ -340,7 +316,6 @@ Caching is not just about storing data...
 You also have to keep the data consistent when it changes.
 
 Spring Boot provides 2 annotations for this:
-
 
 1️⃣ @Cacheable - Store & Reuse Data
 
@@ -353,7 +328,6 @@ Spring Boot provides 2 annotations for this:
 🔹Next calls (same id) → returned directly from cache
 🔹Improves performance by avoiding repeated DB calls
 
-
 2️⃣ @CacheEvict - Keep Cache in Sync
 
 When data changes, the cache must be updated or cleared. That’s where @CacheEvict comes in.
@@ -364,9 +338,7 @@ When data changes, the cache must be updated or cleared. That’s where @CacheEv
 🔹Removes stale data from cache
 🔹Ensures users don’t see outdated results
 🔹Keeps cache consistent with the database
-
 ---
-
 ## JWT Authentication & Authorization in Spring Boot – Simplified!
 Understanding how security works in modern applications is crucial for every developer. Here’s a quick breakdown of how JWT (JSON Web Token) works in a Spring Boot application:
 ➡️ User logs in via API
@@ -382,9 +354,7 @@ Understanding how security works in modern applications is crucial for every dev
 ✔️ Secure API communication
 ✔️ Scalable system design
 As a Java Full Stack Developer, mastering JWT with Spring Boot is a must for building secure applications.
-
 ---
-
 ## 🚀 Day 72/100 - Spring Boot -Scheduling Tasks (@Scheduled)
 
 Modern applications often need to run tasks in the background. For instance:
@@ -395,11 +365,9 @@ Modern applications often need to run tasks in the background. For instance:
 
 Spring Boot makes this possible using @Scheduled.
 
-
 ➡️ Enable Scheduling
 
 You can enable scheduling in your main class, OR the class where you want it, using @EnableScheduling annotation.
-
 
 ➡️ Using @Scheduled
 
@@ -414,11 +382,8 @@ Runs a task after the previous execution finishes.
 - cron
 Provides flexible scheduling using cron expressions (I'll explain it deeply in the next post)
 
-
 ➡️ Example: see attached image 👇
-
 ---
-
 ## Deep Dive into Spring Boot Internals: How Auto-Configuration Really Works
 
 Most developers use Spring Boot daily, but very few truly understand what happens behind the scenes when an application starts. One of the most powerful features of Spring Boot is Auto-Configuration, which automatically sets up beans, configurations, and dependencies based on the classpath and application settings.
@@ -426,9 +391,7 @@ Most developers use Spring Boot daily, but very few truly understand what happen
 🧠 Core Idea
 
 Spring Boot scans the classpath, detects available libraries (like Spring MVC, JPA, Kafka, etc.), and automatically configures beans so developers don’t have to manually write large configuration files.
-
 ---
-
 ## 𝗕𝗲 𝗰𝗮𝗿𝗲𝗳𝘂𝗹 𝘄𝗵𝗲𝗻 𝘂𝘀𝗶𝗻𝗴 @𝗧𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝗮𝗹!
 
 When working with Spring Boot with Hibernate, annotations play an important role in building compact and efficient systems. Thus, knowing what the annotations are doing and how to correctly use them is a key part of software development.
@@ -445,9 +408,7 @@ Two tips to keep in mind when using @𝗧𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼�
 2. Use the 𝘳𝘦𝘢𝘥𝘖𝘯𝘭𝘺=𝘵𝘳𝘶𝘦 parameter when you are only fetching data (e.g. GET requests). This disables Hibernate’s 𝗗𝗶𝗿𝘁𝘆 𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴, meaning it avoids allocating memory for entity snapshots in the 𝗣𝗲𝗿𝘀𝗶𝘀𝘁𝗲𝗻𝗰𝗲 𝗖𝗼𝗻𝘁𝗲𝘅𝘁. This reduces Garbage Collection and CPU pressure, resulting in faster response times.
 
 Do you know other powerful @𝗧𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝗮𝗹 parameters? Let me know in the comments.
-
 ---
-
 ## 💻 Modern Spring Boot Patterns Every Developer Know
 When you’re coding in Spring Boot, you probably know how to make services, repositories, and DTOs work… but do you know the design patterns hiding behind your code? 🤔
 Understanding these patterns helps you:
@@ -455,9 +416,7 @@ Understanding these patterns helps you:
  ⚡ Debug faster and trace issues like a pro
  💬 Communicate design decisions clearly with your team
 Here’s a modern cheat sheet mapping Spring Boot code to OOAD patterns:
-
 ---
-
 ## Java is not “coming back” in 2026…
 It never left. And now it’s evolving faster than ever 🚀
 Here are 4 trends every Java developer should pay attention to:
@@ -471,7 +430,6 @@ Modern setups (Java 21 + Spring Boot) significantly improve startup time and mem
 4️⃣ Modernization is a priority, not optional
 Companies are actively moving away from legacy Java (8/11) to modern versions (17/21/25), using tools like OpenRewrite to scale migrations
 
-
 💡 My takeaway:
 The biggest shift is not a new framework…
 It’s simplicity + performance + AI integration.
@@ -482,9 +440,7 @@ Java is becoming:
 And honestly… that’s exciting.
 
 What trend are you seeing in your projects?
-
 ---
-
 ## SOLID Principles in Java – Explained Simply
 
 When building scalable and maintainable software, following good design principles is essential. One of the most important concepts in Object-Oriented Programming is SOLID Principles.
@@ -562,9 +518,7 @@ These principles are widely used in Java, Spring Boot, and enterprise applicatio
 
 Tech Stack I work with:
  Java | Spring Boot | REST APIs | PostgreSQL | React
-
 ---
-
 ## 🚀 Understanding the Internal Working of Spring Boot
 As a Java developer, mastering how Spring Boot works internally can significantly improve debugging, performance tuning, and system design.
 Here’s a simplified flow of how a request is processed:
@@ -594,9 +548,7 @@ Understanding this flow helps in: ✔ Debugging issues faster
 ✔ Optimizing performance
 ✔ Cracking interviews with confidence
 👨‍💻 As developers, we often use frameworks but knowing what happens behind the scenes gives us an edge.
-
 ---
-
 ## One of the most common errors in Java is NullPointerException. Even experienced developers still run into it.
 
 While Java is slowly improving with Project Valhalla, frameworks like Spring already give us tools to write safer code today.
@@ -611,9 +563,7 @@ For example, if you mark a package with @NullMarked, all reference types are ass
 Special thanks to Dan Vega, his YouTube videos help to understand not only these annotations, but he also has many great videos about Spring and the new features in Spring Boot 4.
 
 Have you tried JSpecify annotations in your projects?
-
 ---
-
 ## THE INTERVIEWER OPENS YOUR SPRING BOOT PROJECT
 AND STARTS ASKING QUESTIONS.
 
@@ -651,13 +601,7 @@ They test whether you understand
 *why your backend is designed the way it is.*
 
 Which of these would be hardest for you to answer in an interview?
-
-Comment the number.
-
-I’ll share the detailed PDF individually with interested folks.
-
 ---
-
 ## Spring Boot looks easy…
 Until the interviewer goes deep.
 
@@ -698,15 +642,7 @@ Here are 30 real Spring Boot questions asked in backend interviews 👇
 
 Spring Boot looks simple. But its internal architecture is what makes it powerful.
 If you can answer these questions confidently, you are already ahead of 90% backend candidates.
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝘄𝗲𝗻𝘁 𝗱𝗲𝗲𝗽 𝗮𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-Use JAVA15 to get 15% off.
-
-Stay Hungry, Stay FoolisH!
-
 ---
-
 ## 🚀 Java + Spring Boot Interview Questions (4+ Years Experience)
 Today one of my friends attended an interview at Capgemini for a Java Developer (4+ years experience) role. Sharing some of the questions asked in the interview.
 Core Java
@@ -753,24 +689,10 @@ How do you handle global exception handling in Spring Boot?
 How do you improve performance in microservices architecture?
 How do you handle distributed transactions?
 
-
 💡 Tip: Most companies now focus on Microservices design, Spring Boot internals, and Java 8 Streams, not just theory.
 
 Hope this helps developers preparing for backend interviews.
-
-📌 If you want the answers in PDF, comment “PDF” and I will share it.
-
-📌 Also join my WhatsApp Community – Java Seekho Community for daily Java interview questions, coding tips, and learning resources. 👇
-
 ---
-
-## Spring Boot - Build Your Project Faster
-
-Image preview
-Spring Boot - Build Your Project Faster
-
----
-
 ## 🚀 @RestController vs @Controller — Do You Know the Real Difference?
 
 Most Spring Boot developers reach for @RestController without thinking twice. But knowing why it exists separates good engineers from great ones.
@@ -804,9 +726,7 @@ The rule is simple:
 → Building server-side rendered views (SSR)? Use @Controller.
 
 In modern microservice architectures, @RestController dominates — because APIs communicate via JSON, not HTML pages.
-
 ---
-
 ## If you are a backend engineer, save this, it might help you with your upskilling.
 
 In-depth playlist:
@@ -826,9 +746,7 @@ JUnit5 and Mockito from Basics to Advanced:
 Event Driven Architecture:
 
 Spring AI:
-
 ---
-
 ## 🚀 What actually happens inside the JVM when a Spring Boot application starts?
 
 Most developers run a Spring Boot app with one command:
@@ -838,9 +756,7 @@ Most developers run a Spring Boot app with one command:
 But inside the JVM, a lot happens before your API becomes available.
 
 Here’s a simplified breakdown 👇
-
 ---
-
 ## 🔹 1. JVM starts the application
 
 The JVM creates the main thread and executes the "main()" method.
@@ -851,9 +767,7 @@ public class Application {
  SpringApplication.run(Application.class, args);
  }
 }
-
 ---
-
 ## 🔹 2. Class Loading
 
 The JVM loads classes using the ClassLoader subsystem.
@@ -863,9 +777,7 @@ The JVM loads classes using the ClassLoader subsystem.
 - Application ClassLoader → loads your Spring Boot classes
 
 Class metadata is stored in Metaspace.
-
 ---
-
 ## 🔹 3. Bytecode Verification
 
 Before execution, the JVM verifies bytecode to ensure:
@@ -875,9 +787,7 @@ Before execution, the JVM verifies bytecode to ensure:
 ✔ No illegal memory access
 
 This protects the JVM from invalid code.
-
 ---
-
 ## 🔹 4. Spring Boot Startup Begins
 
 "SpringApplication.run()" starts the Spring ecosystem:
@@ -885,9 +795,7 @@ This protects the JVM from invalid code.
 - Creates ApplicationContext
 - Reads "application.properties" / "application.yml"
 - Determines auto configurations
-
 ---
-
 ## 🔹 5. Component Scanning
 
 Spring scans packages to detect components like:
@@ -898,9 +806,7 @@ Spring scans packages to detect components like:
 - "@Component"
 
 These become Spring Beans.
-
 ---
-
 ## 🔹 6. Bean Creation
 
 Spring first creates Bean Definitions and then instantiates beans.
@@ -908,9 +814,7 @@ Spring first creates Bean Definitions and then instantiates beans.
 Process:
 
 Constructor → Dependency Injection → Bean Post Processing
-
 ---
-
 ## 🔹 7. AOP Proxies
 
 For features like:
@@ -920,17 +824,13 @@ For features like:
 - "@Cacheable"
 
 Spring creates proxies using JDK Dynamic Proxy or CGLIB.
-
 ---
-
 ## 🔹 8. Embedded Server Starts
 
 Spring Boot starts an embedded server like Tomcat and initializes DispatcherServlet.
 
 Your APIs are now ready to serve requests.
-
 ---
-
 ## 💡 Full Startup Flow
 
 JVM Start
@@ -956,9 +856,7 @@ AOP proxy creation
 Embedded server start
 ↓
 Application ready
-
 ---
-
 ## ⚡ Senior developer insight
 
 Most startup issues in production happen during:
@@ -969,15 +867,11 @@ Most startup issues in production happen during:
 - Missing environment properties
 
 Understanding this flow makes debugging Spring Boot startup failures much easier.
-
 ---
-
 ## If you're a Spring developer:
 
 - Which startup error has troubled you the most?
-
 ---
-
 ## In a recent Java backend interview, I was asked some interesting questions.
 
 Not about frameworks like Spring Boot.
@@ -1032,9 +926,7 @@ Which tests:
 - DTO responses
 
 Sometimes interviews remind us that strong fundamentals matter more than frameworks.
-
 ---
-
 ## 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 – 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲
 I recently appeared for a Java Backend Developer interview and wanted to share some of the challenging questions that were asked.
 Sharing this here in case it helps others preparing for Java / Spring Boot backend roles.
@@ -1075,9 +967,7 @@ Discussion points:
 - Transaction Isolation Levels
 
 Hope this helps someone preparing for Java Backend interviews.
-
 ---
-
 ## 🚀 Cracking Java Backend in 2026?
 If you're preparing for Java + Spring Boot + Microservices + SQL roles (4–5 years experience), these are some of the questions you MUST be ready for 👇
 
@@ -1135,9 +1025,7 @@ Secure API design
 
 "Success in backend development is built one line of code at a time." ⚡
  ALL THE BEST 👍
-
 ---
-
 ## If you're a Java/Spring developer looking to add AI to your application, you’ve probably noticed one thing: making a single LLM call is easy. Turning it into a scalable, production-ready feature? That’s where things get tricky.
 That’s exactly why Spring AI was created. Built by the team behind the Spring Framework, it helps you integrate AI into your apps using the same familiar Spring concepts—dependency injection, clean configuration, and well-structured architecture.
 And it’s more than just an API wrapper:
@@ -1149,9 +1037,7 @@ And it’s more than just an API wrapper:
 No more stitching together SDKs or writing custom glue code.
 With Spring AI, you can build AI-powered features the Spring way—clean, maintainable, and ready to scale.
 AI in real Java applications. Built properly
-
 ---
-
 ## Spring boot Annotation cheat sheet
 Spring Boot Annotations Cheat Sheet with use cases.😎
 
@@ -1177,9 +1063,7 @@ Overview🚀
 9. @Value & @PropertySource ⚙️: The Settings—inject external configurations without hardcoding values.
 
 10. @SpringBootTest & @MockBean 🧪: The Lab—load the full app context or use mocks to ensure high-quality code
-
 ---
-
 ## 🚀 All Spring Boot Annotations — One Cheat Sheet
 I created a complete cheat sheet covering the most important Spring Boot annotations:
 ✅ Dependency Injection
@@ -1192,9 +1076,7 @@ Perfect for developers and interview preparation.
 🎁 Download full package for FREE here:
 Also, I’ve opened all my packages for free — including Spring Boot, Microservices, and AI.
 Let’s grow together 🚀
-
 ---
-
 ## Hi everyone ,
 From today onwards, I’m starting a small series where I’ll share Spring Boot concepts the way we actually use them in real projects. No heavy theory, no copy-paste definitions — just practical understanding, useful for both
 development and interviews.
@@ -1231,34 +1113,19 @@ Starts the entire Spring context.
 I’ll be posting more Spring Boot annotations and project concepts in this series.
 Let’s learn Spring Boot practically, not just for exams.
  If you’re learning Spring Boot or revising for interviews, follow along 👍
-
 ---
-
 ## Great time to be a Java developer! Benchmarking Model Context Protocol (MCP) server implementations across #Java, #Python, #JavaScript, and #Go shows the MCP Java SDK with #SpringAI leading the pack: sub-milliseconds latency, highest throughput, and best CPU efficiency.
 Kudos to Thiago Mendes
-
 ---
-
 ## 🌻let's break Solid Principles one by one with Java ☕️🌲
-
-
-
-
-
-Image preview
-Solid Principles
-
 ---
-
 ## 💡 Understanding the DTO (Data Transfer Object) Layer
 
 In modern application development, the DTO layer plays a crucial role in ensuring clean architecture and efficient data communication between client and server.
 DTOs help transfer data between layers without exposing the internal domain models — improving security, performance, and maintainability.
 
 By separating data representation from business logic, DTOs make APIs more structured, lightweight, and easy to evolve. 🚀
-
 ---
-
 ## Interview Preparation/Question :
 Senior Java Backend Developer – Spring Boot & Microservices
 
@@ -1307,9 +1174,7 @@ Senior Java Backend Developer – Spring Boot & Microservices
 
 🏷️ Hashtags:
 hashtag
-
 ---
-
 ## 👉 Spring Boot Annotations Overview: Mastering Your Development
 
 - Ready to dive into the world of Spring Boot? Here’s a quick overview of key annotations that can supercharge your development process.
@@ -1368,11 +1233,7 @@ These are the questions that will.👇
 12/ SQL vs NoSQL- tradeoffs?
 13/ What are idempotent APIs?
 14/ How do microservices communicate securely?
-
 ---
-
-
-
 ## Top 7 skills required for Java devs to get a job these days.
 
 Which one are you struggling with ?
@@ -1390,11 +1251,7 @@ Which one are you struggling with ?
 6. DSA : Arrays, trees, graphs, DP, hashing
 
 7. Concurrency : Thread pools, locks, CompletableFuture, Loom
-
 ---
-
-
-
 ## 5 Rounds. 38 LPA. The Goldman Sachs Interview Breakdown
 Role: Java Backend Developer
 Application Mode: Direct Application
@@ -1443,17 +1300,7 @@ Application Mode: Direct Application
  - Career growth plans?
 
 Pattern: Goldman doesn’t test topics. They test thinking depth.
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝘄𝗲𝗻𝘁 𝗱𝗲𝗲𝗽 𝗮𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-Use JAVA20 to get 20% off.
-
-Stay Hungry, Stay FoolisH!
-
 ---
-
-
-
 ## Recently attended a Java Developer interview and thought of sharing the actual questions that came up.
 
 Posting this purely from memory not a prepared list in case it helps someone preparing 😊
@@ -1484,601 +1331,7 @@ After this, they deep-dived into Microservices and Kafka, which I’ll probably 
 
 It was a good learning experience revisiting the fundamentals.
 Hope this helps anyone preparing for Java + Spring interviews.😊
-
-Preparing for interviews? Start revising these today
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁.
-
-
-keep learning, keep sharing !
-
 ---
-
-
-
-## That’s where Spring Boot changed everything.
-
-Spring Boot is a powerful Java framework designed to help developers build production-ready applications quickly, especially REST APIs and microservices.
-Instead of spending hours configuring servers and dependencies, Spring Boot allows developers to focus on what really matters: building the application logic.
->>> Why developers love Spring Boot <<<
-✔ Auto-configuration – most setup is handled automatically
- ✔ Embedded servers – no need to manually deploy WAR files
- ✔ Fast REST API development
- ✔ Large ecosystem (Spring Security, Spring Data JPA, Spring Cloud…)
- ✔ Production-ready features like monitoring, logging, and health checks
-🧩 How Spring Boot projects are typically structured
-A clean Spring Boot architecture usually separates responsibilities:
-- Controller → Handles HTTP requests and REST endpoints
- - Service → Contains the business logic
- - Repository → Manages database operations (JPA / ORM)
- - Entity / Model → Represents database tables
- - DTO → Defines API request and response structures
- - Configuration → Application and security settings
- - Exception Handling → Centralized error management
-This architecture helps developers build systems that are:
-✔ Cleaner
- ✔ Easier to maintain
- ✔ Easier to test
- ✔ Easier to scale
-
-That’s why Spring Boot has become one of the most popular frameworks for Java backend development, especially when building REST APIs and microservices.
-
----
-
-
-
-## 🚀Deep Dive into Spring Boot Architecture & Request Flow
-As I continue strengthening my understanding, I explore how Spring Boot handles requests internally and how its layered architecture works behind the scenes.
-
-🔧 Spring Boot Architecture
- 1. Overview
-Spring Boot applications follow a multi‑layered architecture built on top of the Spring Framework.
-Each layer has a well‑defined responsibility, making the system clean, maintainable, and ensuring separation of concerns.
-
- 2. Controller Layer (Presentation Layer)
-📌 Responsibility:
-Handles incoming HTTP requests and returns responses.
-💡 What it does:
-Maps URLs using annotations like @GetMapping, @PostMapping
-Accepts request data (JSON, params)
-Converts request → DTO
-Sends a response using ResponseEntity
-⚙️ Internally Uses:
-DispatcherServlet
-Handler Mapping
-Handler Adapter
-
-3. Service Layer (Business Logic)
-📌 Responsibility:
-Contains business rules and logic
-💡 What it does:
-Processes data
-Applies validations
-Manages transactions (@Transactional)
-Coordinates between Controller and Repository
-This layer ensures that controllers remain thin and focused only on managing HTTP interactions.
-
-4. Repository Layer (Data Access Layer)
-📌 Responsibility:
-Handles database operations
-💡 What it does:
-Communicates with DB
-Executes queries (JPQL, Native, Derived)
-Uses Spring Data JPA (JpaRepository)
-
-5. Database Layer
-📌 Supported Databases:
-Relational: MySQL, PostgreSQL, Oracle
-NoSQL: MongoDB, Redis
-In-memory: H2 (for testing)
-
-⚙️ Spring Boot Auto Configuration
-Spring Boot automatically configures:
-DispatcherServlet
-Embedded Server (Tomcat/Jetty)
-Object Mapping (Jackson)
-Transaction Management
-Hibernate Session
-- This reduces boilerplate code and speeds up development.
-
-🌟 Why This Architecture Works Well
-✅ Clear separation of concerns
-✅ Easy to test (unit & integration testing)
-✅ Scalable for microservices
-✅ Flexible & easy to extend
-✅ Clean and maintainable code
-
-🧠 Key Takeaway
-- Controller = Handles request
-- Service = Applies logic
-- Repository = Talks to DB
-
----
-
-
-
-## 💡 Interview Prep Is Not Just About Coding — It’s About Thinking Like an Architect
-Recently, I had an interview and I wanted to share some of the questions I encountered.
-They span across Java, SQL, REST APIs, Spring Boot, Microservices, and MQ/Kafka — reflecting the depth of knowledge expected in enterprise-level systems.
-
-🔹 Java
-- What are the types of errors in Java?
-- Why do we use ConcurrentHashMap?
-- In a multithreaded environment, if one thread sets a value to 1, another modifies it to 5, and a third retrieves it — what will be returned?
-- Why do we use Streams in Java?
-- Explain multithreading in Java.
-🔹 SQL
-- How do you create an index?
-- On which columns can we create an index if we have Employee and Department tables with conditions on salary and age? How do we decide which column needs indexing?
-- How does indexing improve SQL performance?
-🔹 REST API
-- How do you use @RestController and create an endpoint?
-🔹 Spring Boot / Microservices
-- How do you rollback one transaction in Spring Boot if two transactions are already committed?
-- If connecting to a database from an API fails, how do you rollback?
-- How do you handle exceptions in Spring Boot?
-- What is the Circuit Breaker pattern and how do you implement it?
-- How do you debug issues when the system gives slow responses?
-- When do we use retry mechanisms?
-- How do we set up caching in Java/Spring Boot?
-- How to implement caching if the application runs in multiple pods?
-- What is atomic and where do we use it?
-- What is transient and why do we use it?
-🔹 MQ / Kafka
-- Difference between synchronous and asynchronous calls — how do you implement them?
-- How do we connect to MQ?
-- What is Async in messaging?
-- Explain IBM MQ: message queues, listeners, and sender queues.
-- How do you use SSL while communicating with MQ?
-
-Key Insight:
-These aren’t just theoretical questions — they test how you’d apply concepts in real-world, production-grade systems. From concurrency to distributed caching and secure messaging, the focus is on architectural thinking and problem-solving under complexity.
-
----
-
-
-
-## As a Full Stack Developer, I would choose Spring Boot for the backend.
-
-Do you know why?
-
-When building modern applications, the backend needs to be reliable, scalable, and maintainable. Spring Boot provides exactly that, which is why many enterprise companies rely on it.
-
-Here are a few reasons why I prefer Spring Boot for backend development:
-
-1. Rapid Development
- Spring Boot reduces configuration and boilerplate code with auto-configuration and starter dependencies, allowing developers to focus on business logic.
-
-2. Enterprise-Level Architecture
- It supports layered architecture, dependency injection, and clean code practices, making large applications easier to manage and maintain.
-
-3. Powerful Ecosystem
- Spring Boot integrates seamlessly with tools like Spring Security, Spring Data JPA, Spring Cloud, Kafka, Redis, and many other technologies commonly used in enterprise systems.
-
-4. Microservices Ready
- It works well for building scalable microservices and integrates smoothly with Docker and Kubernetes.
-
-5. Large Community and Industry Adoption
- Spring Boot has strong community support and is widely used in banking, fintech, and large-scale SaaS platforms.
-
-For full stack developers, choosing the right backend framework can significantly impact the scalability and stability of the entire application.
-
-Spring Boot provides the structure and flexibility needed for enterprise level backend systems.
-
-What backend technology do you prefer for large scale applications and why?
-
----
-
-
-
-## Today I had the opportunity to attend a technical interview with Tata Consultancy Services (TCS) for a Java Developer role (5+ years experience).
-The discussion was very insightful and covered multiple areas including Core Java, Spring Boot, Microservices, Kafka, Multithreading, and Java 8. The interview lasted around an hour and involved several deep technical questions along with coding discussions.
-Some of the questions asked during the interview:
-Core Java
-- Difference between HashMap and ConcurrentHashMap
-- Internal working of HashMap
-- Comparable vs Comparator
-- Checked vs Unchecked exceptions
-Multithreading
-- Thread vs Runnable
-- synchronized block vs synchronized method
-- Deadlock and ways to avoid it
-- wait(), notify(), notifyAll()
-Spring / Spring Boot
-- Dependency Injection in Spring
-- Difference between @Component, @Service, and @Repository
-- @RestController vs @Controller
-- Exception handling in Spring Boot
-Microservices
-- Advantages of Microservices architecture
-- API Gateway and its purpose
-- Service Discovery
-- Communication between microservices
-Kafka
-- What is Kafka and when do we use it
-- Topics, Partitions, and Offsets
-- Consumer Groups
-Java 8 Coding
-- Find duplicate elements in a list using Streams
-- Find the second highest number using Streams
-- Count occurrences of characters in a String
-- Sort a list using Lambda expressions
-Overall, it was a great learning experience and a good opportunity to revisit many important concepts used in modern Java applications.
-Sharing this for anyone preparing for Java backend interviews. Hope this helps the community.
-
----
-
-
-
-## Recently attended a Java Backend interview, and these are some of the questions I was asked:
-
-- Explain your project architecture and your role in it
-- Difference between @RestController and @Controller
-- How does Spring MVC work internally?
-- What is data binding? Explain @Valid and @NotNull
-- Serialization and Deserialization in Spring Boot
-- Use cases of REST APIs vs MVC
-- What is thread safety in multithreading?
-- Difference between HashMap and ConcurrentHashMap
-- What is Dependency Injection in Spring?
-- Explain bean scopes in Spring
-- What is the difference between Interface and Abstract Class?
-- How does exception handling work in Spring Boot?
-Coding Questions:
-- Find a value from a HashMap using Java 8
-- Write a program to reduce a number to a single digit (e.g., 1234 → 1)
-
-It was a great learning experience!
-Would love to know if you’ve come across similar questions or any suggestions to improve 👍
-
----
-
-
-
-## Java is quietly becoming one of the most modern developer experiences again.
-A few years ago, the common complaint was simple:
-“Java has too much boilerplate.”
-But after working with Java 21 and Spring Boot 3, that perception is changing fast.
-Some things that really stand out:
-- Records removing repetitive model code
-- Pattern Matching making logic cleaner
-- Virtual Threads (Project Loom) enabling massive scalability without complex reactive frameworks
-- Spring Boot 3 simplifying modern microservice development
-As someone with 10+ years building enterprise systems, it’s interesting to see how Java has evolved.
-It kept what made it strong — stability, reliability, and a massive ecosystem — while becoming far more developer-friendly.
-Modern Java is no longer just “enterprise safe.”
-It’s becoming developer efficient again.
-Curious to hear from the community:
-What feature in modern Java has improved your development experience the most?
-
----
-
-
-
-## Today’s Java backend interview reminded me that backend engineering is not just about writing one API — and definitely not just about frameworks.
-
-𝗜𝗻 𝗮 𝘀𝗶𝗻𝗴𝗹𝗲 𝗿𝗼𝘂𝗻𝗱, 𝘁𝗵𝗲 𝗱𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻 𝗺𝗼𝘃𝗲𝗱 𝗮𝗰𝗿𝗼𝘀𝘀: ᴄᴏᴅɪɴɢ, sǫʟ, sᴘʀɪɴɢ ʙᴏᴏᴛ ɪɴᴛᴇʀɴᴀʟs, sᴇᴄᴜʀɪᴛʏ, ᴀʀᴄʜɪᴛᴇᴄᴛᴜʀᴇ, ᴀɴᴅ ʀᴇᴀʟ ᴘʀᴏᴊᴇᴄᴛ ᴅᴇᴄɪsɪᴏɴs.
-
-🚀 These are Topics: • Java 8 Streams • SQL • JPA • REST API design • Exception handling • Spring Boot internals • Security • Architecture • Performance optimization • CI/CD and Kubernetes • UI-backend integration 🚀
-
-A few questions/topics that stood out:
-- Group transactions by type and calculate total amount using Java 8 Streams
-- Write a SQL query to find total quantity sold per product in the last 30 days
-- Design `/employees/{id}` with proper 200 / 404 / 500 responses
-- Handle errors cleanly using `@ControllerAdvice`
-- Prevent SQL injection by separating query structure from input parameters
-- Explain Predicate, OOP principles, and Spring Boot auto-configuration
-- Discuss JWT, Basic Auth, OAuth, Filters vs Interceptors
-- Explain whether the architecture is truly microservices or more centralized.
-
-What stood out to me was this:
-Interviewers were not only checking whether I could write code.
-
-They were checking whether I understand how backend systems are actually built, secured, integrated, and maintained in real projects.
-
-That includes:
-writing code, designing APIs, handling failures, optimizing queries, understanding framework internals and explaining architecture clearly.
-
-For me, this was a strong reminder that backend engineering is a mix of:
-★ Fundamentals + practical design + system thinking. ★
-
-If you’re preparing for Java backend interviews, don’t prepare only framework annotations.
-Prepare for the full picture.
-
-For a clearer breakdown of these questions and topics:
-
----
-
-
-
-## 🎯 Interview Experience – Java Backend Developer for IBS Software, I attended an interview for the Java Developer role.
-Below are some of the key questions that were asked 👇
-
-🔹 Core Java
- 1️⃣ Tell me about yourself.
- 2️⃣ Which is the Latest version of java in your Project.?
- 3️⃣ Use of Record Class and When we Used Sealed Classes in Java.?
- 4️⃣ When We Use Record Classes ? Can record classes extend other classes? Why?
- 5️⃣ Difference Between Default and Static Methods .?
- 6️⃣ What is a Functional Interface?
- 7️⃣ Difference between Abstract Class and Interface?
- 8️⃣ Can Functional Interfaces extend other interfaces?
- 9️⃣ Explain Difference between Runnable and Callable?
- 🔟 What is the relationship between Lambda Expressions and Functional Interfaces?
-
-🔹 Spring Boot:
- 1️⃣1️⃣ How that JWT token you are creating & using it?
- 1️⃣2️⃣ How do you optimize an API?
- 1️⃣3️⃣ What is API Gateway? Use for API Gateway?
- 1️⃣4️⃣ Internal working of REST API in Spring Boot?
- 1️⃣5️⃣What is Spring Security & where does the OAuth2 comes into picture?
- 1️⃣6️⃣ Can you tell me what are controller layer annotations?
-
-Thanks for reading!
-
-If you find these interview questions helpful, please feel free to connect with me for more interview-related posts.
-
-Do share your feedback in the comments. Your comments and suggestions are always welcome.
-
----
-
-
-
-## 💳 American Express
- 📌 Recent Java Backend Interview Questions (March 2026)
- 💎 Experience : 2–4 YOE
-
-🧩 Core Java
-Q1. What is the difference between synchronized, ReentrantLock, and ReadWriteLock? When would you use each?
-Q2. Explain fail-fast vs fail-safe iterators in Java collections.
-Q3. Why are Strings immutable in Java and what benefits does it provide in multithreaded environments?
-Q4. How does the ForkJoinPool work and when should it be used?
-
-🌱 Spring Boot / Backend
-Q5. What is the difference between @Bean and @Component?
-Q6. How do filters, interceptors, and AOP differ in Spring Boot?
-Q7. What are the differences between ApplicationContext and BeanFactory?
-Q8. How do you configure multiple data sources in Spring Boot?
-Q9. How would you design a scalable REST API in Spring Boot for high traffic?
-
-🗄️ Database & Backend Fundamentals
-Q10. What is database indexing and how does it improve query performance?
-Q11. What is a composite index and when should it be used?
-Q12. What is the difference between optimistic locking and pessimistic locking?
-Q13. How do you handle database transactions across microservices?
-
-📊 DSA / Coding
-Q14. Minimum deletions required to make character frequencies unique in a string.
-Q15. Find the longest prefix where removing one element makes frequencies equal.
-Q16. Find the longest substring without repeating characters.
-Q17. Solve the Fruit Into Baskets problem using a sliding window approach.
-Q18. Solve the Celebrity Problem using a stack-based approach.
-
-🧱 System Design / Backend Architecture
-Q19. Design a payment gateway system that handles retries and failures.
-Q20. Design a shopping cart service that supports millions of users.
-Q21. Design a secure checkout system with fraud detection.
-Q22. How do you ensure high availability and fault tolerance in microservices?
-Q23. How would you design a scalable transaction processing system?
-
----
-
-
-
-## 🔎 After 9 years in Java backend development, one thing is becoming very clear:
-AI is becoming part of the backend stack.
-Recently, I experimented with Spring AI to see how easily AI capabilities could be integrated into a typical Spring Boot microservice.
-Honestly, I expected a complex setup.
-But the result was surprising.
-Within 10 minutes, I was able to expose an AI-powered endpoint from a Spring Boot application.
-No ML pipeline.
-No model training.
-No Python stack.
-Just three simple steps:
-✔ Add the Spring AI dependency
-✔ Configure the API key
-✔ Expose a REST endpoint
-And the API could start generating intelligent responses.
-This shows how quickly backend architecture is evolving.
-For years, most backend systems have focused on:
-- CRUD services
-- Authentication & authorization
-- Database integrations
-- Messaging & integrations
-But modern backend platforms will increasingly include:
-🤖 AI-powered APIs
-⚙ Intelligent automation
-🧠 Context-aware services
-💡 AI copilots embedded into enterprise platforms
-Which means the backend stack is evolving toward:
-Java + Spring Boot + Microservices + Cloud + AI
-AI will not replace backend engineers.
-But backend engineers who understand how to integrate AI into enterprise systems will shape the next generation of platforms.
-Exciting times ahead for backend developers.
-Curious to know:
-- Are you already integrating AI into your microservices or enterprise applications?
-
-Things to do:
-// ================================
-// Spring Boot + Spring AI Example
-// ================================
-
-// Step 1: Add Dependency (pom.xml)
-/*
-<dependency>
- <groupId>org.springframework.ai</groupId>
- <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
-</dependency>
-*/
-
-// Step 2: Configure API Key (application.properties)
-/*
-spring.ai.openai.api-key=YOUR_API_KEY
-*/
-
-// Step 3: Create AI Controller
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.ai.chat.client.ChatClient;
-
-@RestController
-public class AIController {
-
- private final ChatClient chatClient;
-
- public AIController(ChatClient.Builder builder) {
- this.chatClient = builder.build();
- }
-
- @GetMapping("/ask-ai")
- public String askAI(String message) {
- return chatClient.prompt(message)
- .call()
- .content();
- }
-}
-
-// Example API Request
-// GET http://localhost:8080/ask-ai?message=Explain microservices architecture
-
- Response:
-- AI generated explanation of microservices architecture
-
----
-
-
-
-## Using git How to remove changes from Working Tree, Staging Area, Local Repository?
-
-📌 git restore --staged file3.java
- ➡️ Remove the staged file from the staging area.
- ➡️ File will still be available in the working tree.
-
-🔹 Reset
-Two types of reset are available.
-📌 git reset --soft HEAD~1
- 🔸 hard ⇒ Remove the changes from local repository, staging area, working tree
-📌 git reset --hard HEAD~1
- 🔸 soft ⇒ Remove the changes from local repository, staging area and keep them in the working tree
-📌 git reset --hard HEAD~1
-
- How to remove changes from Working Tree?
-📌 rm file.java
-
- How to remove changes from Central Repository?
- I will cover on next post Don't forget to Follow Hariprasath V
-
-♻️Repost so others can learn and grow together.
- 🔔 Follow Hariprasath V for daily Java, DSA, and System Design,Springboot,Microservices,Devops,Full Stack resources.
-
-===============================================
-
----
-
-
-
-## 📌 Interview Experience – Virtusa | Java Full Stack Developer
-Recently, I attended an interview for the Java Full Stack Developer role at Virtusa. The interview lasted around 1 hour and focused mainly on Java, Spring Boot, and database concepts. I wanted to share some of the questions that were asked, which may help others preparing for similar roles.
-🔹 Some of the questions asked during the interview:
-- Write a program to convert a List into a Map in Java.
-- Write code to find the maximum sum of a subarray for a given array.
-- Write a small code example demonstrating a Lambda expression.
-- What is the difference between Lambda expressions and Functional Interfaces?
-- What are Exceptions in Java?
-- Can we handle exceptions inside a Lambda expression?
-- What are Optional classes in Java and why are they used?
-- What are the SOLID principles in object-oriented design?
-- How do you handle global exceptions in Spring Boot?
-- How do you secure a Spring Boot application?
-- What is Kafka and where is it used?
-- What is Normalization in SQL?
-- What is the difference between DELETE, TRUNCATE, and DROP in SQL?
-- What is the purpose of annotations in Spring Boot / Java?
-🔹 Discussion also included:
-- Java 8 features
-- REST API concepts
-- Spring Boot fundamentals
-- SQL and database design
-💡 Key takeaway:
-Having a strong understanding of Java fundamentals, Java 8 features, Spring Boot concepts, and SQL basics is very important for this role.
-Overall, it was a great learning experience and a good technical discussion.
-Hope this helps anyone preparing for Java Full Stack Developer interviews!
-
----
-
-
-
-## 30LPA at JPMorganChase
-
-This is the classic question they generally ask
-
-𝗖𝗼𝗿𝗲 𝗝𝗮𝘃𝗮
- 1. How to sort a map?
- 2. Write a singleton class.
- 3. Difference between comparable and comparator.
- 4. New features in JAVA 7 and 8? Features of Java 8, 11, and 17.
- 5. What is try with resources?
- 6. What is a multi-catch statement in Java?
- 7. What is runnable and callable?
- 8. Types of exceptions in Java. Exception hierarchy in Java.
- 9. What are the different Design patterns in Java?
- 10. OOP
- 11. ConcurrentHashMap internals.
- 12. How does Java garbage collection work?
-
-𝗗𝗦𝗔/𝗖𝗼𝗱𝗶𝗻𝗴
- 1. How to find duplicate strings in a list of strings?
- 2. Write a program to find if a string is a palindrome string.
- 3. Combination Sum II (recursion problem).
- 4. Given an array, remove all odd numbers, multiply each number by a constant, and return the sum using Java Streams.
- 5. Missing integer in consecutive array.
- 6. Move all zeroes to the end of an array.
- 7. Check if two strings are anagrams.
- 8. Longest common prefix among strings.
- 9. Longest increasing subsequence.
- 10. Best time to buy & sell stock (maximize profit).
- 11. Dijkstra’s algorithm.
- 12. Coin change problem (minimum coins).
- 13. Reverse-add palindrome problem.
-
-𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲 (𝗦𝗤𝗟)
- 1. How to find the number of tables and their columns in the SQL DB?
- 2. What is the purpose of a database index?
- 3. How do you detect duplicate rows in SQL?
- 4. How would you design a schema for a ride-sharing app?
-
-𝗪𝗲𝗯/𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸𝘀
- 1. Difference between REST and SOAP.
- 2. What is Spring?
- 3. Why do we use Spring?
- 4. Difference between Spring and Spring Boot?
- 5. How does autowiring work in Spring?
- 6. What is Spring Security?
- 7. What is a RESTful API?
- 8. Difference between HTTP and HTTPS.
-
-𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻
- 1. Explain the design of one of your recent projects.
- 2. Fraud detection model for transactions.
- 3. Database design for ride-sharing.
- 4. Data warehouse for an online retailer.
- 5. Design a news aggregator.
-
-𝗦𝗲𝗿𝘃𝗲𝗿/𝗦𝘆𝘀𝘁𝗲𝗺
- 1. How to find server crash reasons?
- 2. How to find server memory?
- 3. How do you debug high CPU or memory issues in the JVM?
- 4. How do you capture heap/thread dumps?
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗮𝗻 𝗶𝗻-𝗱𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-
-Stay Hungry, Stay FoolisH!
-
----
-
-
-
 ## 🚀 Java + Spring Boot + Microservices Interview Questions (Shared by a Friend after EPAM Interview)
 
 One of my friends recently attended a technical interview at EPAM Systems for a Java Backend role.
@@ -2129,15 +1382,7 @@ Sharing some trending questions that were discussed during the interview. These 
 💡 Tip: Most companies now focus on Microservices design, Spring Boot internals, and Java 8 Streams, not just theory.
 
 Hope this helps developers preparing for backend interviews.
-
-📌 If you want the answers in PDF, comment “PDF” and I will share it.
-
-📌 Also join my WhatsApp Community – Java Seekho Community for daily Java interview questions, coding tips, and learning resources. 👇
-
 ---
-
-
-
 ## 🚀 Spring Boot Interview Preparation
 
 One of my friends recently attended an interview at Accenture for the Customer Support Engineer role. Sharing some core and trending Spring Boot questions that were asked and discussed in the interview. These questions are very helpful for anyone preparing for Java / Spring Boot interviews (3–5 years experience).
@@ -2177,15 +1422,8 @@ Most Asked Questions:
 
 Practicing these questions will help a lot if you are preparing for Spring Boot / Microservices interviews.
 
-
-💬 Comment “JAVA” if you want a full list of 100+ Java + Spring Boot interview questions.
-
 💡 If you are preparing for interviews, feel free to connect and practice together. Let’s grow together! 💯
-
 ---
-
-
-
 ## Recently attended an #interview with #EY and wanted to share the questions that were discussed. The interview covered Java fundamentals, Spring Boot, Microservices, AWS, and DevOps related topics.
 
 The round started with basic discussion about my background.
@@ -2194,7 +1432,6 @@ Introduction and #Project Discussion:
 
 Explanation of my current and past projects
 Tech stack used and responsibilities in the project
-
 
 Difference between #Spring and Spring Boot?
 How security works in your project?
@@ -2207,13 +1444,11 @@ Difference between @Component, @Service, and @Repository?
 How @Transactional works?
 How microservices communicate with each other?
 
-
 What is the #volatile keyword?
 What is the use of volatile?
 What is #abstraction and polymorphism?
 Difference between #encapsulation and abstraction?
 What is the difference between Spring, #SpringBoot, JPA, and #Hibernate?
-
 
 How do you #deploy your service in a serverless #environment?
 What is EC2 and how do you create an EC2 instance?
@@ -2225,7 +1460,6 @@ How do you configure a Dockerfile?
 Have you written Jenkins pipelines?
 How do you configure SonarQube?
 
-
 What is your strength?
 What is your weakness?
 
@@ -2234,11 +1468,7 @@ Overall, the interview covered a wide range of topics including Java fundamental
 Hope this helps someone preparing for Java developer interviews.
 
 All the best to everyone preparing.
-
 ---
-
-
-
 ## Why Modern Java 25 + Spring AI is the High-Performance Engine for the AI Era.
 
 If you still think Java is "just" about maintaining legacy enterprise monoliths, it's time to look again. With Java 25 (LTS) and the Spring AI framework, the platform has evolved into an engine designed for the massive scale that AI demands.
@@ -2257,11 +1487,7 @@ By staying in the Java ecosystem, you aren’t choosing "old" over "new." You ar
 Part 4 of my series on Spring AI. Bridging the gap between reliability and the future of intelligence.
 
 Is your Java knowledge ready for 2026? Check out my "Modern Java Fast-Track" workshop in the first comment!
-
 ---
-
-
-
 ## 🎯 Interview Experience – Java Backend Developer
 Yesterday, I attended an interview for the Java Backend Developer role.
 Below are some of the key questions that were asked 👇
@@ -2300,11 +1526,7 @@ Thanks for reading!
 If you find these interview questions helpful, please feel free to connect with me for more interview-related posts.
 
 Do share your feedback in the comments. Your comments and suggestions are always welcome.
-
 ---
-
-
-
 ## Interview Experience – L1 & L2
 
 (Java | Spring Boot | AWS | Microservices - 7 YOE)
@@ -2349,11 +1571,7 @@ Do share your feedback in the comments. Your comments and suggestions are always
  Since I worked with SQS: explained SQS implementation in Spring Boot - Follow up on max message size
 - JUnit version and Mockito usage
 - SAML assertion in SSO login flow
-
 ---
-
-
-
 ## 🚀 Top Interview Questions for Java Spring Boot Microservices Developers (8+ Years Experience)
 
 If you’re preparing for senior / lead backend roles, these are the questions interviewers actually ask 👇
@@ -2457,11 +1675,7 @@ If you’re preparing for senior / lead backend roles, these are the questions i
 ▪ Handling failures in distributed systems
 ▪ CAP Theorem in real-world systems
 💡 If you can explain these with real examples, you’re already at senior/lead level.
-
 ---
-
-
-
 ## If you write Java in 2026, you can't stay stagnant. The software world moves fast adapt or get left behind. Being "just a Java dev" won't cut it; become a modern backend engineer.
 
 I've seen talented devs stall because they stopped learning.
@@ -2480,11 +1694,7 @@ Event-Driven – Kafka/RabbitMQ for async systems.
 AI/LLM Integration – Spring AI, LangChain4j.
 
 Are you building your future or just clocking in?
-
 ---
-
-
-
 ## Clear Next Java Developer Interview
 
 𝗧𝗼𝗽𝗶𝗰 𝟭: 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗳𝗹𝗼𝘄 𝗮𝗻𝗱 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲
@@ -2539,11 +1749,7 @@ Are you building your future or just clocking in?
 Use code JAVA10.
 
 Stay Hungry, Stay FoolisH!
-
 ---
-
-
-
 ## As a Java developer,
 
 Please learn:
@@ -2632,15 +1838,7 @@ Please learn:
 - Containerization with Docker
 - Orchestration with Kubernetes
 - Source control (Git), versioning, branching strategies
-
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
-
-Use code 𝗝𝗔𝗩𝗔𝟰𝟬
-
 ---
-
-
-
 ## Complete Roadmap to Become a Java Developer:
 
 Learn these things (preferably) in the given order:
@@ -2657,16 +1855,8 @@ Learn these things (preferably) in the given order:
 10. Deployment of Spring Boot Apps on Cloud (AWS, Azure or Google Cloud)
 11. Optional - Serverless, Batch processing with Spring, etc.
 
-Preparing for interviews? Start revising these today
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁.
-
-
 keep learning, keep sharing !
-
 ---
-
-
-
 ## 1. Why does a Spring Boot app consume more memory over time?
 2. How do you detect bean initialization issues in large applications?
 3. What happens if @PostConstruct throws an exception?
@@ -2701,11 +1891,7 @@ keep learning, keep sharing !
 𝑶𝑹
 
 All the best!
-
 ---
-
-
-
 ## Stop memorizing syntax and start breaking the framework.
 
 23 sections into my Spring Boot journey, and my biggest takeaway isn't a line of code. It’s the shift from "How" to "Why."
@@ -2726,11 +1912,7 @@ Here is how that "clicking" moment happened:
 Next up: A deep dive into the E-commerce backend I’m currently building with these tools! 🏗️
 To my fellow backend devs: What concept took you the longest to really "get"? For me, the Bean Lifecycle was the final boss! 🛡️
 TELUSKO
-
 ---
-
-
-
 ## Java Backend Interview Questions (4–5 Years Experience)
 
 Sharing some practical Spring Boot / Java backend interview questions that focus more on real-world decision-making rather than just annotations. Helpful for developers preparing for backend interviews or strengthening fundamentals.
@@ -2765,6 +1947,4 @@ Sharing some practical Spring Boot / Java backend interview questions that focus
 28. How do you prevent breaking changes during deployments?
 29. Why does @ConfigurationProperties fail silently?
 30. What Spring Boot decision has caused you a real production issue?
-
 ---
-

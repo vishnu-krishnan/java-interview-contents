@@ -40,11 +40,7 @@
 38. Distributed Data Processing: Frameworks like Apache Spark or Apache Flink for large-scale data processing.
 39. GraphQL: Alternative to REST for inter-service communication.
 40. JVM Tuning for Distributed Systems: Memory management and performance tuning in distributed environments.
-
 ---
-
-
-
 ## 🚨 EY Java Full Stack Developer (L1) Interview – Questions Asked (4–6 YOE) 🔥
 
 Sharing insights from a recent EY Java Full Stack Developer – L1 interview experience (shared by a candidate).
@@ -98,11 +94,7 @@ This round clearly checks:
 If you're targeting strong product-based or consulting companies, prepare at this depth.
 
 Hope this helps someone in their preparation journey 🚀
-
 ---
-
-
-
 ## Java Microservices – Latest Interview Questions (2026 Trend)
 Recently I compiled some frequently asked questions in Java Microservices interviews for 3–5 years experience:
 🔹 Core Java
@@ -145,11 +137,7 @@ How do you monitor logs?
 What is Rate Limiting?
 💡 Observation:
  Interviewers are focusing more on real-time architecture and problem-solving instead of theoretical definitions.
-
 ---
-
-
-
 ## RabbitMQ vs Kafka ⚡🐰
 
 Most people compare them wrong.
@@ -257,13 +245,7 @@ Because:
 
 Both are powerful.
 Choose based on your system’s need — not on hype.
-
 ---
-
-
-
----
-
 ## Apache Kafka vs RabbitMQ
 
 Kafka and RabbitMQ both handle messages, but they solve different problems.
@@ -275,9 +257,7 @@ RabbitMQ is a message broker. Producers publish messages to exchanges. Those exc
 The common mistake is using Kafka like a queue or RabbitMQ like an event log. They're different tools built for different use cases.
 
 --
-
 ---
-
 ## 🚀 Day 76/100 - Spring Boot - Messaging with RabbitMQ
 
 RabbitMQ is a popular message broker that enables reliable, asynchronous communication using AMQP (Advanced Message Queuing Protocol).
@@ -286,7 +266,6 @@ It’s widely used for:
 🔹Background processing
 🔹Task queues
 🔹Decoupling microservices
-
 
 ➡️ How to Configure
 
@@ -297,15 +276,12 @@ It’s widely used for:
 
 See attached images 👇 for code
 
-
 ➡️ How It Works
 
 1️⃣ Producer sends message to a queue
 2️⃣ RabbitMQ stores it safely
 3️⃣ Consumer listens and processes it asynchronously
-
 ---
-
 ## 12 Architectural Concepts Developers Should Know
 
 1 - Load Balancing: Distributes incoming traffic across multiple servers to ensure no single node is overwhelmed.
@@ -322,9 +298,7 @@ See attached images 👇 for code
 12 - Auto Scaling: Automatically adds or removes compute resources based on defined metrics.
 
 --
-
 ---
-
 ## 🚀 Day 75/100 - Spring Boot - Messaging (Overview)
 
 Modern applications often rely on asynchronous communication instead of direct calls.
@@ -333,7 +307,6 @@ Spring Boot makes this possible with message-driven architecture, which helps to
 🔹Loose coupling
 🔹Better scalability
 🔹Event-driven systems
-
 
 ➡️ Popular Messaging Options
 
@@ -352,16 +325,12 @@ A Java standard API for messaging.
 🔹Works with brokers like ActiveMQ
 🔹Enterprise-level integration
 
-
 Starting from RabbitMQ, we'll dive deep into each in the next posts.
-
 
 - Key Takeaway
 
 Messaging enables systems to communicate asynchronously and stay decoupled, which is a key principle in microservices architecture.
-
 ---
-
 ## 🚀 Sharing My Interview Journey: Microservices and Kafka Questions 🚀
 In my journey as a Java Fullstack Developer candidate, I faced some fascinating questions on microservices and event-driven systems. Here are a few that stood out—great for anyone brushing up on system design and Kafka concepts...
 
@@ -402,9 +371,7 @@ How do offsets affect these guarantees?
 How are offsets managed in consumer groups?
 What happens to offsets during rebalance?
 What is partition reassignment?
-
 ---
-
 ## 🚀 Top 10 Microservices Interview Questions (Kafka | Docker | Zipkin | CI/CD)
 
 Preparing for Java Microservices Interviews (2–3 Years Experience)?
@@ -439,24 +406,18 @@ Automates build, test, and deployment process.
 
 🔹 10. What is Jenkins Pipeline?
 Automates workflow: Code → Build → Test → Deploy.
-
 ---
-
 ## 🔥 Most Asked Real Interview Question:
 - Explain your project architecture using Kafka, Docker, and CI/CD pipeline
 
 💡 Pro Tip:
 Always explain flow clearly:
 Client → API Gateway → Microservices → Kafka → Database → Docker → Jenkins
-
 ---
-
 ## 🎯 Perfect for TCS | Infosys | Capgemini interviews
 
 - Comment "MICRO" if you want real-time scenario questions & answers
-
 ---
-
 ## Saga Pattern in Microservices: 2 Ways to Handle Distributed Transactions
 In microservices, a single business operation often spans multiple services.
 For example: creating an order may involve payment, inventory, and delivery services.
@@ -480,9 +441,7 @@ There are two main ways to implement Saga:
  ✖ tighter coupling
 Both approaches solve the same problem — keeping data consistent across services without distributed transactions.
 Choosing the right one depends on system complexity and team preferences.
-
 ---
-
 ## 🚀 Apache Kafka Interview Questions & Answers (Must-Know for Backend Developers)
 Preparing for backend or microservices interviews? Here are some commonly asked Apache Kafka questions with crisp answers 👇
 🔹 1. What is Apache Kafka?
@@ -517,9 +476,7 @@ A library for building real-time stream processing apps.
 For event-driven architecture, log aggregation, real-time analytics.
 💡 Pro Tip:
 Focus on real-world use cases like order processing, notifications, and microservices communication.
-
 ---
-
 ## .
 📌 DAY 5/30 – JSON WEB TOKEN (JWT) IN SYSTEM DESIGN
 
@@ -612,9 +569,7 @@ Claims can be:
 6️⃣ Server verifies the signature and expiration
 7️⃣ If valid, access is granted
  This allows backend services to authenticate the user without maintaining session state.
-
 ---
-
 ## 🔐 JWT Authentication & Authorization — Explained Clearly
 
 JWT (JSON Web Token) is a stateless token-based security mechanism widely used in APIs, microservices, and cloud-native applications.
@@ -671,9 +626,7 @@ Server:
 ✔️ Don’t store sensitive data in payload
 
 🎯 JWT combines authentication and authorization in a scalable way.
-
 ---
-
 ## 𝐓𝐨𝐩 𝐌𝐢𝐜𝐫𝐨𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐃𝐞𝐬𝐢𝐠𝐧 𝐏𝐚𝐭𝐭𝐞𝐫𝐧𝐬 🤷
 ➡ API Gateway Pattern: Centralizes external access to your microservices, simplifying communication and providing a single entry point for client requests.
 
@@ -690,11 +643,8 @@ Server:
 ➡ Saga Pattern: Manages distributed transactions across multiple microservices, ensuring data consistency while maintaining the autonomy of your services.
 
 ➡ CQRS (Command Query Responsibility Segregation) Pattern: Separates the read and write operations in a microservice, improving performance, scalability, and maintainability.
-
 ---
-
 ## 🚀 #Microservices #Architecture
-
 
 🧩 #What #Are #Microservices?
 ->Microservices architecture is a design approach where a large application is broken into independent, loosely coupled services.
@@ -707,14 +657,12 @@ Each service:
 
 ->Communicates via lightweight #APIs (typically #REST, #gRPC, or #messaging #queues)
 
-
 ⚙️ Key Benefits
 
 ✅ #Scalability – Scale only the services that need it
 ✅ #Flexibility – Use different tech stacks per service
 ✅ #Faster #Delivery – Independent teams ship features quickly
 ✅ #Resilience – Failure in one service doesn’t break the whole system
-
 
 ➡️ Core Components
 
@@ -728,17 +676,8 @@ Each service:
 
 ✔️ #Database #per #Service: Each service owns its data
 
-
 🔔 Follow: Varsha D. for more Updates.🎯
 
 ♻ Repost to help others find it.
 
-
 📝Document credit goes to @Mohamed El Laithy
-
-
-
-
-Image preview
-Microservice Architecture Guide
-

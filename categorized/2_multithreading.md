@@ -50,9 +50,7 @@ Multithreading doesn’t just make your app faster
 It forces you to think like a system designer.
 
 Have you ever faced performance issues that multithreading solved (or created 😅)?
-
 ---
-
 ## 🔹 Most Asked Java Multithreading Interview Questions
 
 Multithreading is one of the most common topics in Java backend interviews. Here are some questions that frequently appear for Java developers 👇
@@ -79,9 +77,7 @@ Deadlock happens when two or more threads wait indefinitely for each other’s r
 
 7️⃣ What is ExecutorService?
 ExecutorService manages a pool of threads and simplifies concurrent task execution.
-
 ---
-
 ## What’s new in Java 26 (for Developers) 🚀
 
 Java 26 is here, and while it’s not an LTS release, it’s a very important one.
@@ -95,9 +91,7 @@ Here are a few highlights:
 - HTTP/3 support is now built into the Java HTTP client
 - New APIs for cryptography (PEM) and lazy initialization
 - Java is tightening immutability, “final” is about to really mean final
-
 ---
-
 ## Why ConcurrentHashMap Does NOT Allow a Null Key (While HashMap Does)?
 
 This is one of those Java interview questions that looks simple —
@@ -116,7 +110,6 @@ In a HashMap, you might write:
  map.put(null, "value");
 
 - This works because operations are typically single-threaded or externally synchronized.
-
 
 But in a concurrent environment, things get tricky.
 
@@ -156,9 +149,7 @@ This ensures:
  - Cleaner concurrent semantics
 
 Java #Concurrency #ConcurrentHashMap #BackendEngineering #JavaInternals
-
 ---
-
 ## Most Java developers don't know this exists.
 
 One line in Spring Boot 3.2 that handles 10x more requests:
@@ -256,9 +247,7 @@ ReentrantLock — lets virtual thread park safely.
 
 Most tutorials show the feature.
 Very few explain WHY it works and WHERE to be careful.
-
 ---
-
 ## Hey Java Developers 👋
 
 Here are 15 must-know Java & Spring Boot interview questions that every backend developer should master 🚀
@@ -300,13 +289,8 @@ Here are some unexpected, brain-twisting questions interviewers love asking to t
 
 These questions don’t just test Java — they test your mental model of the JVM, memory, concurrency, and language design.
 
-
 hashtag
-
 ---
-
-
-
 ## Core Java (Deep Concepts):
 
 1️⃣ What happens internally in HashMap when two keys generate the same hash?
@@ -353,13 +337,8 @@ getters
 equals()
 hashCode()
 toString()
-
 ---
-
-
-
 ## Java Learning Roadmap
-
 
 |-- Java Basics
 | |-- Introduction to Java
@@ -450,16 +429,8 @@ toString()
 
 Like & repost to educate others. Bookmark💪
 
-Preparing for interviews? Start revising these today
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁.
-
-
 keep learning, keep sharing !
-
 ---
-
-
-
 ## 🚨 Suppose you are in a Java Backend Interview and the interviewer asks:
 “If I ask you to create 100,000 threads in Java — how will you do it?”
 
@@ -505,6 +476,4 @@ public class VirtualThreadDemo {
 🧵 Ideal for blocking I/O operations (like DB calls or HTTP)
 🔄 Seamlessly works with existing Java thread APIs
 ⚡ No need to re-architect your app for async frameworks
-
 ---
-

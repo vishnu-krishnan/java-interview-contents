@@ -66,7 +66,6 @@ class Singleton {
 - Can be made thread-safe
 - Used when only one instance is required
 
-
 📌 Interview Tip
 
 Singleton can break due to:
@@ -76,9 +75,7 @@ Singleton can break due to:
 - Cloning
 
 Always use proper handling to make it robust.
-
 ---
-
 ## 🧠 One Java Pattern That Makes Your Code Flexible: Strategy Pattern
 
 One pattern I’ve found extremely useful in real-world Java applications is the Strategy Pattern.
@@ -129,9 +126,7 @@ Instead of asking “which condition?”, you start asking
 That shift makes systems easier to scale and evolve.
 
 What’s a place where you replaced condition-heavy code with a pattern?
-
 ---
-
 ## What if understanding a Java framework didn’t come from using it but by building it yourself? 😁
 
 Aetheris comes from the Greek word “aether”, referring to the pure and invisible air of the gods.

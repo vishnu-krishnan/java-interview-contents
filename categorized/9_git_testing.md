@@ -28,9 +28,7 @@
 26. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 --𝐬𝐨𝐟𝐭 𝐇𝐄𝐀𝐃^: Undo the last commit, but keep the changes.
 27. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 --𝐡𝐚𝐫𝐝: Resets everything to a previous commit, erasing all uncommitted changes.
 28: 𝐠𝐢𝐭 𝐛𝐫𝐚𝐧𝐜𝐡 --𝐬𝐞𝐭-𝐮𝐩𝐬𝐭𝐫𝐞𝐚𝐦-𝐭𝐨 𝐫𝐞𝐦𝐨𝐭𝐞_𝐛𝐫𝐚𝐧𝐜𝐡: Sets the upstream branch to the specified
-
 ---
-
 ## From Idea to Launch: The Software Development Process
 
 The software development cycle is a structured process used by development teams to design, develop, and deliver high-quality software. This cycle consists of several key stages, each playing a crucial role in ensuring the success of the software project. Here’s an overview of the typical software development cycle:
@@ -68,10 +66,6 @@ The software development cycle is a structured process used by development teams
 🔹𝗕𝗲𝘀𝘁 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲𝘀: Follows continuous delivery and continuous deployment (CI/CD) practices to ensure smooth and reliable releases.
 
 𝐈 𝐡𝐨𝐩𝐞 𝐭𝐡𝐢𝐬 𝐡𝐞𝐥𝐩𝐬 𝐲𝐨𝐮 🙌
-
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
-
-Use code 𝗝𝗔𝗩𝗔𝟰𝟬
 
 Do save it for future reference and follow &
 Rani Dhage for more! ✨

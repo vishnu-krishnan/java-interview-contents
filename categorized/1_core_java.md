@@ -57,9 +57,7 @@ final class A {}
 📌 Interview Tip
 
 final is widely used to create immutable objects and to improve security and performance in Java applications.
-
 ---
-
 ## 🚀 Java Exception Handling – Top Interview Questions (Experienced Developers)
 
 Exception handling is not just about try-catch.
@@ -93,15 +91,12 @@ If you have 2+ years of experience, expect questions like these 👇
 ✔ Stronger interview confidence
 
 💬 If you can explain these clearly, you’re operating at a Senior Java Developer level.
-
 ---
-
 ## Most Java developers confuse this 👇
 Fail-Fast vs Fail-Safe ⚡🛡️
 
 It feels like just another definition-based question…
 But interviewers are actually testing your understanding of collections behavior 👀
-
 
 🔴 Fail-Fast Iterator
 
@@ -114,7 +109,6 @@ ArrayList, HashMap
 ✔️ Fast
 ❌ Not safe during modification
 
-
 🟢 Fail-Safe Iterator
 
 - Works on a clone (copy) of the collection
@@ -125,11 +119,9 @@ CopyOnWriteArrayList, ConcurrentHashMap
 ✔️ Safe during modification
 ❌ Slightly slower (extra memory used)
 
-
 🔥 Real Difference (What interviewers expect):
 - Fail-Fast → Detects changes and fails immediately
 - Fail-Safe → Ignores changes by working on a copy
-
 
 💡 Simple Analogy:
 Fail-Fast ⚡
@@ -137,16 +129,13 @@ Fail-Fast ⚡
 Fail-Safe 🛡️
 = “I’ll continue with my own copy.” ✅
 
-
 🎯 Interview Tip:
 - Use Fail-Fast when performance matters
 - Use Fail-Safe when concurrent modification is expected
 
 Stop memorizing definitions.
 Start explaining behavior. 🚀
-
 ---
-
 ## Java Collections Interview Questions
 📌 Basic Level
 What is the Java Collection Framework?
@@ -203,9 +192,7 @@ Can we store null in HashMap and HashSet?
 What is the difference between fail-fast and fail-safe in real scenarios?
 Why is TreeMap slower than HashMap?
 What happens internally when HashMap resizes?
-
 ---
-
 ## Most asked #Java 8 programs in Interview
 
 1. Reverse a String using Java 8
@@ -259,7 +246,6 @@ What happens internally when HashMap resizes?
  49. Create Stream from Collection
  50. Generate Infinite Stream using iterate
 
-
 1.Send me connection request so that you can message me.
 
 2.Send me CV , notice period , current and preferred location , years of experience if criteria is matched .
@@ -269,9 +255,7 @@ What happens internally when HashMap resizes?
 4.You will get mail , Recruiter will contact you .
 
 5.If you pass Technical Interview , You will get selected and Onboarding starts .
-
 ---
-
 ## Java Stream API is confusing… until you solve THESE 🔥
 
 Most developers keep reading theory but still get stuck in interviews.
@@ -293,9 +277,7 @@ Instead of writing long loops, I used:
 
 💡 Practicing problems > Reading theory
 Here are the code snippets 👇
-
 ---
-
 ## Java Interviews are not always about Java… sometimes it’s about Java + Vibes 😅
 
 After attending multiple interviews, I realized something interesting.
@@ -332,9 +314,7 @@ So if you ever get rejected after a good interview, don’t doubt your skills.
 
 Maybe it wasn’t about Java…
 Maybe it was just about the vibes.
-
 ---
-
 ## 𝐓𝐨𝐩 50 𝐉𝐚𝐯𝐚 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐚𝐧𝐝 𝐀𝐧𝐬𝐰𝐞𝐫𝐬 𝐏𝐃𝐅
 
 In this Document, you will find a collection of 50 Java interview questions and answers that will help you prepare for your next Java programming interview.
@@ -342,9 +322,7 @@ In this Document, you will find a collection of 50 Java interview questions and 
 The notes are divided into two sections: basic and advanced. The basic section covers the fundamental Java topics that every Java developer should know, such as data types, operators, control statements, arrays, strings, classes, objects, constructors, methods, interfaces, and abstract classes.
 
 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐏𝐃𝐅:
-
 ---
-
 ## 𝐌𝐨𝐬𝐭 𝐀𝐬𝐤𝐞𝐝 𝐉𝐚𝐯𝐚 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 (100 𝐐&𝐀) 𝐏𝐃𝐅
 
 By studying these questions and answers, you'll be well-equipped to tackle any Java interview with confidence. So, let's dive in and start preparing for your next Java interview!
@@ -352,9 +330,7 @@ By studying these questions and answers, you'll be well-equipped to tackle any J
 To help you prepare, we have compiled a list of the most commonly asked Java interview questions and answers. This PDF contains 100 Q&A that cover topics such as Java basics, object-oriented programming, collections, multithreading, exception handling, and more.
 
 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐏𝐃𝐅:
-
 ---
-
 ## Q.Sort Map by Values & use java8.
 Map<String, Integer> map = Map.of("apple", 3, "banana", 1, "kiwi", 2);
 To sort a Map by its values in Java 8, you must convert the entry set into a Stream, sort it using a value-based comparator, and collect the results into a LinkedHashMap to preserve the sorted order.
@@ -389,9 +365,7 @@ Map<String, Employee> topPaidByDept = employeeList.stream()
  Optional::get
  )
  ));
-
 ---
-
 ## Records in Java are used to create immutable data objects with minimal code.
 They automatically generate constructors, getters, equals(), hashCode(), and toString().
 
@@ -402,9 +376,7 @@ Java 14 → Preview
 Java 15 → Preview (second iteration)
 
 Java 16 → Official release
-
 ---
-
 ## Refactoring in Java isn’t “clean-up”.
 It’s how you keep change cheap.
 
@@ -435,18 +407,11 @@ Refactor like a professional:
  ✅ behaviour stays the same
 
 What refactor gives you the biggest win in real production code?
-
-Image preview
-Java Refactoring Best Practices
-
 ---
-
 ## ✒ Write a method to verify whether the given two strings are anagrams using Java Streams.
 
 Input - CarRace, RaceCar and BatRat, CatRat
-
 ---
-
 ## 📌Java Control Flow Statement Cheatsheet. (Explained)
 
 ⭕Here is the quick reference guide for control flow statements in Java.
@@ -468,9 +433,7 @@ Looping statements are used to execute a set of statements repeatedly until supp
 
 🟤Branching Statements :
 Branching statements or jump statements are used to transfer the control of execution to some other part of the program.
-
 ---
-
 ## “I thought I knew Strings… until my recent interviews proved me wrong!” 😅
 
 During my recent #Java developer interviews (while switching jobs), I was hit with some deceptively simple-looking String questions —
@@ -512,11 +475,8 @@ Check these out 👇 — can you guess the outputs? 🤔
 
 💥 Most developers fail these not because of logic — but because they don’t truly get how JVM handles Strings internally.
 
-
 Thanks Vipul Tyagi for ur Detailed Explanation ✨
-
 ---
-
 ## 📌Java Collections Cheat Sheet. (complete Guide)
 
 ⭕Here is the quick reference guide for collections in java
@@ -534,12 +494,8 @@ Thanks Vipul Tyagi for ur Detailed Explanation ✨
 ➡️All the classes and interfaces related to Java collections are kept in java.util package. List, Set, Queue and Map are four top level interfaces of Java collection framework. All these interfaces (except Map) are the sub interfaces of java.util.Collection interface.
 
 ⭕Let’s see these primary interfaces one by one👇
-
 ---
-
 ## The first Java roadmap that you can talk with!! This roadmap covers both Core Java topics (like Syntax, OOP and Exception Handling) and more advanced topics like JVM Internals and Annotations. You'll also learn about Java Frameworks, Microservices Architecture and Performance Optimization.
-
-
 
 About
 Accessibility
@@ -640,11 +596,7 @@ For SDE-1/SDE-2, they often test System Design, LLD, Java internals, backend arc
 From what I’ve seen, these are the kinds of questions candidates should prepare for
 
 Stay Hungry, Stay FoolisH!
-
 ---
-
-
-
 ## 🚀 𝐅𝐚𝐢𝐥-𝐅𝐚𝐬𝐭 𝐯𝐬 𝐅𝐚𝐢𝐥-𝐒𝐚𝐟𝐞 𝐈𝐭𝐞𝐫𝐚𝐭𝐨𝐫𝐬 𝐢𝐧 𝐉𝐚𝐯𝐚
 If you're preparing for Java interviews, this is an important concept to understand.
 When iterating over collections in Java, two types of iterator behaviors exist.
@@ -683,11 +635,7 @@ for (String s : list) {
 Fail-Fast → Throws exception if collection is modified during iteration
 Fail-Safe → Works on a copy, so no exception occurs
 Understanding this concept is important when working with multithreading and concurrent collections.
-
 ---
-
-
-
 ## I have reviewed hundreds of Java PRs over years. The same mistakes show up every single time.
 Here are 6 I flag in almost every review and exactly what I write in the comment:
 
@@ -738,13 +686,8 @@ if (discount > 0.25) { ... }
 My comment: "Extract to named constants. 3 and 0.25 mean nothing to the next developer (or to you in 6 months)."
 ----------------------------------------
 
-
 Which one do you see most often on your team?
-
 ---
-
-
-
 ## I Remember Struggling With Java Interviews… Until I Found My Path! 💪
 
 When I started preparing for Java interviews, it felt overwhelming—like a giant puzzle with too many pieces.
@@ -775,6 +718,4 @@ I faced the same struggle, but consistency and proper planning helped me conquer
 If you’re feeling lost in your Java interview preparation, let’s discuss and improve together!
 
 For queries and guidance, connect with me here: Topmate
-
 ---
-

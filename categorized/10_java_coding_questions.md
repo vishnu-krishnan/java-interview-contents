@@ -1,5 +1,3 @@
-
-
 ## Recently, I attended a few interviews for a Java developer role in service-based companies. Sharing some commonly asked coding questions that might help others preparing. 👇
 Java Streams (Very Important)
 1️⃣ First Non-Repeating Character
@@ -35,8 +33,6 @@ Find two numbers with given sum
 - Input: [2,4,6,8,10], Target = 6
 
 💡 If you're preparing for Java roles, focus on these areas — they are being asked frequently!
-
-
 
 ## 10 Golden Rules for Solving a Coding Question in an Interview 🔥
 

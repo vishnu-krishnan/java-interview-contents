@@ -19,11 +19,7 @@ UnaryOperator is used when input and output types are the same, while Function i
 📌 Example:
 Squaring a number → input = Integer, output = Integer → perfect use case for UnaryOperator
 These small distinctions are what make a difference in Java interviews and clean code practices.
-
 ---
-
-
-
 ## Java 8 has transformed the way we write Java, making it more functional, expressive, and powerful.
 
 Here’s a quick cheatsheet I use daily:
@@ -35,9 +31,7 @@ Here’s a quick cheatsheet I use daily:
 - **Method References**: Provide a shorthand notation for calling methods.
 
 This cheatsheet serves as a handy reference for leveraging the features of Java 8 effectively.
-
 ---
-
 ## Different versions of Java and their main features for any interview revisions.
 
 →Java 8 (2014)
@@ -54,9 +48,7 @@ Star of the show is Virtual Threads (from Project Loom), which makes it incredib
 
 Java 25 (LTS - 2025)
 Aims to boost performance even further. It will continue to enhance major projects like Panama (for better interaction with native code) and Valhalla (for improved memory layout with value types), making Java even more powerful and scalable.
-
 ---
-
 ## 𝙅𝒂𝙫𝒂 𝑰𝙣𝒕𝙚𝒓𝙫𝒊𝙚𝒘 𝑷𝙧𝒆𝙥𝒂𝙧𝒂𝙩𝒊𝙤𝒏 - 𝟰
 
 🔹 𝙈𝙖𝙨𝙩𝙚𝙧𝙞𝙣𝙜 𝙅𝙖𝙫𝙖 𝙎𝙩𝙧𝙚𝙖𝙢𝙨: 𝙙𝙞𝙨𝙩𝙞𝙣𝙘𝙩(), 𝙥𝙚𝙚𝙠(), 𝙡𝙞𝙢𝙞𝙩(), 𝙖𝙣𝙙 𝙨𝙠𝙞𝙥()! 🔹
@@ -113,11 +105,7 @@ These coding problems test your understanding of:
 ✔ Functional Programming
 ✔ Data transformation using Streams
 Master these and you’ll be well prepared for Java backend interviews.
-
 ---
-
-
-
 ## 🚀 Java 8 Features Day 5
 
 🔗 Functional Interface Chaining (Java 8)
@@ -186,8 +174,5 @@ class Main {
 ♻️Repost so others can learn and grow together.
  🔔 Follow Hariprasath V for daily Java, DSA, and System Design,Springboot,Microservices,Devops,Full Stack resources.
 
-
 ================================================
-
 ---
-

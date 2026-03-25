@@ -1,5 +1,3 @@
-
-
 ## 🔹 Interview Question: What is the transient keyword in Java?
 Me:
 The transient keyword in Java is used to indicate that a field should NOT be serialized.
@@ -52,11 +50,7 @@ When converting object → JSON:
 🚀 Key Takeaway
 transient helps control what should NOT travel with your object when it is serialized.
 A small keyword, but very important in real-world backend systems and interviews.
-
 ---
-
-
-
 ## Recently I attended a Java Backend Developer interview (4+ years experience). Sharing some of the questions that were asked. Hope it helps others preparing for similar roles.
 
 Round 1 – Coding + Core Java + Spring Boot
@@ -106,19 +100,9 @@ Despite the good interview where 80-85% questions i answered correctly I was not
 Learning - Sometimes your best interview also can lead to rejection so just focus on next interview rather than thinking about previous Results 😊
 
 Hope this helps Java developers preparing for backend interviews.
-
 ---
-
-
-
 ## Want Cleaner, Faster Java Code? Start Here.
-
 ---
-
-
-
----
-
 ## Most Spring Boot apps I review have the same problems.
 
 Not complex architecture issues. Basic mistakes that compound over time and make the codebase painful to work with.
@@ -138,14 +122,7 @@ The fix for each one takes less than 30 minutes.
 The cost of ignoring them shows up months later when onboarding slows down, bugs slip through, and deployments break.
 
 Which of these have you seen in production code?
-
-
-
-Image preview
-Spring Boot Mistakes
-
 ---
-
 ## JAVA INTERVIEW SCENARIO:
 
 The interviewer says:
@@ -159,9 +136,7 @@ Answer:
 - Mutable keys being modified after insertion
 - High hash collisions degrading performance
 - Using non-thread-safe HashMap in concurrent environment
-
 ---
-
 ## 2) Your Java application shows high GC activity and performance drops. Why?
 
 Answer:
@@ -169,9 +144,7 @@ Answer:
 - Short-lived objects flooding the heap
 - Improper memory allocation patterns
 - Large objects frequently created and discarded
-
 ---
-
 ## 3) Your application sometimes processes the same request twice. Why?
 
 Answer:
@@ -179,9 +152,7 @@ Answer:
 - Duplicate message processing in async systems
 - Network timeouts causing re-execution
 - Missing request deduplication logic
-
 ---
-
 ## This is what real Java interviews look like.
 
 They don’t test syntax.
@@ -189,11 +160,8 @@ They test how you reason about real-world problems.
 
 Which one would you struggle to explain?
 
-
 I’ll share the detailed Java and Spring boot Questions and Answers PDF with interested folks.
-
 ---
-
 ## 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝘄𝗮𝘀 𝘀𝗹𝗼𝘄.
 API latency went from 180ms to 14s.
 No memory leak. No deadlock. Logs looked clean.
@@ -233,17 +201,10 @@ Connect: Amaan Nirban
 
 If this helped, save it before your next backend interview.
 What’s the worst “works in dev, fails in prod” Hibernate issue you’ve seen?
-
-
-Image preview
-1+N Problem Guide
-
 ---
-
 ## Most Java developers think AI integration is complex.
 It’s actually much simpler than it looks.
 Here’s a minimal example using Spring AI to call an LLM from a Java application:
-
 
 ChatClient chatClient = ChatClient.create(openAiChatModel);
 String response = chatClient
@@ -251,7 +212,6 @@ String response = chatClient
  .call()
  .content();
 System.out.println(response);
-
 
 That’s it.
 You’re calling an LLM directly from your Java code.
@@ -268,9 +228,7 @@ It’s becoming part of backend engineering.
 And Java developers are perfectly positioned for this.
 Making the world AI-ready with Java — one developer at a time.
 If you’re exploring this, what are you building?
-
 ---
-
 ## JAVA INTERVIEW SCENARIO:
 
 The interviewer says:
@@ -284,9 +242,7 @@ Answer:
 - Large number of objects created and retained in collections
 - Improper use of caches without eviction
 - High GC pressure causing memory not being freed efficiently
-
 ---
-
 ## 2) Multiple threads update shared data and results become inconsistent. Why?
 
 Answer:
@@ -294,9 +250,7 @@ Answer:
 - Non-thread-safe data structures used
 - Missing locks or improper concurrency control
 - Visibility issues (no use of volatile or proper synchronization)
-
 ---
-
 ## 3) Your application becomes slower after increasing thread pool size. Why?
 
 Answer:
@@ -304,9 +258,7 @@ Answer:
 - Threads competing for limited resources (CPU, DB connections)
 - Lock contention increases
 - More threads ≠ better performance in CPU-bound tasks
-
 ---
-
 ## This is what real Java interviews look like.
 
 They don’t test syntax.
@@ -314,11 +266,8 @@ They test how you think when systems behave unexpectedly.
 
 Which one have you faced in real scenarios?
 
-
  I’ll share the detailed Pdf with interested folks.
-
 ---
-
 ## Java Backend Developer - 1st Round Interview
 
 These 20 questions are being asked in interviews right now.
@@ -343,15 +292,7 @@ These 20 questions are being asked in interviews right now.
 18. REST vs Messaging (Kafka) when would you choose each approach?
 19. How would you Dockerize a Spring Boot application?
 20. If two microservices fail during communication, how would you implement fault tolerance?
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝘄𝗲𝗻𝘁 𝗱𝗲𝗲𝗽 𝗮𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-Use JAVA15 to get 15% off.
-
-Stay Hungry, Stay FoolisH!
-
 ---
-
 ## 🚨 Questions asked in my Mastercard First Round Interview (for Backend Developer) — and trust me, this was NOT basic 👇
 
 If you’re preparing for product-based companies, this is your reality check.
@@ -400,9 +341,7 @@ Focus on:
 ✔️ Performance optimization mindset
 
 💬 Comment “PREP” if you want a mock interview or detailed answers
-
 ---
-
 ## I’m sharing my recent interview experience for a Java Developer role (Java, Spring Boot, Microservices).
 
 Sharing some of the questions that were asked 👇
@@ -442,184 +381,7 @@ First, I introduced myself and explained the projects I have been working on in 
 → Basic data retrieval query
 
 Most of the discussion focused on strong fundamentals and real project experience, rather than purely theoretical knowledge.
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝘄𝗲𝗻𝘁 𝗱𝗲𝗲𝗽 𝗮𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-Use 𝗝𝗔𝗩𝗔𝟭𝟱 to get 𝟭𝟬% 𝗢𝗙𝗙.
-
-Stay Hungry, Stay FoolisH!
-
 ---
-
-## You’re in a Java interview.
-
-The interviewer asks:
-
-"Your Java service suddenly stops processing requests in production.
-
-The application is still running.
-CPU usage is very low.
-Memory usage looks normal.
-
-But users are stuck waiting.
-
-What could be happening?"
-
-Possible things to investigate:
-
-- Thread deadlock between synchronized resources
-- All request threads blocked waiting for I/O (DB, API, file)
-- Thread pool exhaustion where all worker threads are busy
-- Infinite waiting caused by improper wait() / notify() usage
-- Long synchronized block blocking other threads
-- Blocking external service calls freezing request threads
-- Unhandled exception killing worker threads silently
-
-This is why Java interviews often include runtime scenarios.
-
-They want to see if you understand
-how threads behave inside a real JVM under load.
-
-So here’s the real question:
-
-What would YOU check first in this situation?
-
-Comment your answer.
-
-I’ll share the detailed Java and Spring boot Questions and Answers PDF individually with interested folks.
-
----
-
-## SPRING BOOT INTERVIEWS ARE RARELY ABOUT ANNOTATIONS.
-
-INTERVIEWERS WANT TO SEE
-HOW YOU THINK WHEN APPLICATIONS FAIL IN PRODUCTION.
-
-Here are scenario-based questions they often ask:
-
-- Your Spring Boot API is fast locally but slow in production. What do you check first?
-- Application fails to start with BeanCreationException after deployment. Why?
-- application.properties change didn’t reflect after redeployment. What could be wrong?
-- CPU is low but requests keep timing out. Where could the bottleneck be?
-- Database connection pool gets exhausted under load. Why does this happen?
-- @Transactional is present but rollback doesn't occur after an exception. Why?
-- Scheduled jobs start affecting API response times. How would you isolate them?
-- Logs appear locally but are missing in production. Where would you investigate?
-- Adding more application instances didn’t improve performance. Why?
-- API works in Postman but fails when called from another service. What might be wrong?
-- Application behaves differently in Docker compared to local environment. Why?
-- Multiple beans of the same type cause application startup failure. How do you fix it?
-- Async processing was added but system performance dropped. Why?
-- Circuit breaker stays open even when downstream service is healthy. Why?
-- Users still see old behavior after a new deployment. What could cause this?
-- Memory usage keeps increasing even with GC running. What do you investigate?
-- API gateway calls your service but headers are missing. Why?
-- Background tasks start blocking request threads. How can this happen?
-- Cache improves performance but sometimes returns outdated data. Why?
-- Application works in staging but fails in production. What would you check first?
-
-These questions test whether you understand
-how Spring Boot applications behave in real environments.
-
-Which question would you struggle to answer in an interview?
-
-Comment the number.
-
-also comment "pdf" for 200+ Java and Spring boot Questions and Answers PDF...I'll share link with interested folks.
-
----
-
-## YOU'RE IN A JAVA INTERVIEW.
-
-The interviewer says:
-
-"Most developers know Java syntax.
-But production systems fail for different reasons."
-
-Then the interviewer starts asking questions like these:
-
-- Your Java service becomes slow over time but no errors appear in logs. What could be happening?
-- CPU usage is low but request latency is very high. What would you investigate?
-- OutOfMemoryError occurs even though heap size seems sufficient. Why?
-- Increasing heap size made performance worse. Explain how that happens.
-- Threads are available in the pool but requests are still queued. Why?
-- Parallel streams were introduced but system throughput dropped. Why?
-- GC pauses suddenly increased after a small code change. What might have changed?
-- JVM does not exit even after main() finishes. What could keep it alive?
-- Deadlock occurs rarely in production but never in testing. Why?
-- Memory usage slowly increases over time. What could indicate a memory leak?
-- Logging level change suddenly slows down the application. Why?
-- ThreadLocal solved one issue but introduced memory problems. How?
-- Retry logic causes system overload during failure scenarios. Why?
-- Thread pool size was increased but throughput didn’t improve. Why?
-- Application works fine locally but fails under production traffic. Why?
-- High GC frequency starts affecting response times. What might cause this?
-- Cached data improves performance but sometimes returns inconsistent results. Why?
-- A background task starts affecting API performance. How could that happen?
-- CPU spikes appear after a deployment even though code change was small. Why?
-- Scaling the service to more instances did not improve performance. What could be wrong?
-
-These questions are asked to see
-whether you understand how Java behaves in real systems,
-not just how to write code.
-
-What question would you find hardest to answer?
-
-Comment the number.
-
-I’ll share the detailed resource individually with interested folks.
-
----
-
-## I’m sharing my recent interview experience for Java Developer role (Java, Spring Boot, Microservices)
-
-Sharing some of the questions that were asked 👇
-
-First I introduced myself and explain the projects I have been working on.. in detail
-After that..I was asked
-
-Spring / Dependency Injection
- - What design patterns are used in your project?
- - What is Dependency Injection?
- - Different ways to inject beans in Spring
- - Which injection is recommended and why?
- - Bean lifecycle in Spring
- - Bean scopes and default scope
- - Difference between ApplicationContext and Spring Context
- - What is `@Configuration` annotation?
-
-Microservices
- - How do microservices communicate with each other?
- - RestTemplate vs WebClient
- - What is Feign Client?
- - Why Feign may not always be recommended in production?
-
-Core Java / Multithreading
- - What is `volatile` keyword?
- - Different ways to create threads
- - Do you create threads manually in production projects?
-
-Collections
- - Internal working of HashMap
- - Difference between Collection vs Collections
-
-Coding Questions
- - Count character frequency in a string and print in ascending order
- - Print all substrings of a given string
-
-SQL
- - Basic data retrieval query
-
-Most of the discussion focused on fundamentals + real project experience, not just theory.
-
-𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝘄𝗲𝗻𝘁 𝗱𝗲𝗲𝗽 𝗮𝗻𝗱 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗝𝗮𝘃𝗮 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗚𝘂𝗶𝗱𝗲.
-
-Use JAVA15 to get 15% off.
-
-Stay Hungry, Stay FoolisH!
-
----
-
 ## Java Backend Developer - 1st Round Interview
 
 These 20 questions are being asked in interviews right now.
@@ -648,9 +410,7 @@ Here are 20 questions candidates are encountering in Round 1:
 18. REST vs Messaging (Kafka) when would you choose each approach?
 19. How would you Dockerize a Spring Boot application?
 20. If two microservices fail during communication, how would you implement fault tolerance?
-
 ---
-
 ## INTERVIEWER:
 “Let’s forget theory for a moment.
 
@@ -688,9 +448,7 @@ Which one would you struggle to answer in an interview?
 Comment the number.
 
 I’ll share the detailed Java and Spring boot Questions and Answers PDF individually with interested folks.
-
 ---
-
 ## How to Improve API Performance in Production
 
 Many APIs work perfectly in development.
@@ -767,9 +525,7 @@ Most API performance issues are not solved with more servers.
 They are solved with better architecture.
 
 Small improvements like caching, pagination, and connection pooling can transform the performance of your system.
-
 ---
-
 ## A Common Production Issue in Java Systems: Connection Pool Misconfiguration
 One issue I’ve seen more than once in backend systems is database connection pool misconfiguration.
 In many cases, everything works perfectly in development and QA.
@@ -789,9 +545,7 @@ In many production systems, performance issues are not caused by complex bugs.
 They happen when traffic, thread pools, and database connection pools are not balanced correctly.
 Curious to hear from others working on backend systems:
 What kind of resource bottlenecks have you encountered most often in production?
-
 ---
-
 ## INTERVIEWER:
 “Pretend you’re the engineer on-call tonight.
 
@@ -830,9 +584,7 @@ Which question would you find hardest in an interview?
 Comment the number.
 
 I’ll share the detailed Java and Spring boot Questions and Answers PDF with interested folks.
-
 ---
-
 ## Java was always the "it starts slow but runs fast" language.
 
 For years, that was the trade-off we accepted. You build your Spring Boot microservice, deploy it to AWS, and watch the JVM spend 10+ seconds warming up before it can handle its first request properly.
@@ -858,9 +610,7 @@ For teams running Kubernetes: AOT cache enables 50-60% more pods per node due to
 The warm-up tax is over. Java 25 doesn't just catch up — it makes the JVM a genuine contender for latency-sensitive, scale-to-zero workloads.
 
 If you're still on Java 21 and running cloud-native workloads, the migration path is clear.
-
 ---
-
 ## Java behaves differently in Kubernetes than it does on your laptop.
 I recently explored a few subtle JVM traps that can cause:
 Unexpected latency spikes
@@ -871,16 +621,12 @@ It turns out JVM ergonomics and container limits don't always align the way we e
 Wrote a short article breaking down what's happening under the hood — and the flags that fixed it.
 Check here.
 
-Image preview
-Why Your Java Service Gets OOMKilled in Kubernetes (And How to Fix It)
-
 medium.com
 
 Prominent academy
 Prominent academyView company: Prominent academy
 5K followers
 2w • 2w Visible to everyone
-
 
 🚫 4+YOE Java Developers - Still Getting Rejected by Zensar Technologies?
 -----------------
@@ -914,12 +660,7 @@ At Prominent Academy, we focus on:
 - Pay After Placement
 So developers don’t just learn concepts - they learn how to apply them in real interviews and real systems.
 📞 Call / WhatsApp: +91 93594 45862
-
-Image preview
-⛔Experience high. Backend depth low.
-
 ---
-
 ## 🚀 Spring Boot 4.0: Writing Safer Code with Null Safety
 
 One of the biggest causes of production bugs in Java applications is the infamous NullPointerException.
@@ -945,9 +686,7 @@ In distributed systems, predictable APIs reduce unexpected failures between serv
 Modern Java practices combined with Spring Boot, Optional, and clear API design help developers build robust and production-ready backend systems.
 
 Small improvements in code safety can prevent big problems in production. 🚀
-
 ---
-
 ## Spring Data Interview Question - Identify & Optimize Slow SQL Queries
 
 Scenario
@@ -977,11 +716,8 @@ How would you systematically identify slow SQL queries and optimize them in a pr
 
 Checkout the detailed solution:
 
-
 Subscribe and join 6200 Java & Spring Boot devs :
-
 ---
-
 ## 🚀 Accenture Interview Experience | Java Backend Developer
 Recently, I had the opportunity to interview with Accenture for a Java Backend Developer role. It was a valuable learning experience with discussions covering Java fundamentals, Spring Boot, System Design, SQL, AWS, and a coding round.
 Here are some of the topics/questions discussed during the interview:
@@ -1015,9 +751,7 @@ Here are some of the topics/questions discussed during the interview:
  - Detailed questions about project architecture, implementation approach, and real-world scenarios.
 Overall, the interview focused on core Java concepts, practical backend development knowledge, and real project experience.
 Grateful for the opportunity and the learning from this experience. Looking forward to more such technical discussions and growth opportunities!
-
 ---
-
 ## 🚀 Deloitte Interview Experience | Java Backend Developer
 
 Recently, I had the opportunity to interview with Deloitte for a Java Backend Developer role. It was a great learning experience with discussions covering Java, Spring Boot, System Design, SQL, and AWS, along with a coding round.
@@ -1066,9 +800,7 @@ Here are some of the topics/questions discussed during the interview:
 Overall, it was a very insightful interview focusing on practical understanding, real project experience, and core fundamentals.
 
 Grateful for the opportunity and the learning from this experience. Looking forward to more such discussions!
-
 ---
-
 ## When a HashMap Quietly Turns Into a Red-Black Tree
 
 Most developers learn that HashMap operations run in O(1) time.
@@ -1109,9 +841,7 @@ It’s a carefully engineered hybrid data structure that adapts dynamically to m
 Most engineers use HashMap every day.
 
 Very few understand what happens inside the bucket when things go wrong.
-
 ---
-
 ## Only for backend engineers:
 
 ☕ Java:
@@ -1131,7 +861,6 @@ Error Handling: Implement @ControllerAdvice and @ExceptionHandler for centralize
 - RESTful APIs: Create REST APIs with CRUD operations, use @Valid, DTOs, and proper HTTP status codes.
 - Security Basics: Implement JWT authentication and role-based authorization.
 Testing: Use @WebMvcTest, @DataJpaTest, and Mockito for testing controllers and repositories.
-
 
 🏗️ 4. Low-Level Design (LLD)
 - Focus on building scalable, maintainable, and clean software designs:
@@ -1157,9 +886,7 @@ Low Level Design from Basics to Advanced (Some Initial Videos are in Hindi, rest
 JAVA from Basics to Advanced (All Videos are in English)
 
 JUnit5:
-
 ---
-
 ## 🚀 Java Backend Interview Experience (4+ Years Experience)
 
 Today I attended a technical interview for a Java Backend / Microservices role, and these were the key topics the interviewer focused on.
@@ -1218,9 +945,7 @@ Sharing this for developers preparing for Java + Spring Boot interviews.
 If you are preparing for Java backend interviews, these topics are must-know.
 
 - What are the most challenging questions you faced in your recent interviews?
-
 ---
-
 ## 1️⃣ Tell me about yourself.
 
 2️⃣ Explain your project architecture.
@@ -1270,9 +995,7 @@ Use tools like JMeter or Gatling to simulate concurrent users and analyze perfor
 Use load balancers and multiple instances of the service to handle high traffic.
 
 💡 These questions are very common in startup backend interviews, especially for developers working with Java, Spring Boot, Microservices, Kafka, Redis, and Docker.
-
 ---
-
 ## YOU'RE IN A JAVA INTERVIEW.
 
 The interviewer asks:
@@ -1305,9 +1028,7 @@ What would YOU check first in this situation?
 Comment your answer.
 
 I’ll share the detailed Java and Spring Boot Question & Answers PDF individually with interested folks.
-
 ---
-
 ## YOU’RE IN A JAVA INTERVIEW.
 
 The interviewer starts with a simple question.
@@ -1338,48 +1059,35 @@ whether you understand how Java behaves in real systems,
 not just how to write code.
 
 I’ll share the detailed questions with answers pdf individually with interested folks.
-
 ---
-
 ## Top 10 Advanced Interview Questions for Senior Java Developer (Latest Technologies & Tools)
 
 If you are preparing for a Senior Java Developer role, modern interviews focus on architecture, cloud, microservices, and AI-driven systems.
 
 1. How do you design scalable microservices architectures using Spring Boot, Spring Cloud, and Kubernetes in cloud-native environments?
 
-
 2. How do you optimize JVM performance using tools like JVM monitoring, JProfiler, VisualVM, or Grafana in high-scale applications?
-
 
 3. What strategies do you use to implement event-driven architectures using tools such as Apache Kafka or RabbitMQ?
 
-
 4. How do you design secure enterprise applications using OAuth2, JWT, and Spring Security?
-
 
 5. How do you implement CI/CD pipelines for Java applications using tools like Jenkins, GitHub Actions, or GitLab CI?
 
-
 6. How do you manage containerized Java applications using Docker and Kubernetes in production environments?
-
 
 7. What is your approach to implementing reactive programming using Spring WebFlux or Project Reactor for high-performance systems?
 
-
 8. How do you integrate AI/ML services or data pipelines with Java applications in modern architectures?
 
-
 9. How do you ensure observability and monitoring using tools like Prometheus, ELK Stack, or OpenTelemetry?
-
 
 10. How do you design resilient and fault-tolerant distributed systems using patterns such as Circuit Breaker, API Gateway, and Service Mesh?
 
 Follow: Akshay Kumawat
 
 Comment: "Senior Java Developer" and I will share the executive-level answers with you.
-
 ---
-
 ## MOST PEOPLE FAIL JAVA & SPRING BOOT INTERVIEWS
 NOT BECAUSE THEY DON’T KNOW ENOUGH,
 BUT BECAUSE THEY CAN’T THINK WHEN SYSTEMS BREAK.
@@ -1428,9 +1136,7 @@ whether you can OWN systems, not just build them.
 
 👇👇👇
 I’ll share the detailed resource individually with interested folks.
-
 ---
-
 ## 📨 "Design a Notification Service."
 This question is quietly showing up in interviews at many product
 companies.
@@ -1499,9 +1205,7 @@ You'll be surprised how much depth is hidden inside it.
 If you see improvements or alternative approaches, drop them in the comments.
 
 Comment “Notification” if you want the complete Java implementation zip, I’ll share it.
-
 ---
-
 ## Code is Easy.
 Production is Brutal.
 
@@ -1548,13 +1252,7 @@ Because writing code is just the beginning.
 
 Owning it in production —
 That’s real engineering.
-
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
-
-Use code 𝗝𝗔𝗩𝗔𝟰𝟬
-
 ---
-
 ## What I see in most Java resumes:
 - Java
 - Spring
@@ -1603,32 +1301,17 @@ If you are targeting Senior, Staff, or Lead roles:
 - Show production ownership
 - Highlight architecture and reliability thinking
 
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
-
-Use code 𝗝𝗔𝗩𝗔𝟰𝟬
-
 Good luck!
-
-
-
 ---
-
 ## Preview 👉 "How To Write Great Java Apps With LLMs and Agents"
 See you at #JavaOne 2026
-
 ---
-
 ## One method in my Java demo app was using 71% of CPU. The code looked perfectly fine. After my DevNexus talk, attendees kept asking about the specific anti-patterns. This post shows eight patterns that compile fine, pass code review, and silently kill performance.
 
 Before/after: 1,198ms → 239ms. 85K → 419K orders/sec. 19 GC pauses → 4.
 
-
 Shoutout to Vinicius Senger for bringing me into his DevNexus talk on Java modernization, this series wouldn't exist without that.
-
-
-
 ---
-
 ## Java Developer Interview Prep Checklist: Don’t Walk In Unprepared
 
 Java 8 & Project-Based Questions:
@@ -1682,4 +1365,3 @@ ON u.id = o.user_id;
 
 This is a solid checklist for Java developers with 2–5 years of experience.
 If you can confidently explain these with real project examples, you’re already ahead of many candidates.
-

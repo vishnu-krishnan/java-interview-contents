@@ -2,7 +2,6 @@
 
 It is overcrowded. Instead of try those websites
 
-
 🌍 30 Websites to Help You Land Your Dream Job in 2025:
 
 [1] Wellfound (https://wellfound.com)
@@ -33,7 +32,6 @@ It is overcrowded. Instead of try those websites
 [27] Virtual Vocations (virtualvocations.com)
 [28] Remote OK Europe (https://remoteineurope.com)
 
-
 📜 12 Best Websites for Creating ATS Resume:
 
 [1] Overleaf- Overleaf.com
@@ -49,8 +47,6 @@ It is overcrowded. Instead of try those websites
 [11] My Perfect Resume - myperfectresume.com
 [12] Zety - zety.com
 
-
-
 🧑‍💻10 Websites to Help You Ace Interviews at Your Dream Company:
 
 [1] The Muse - themuse.com
@@ -64,7 +60,6 @@ It is overcrowded. Instead of try those websites
 [9] Indeed Interview Tips - indeed.com/career-advice
 [10] LinkedIn for Learning - linkedin.com/learning
 
-
 💻𝐅𝐫𝐞𝐞 𝐎𝐧𝐥𝐢𝐧𝐞 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧:
 
 [1]. Coursera - coursera.org
@@ -77,29 +72,18 @@ It is overcrowded. Instead of try those websites
 [8]. OpenLearn - open.edu
 [9]. Great Learning - mygreatlearning.com
 
-
 Programming - w3schools.com & HackerRank
 
 Which is your favourite? Tell me in comments
-
-
-
 
 📌 Remove jobs ,ATS Resume 👇
 https://t.me/Hariskumar0
 
 📍 Twitter 👇
 
-
 ♻️ Repost to your Job seekers friends it is useful for others
-
 ---
-
 ## This one-page resume got me 𝟖+ 𝐨𝐟𝐟𝐞𝐫𝐬 - American Express, Amazon, NI (National Instruments), JUSPAY, and more 🚀
-
-
-
-
 
 I focused on:
 ✅ Highlighting technical skills recruiters actually care about: Python, SQL, Pandas, Tableau, and Spark
@@ -120,9 +104,7 @@ Don'ts Do this Resume
 𝐍𝐞𝐞𝐝 𝐫𝐞𝐟𝐞𝐫𝐫𝐚𝐥?
 
 PS: If you want the same one-page resume template that got me these offers, follow me at https://x.com/tanmaygoel1 and DM “𝐑𝐞𝐬𝐮𝐦𝐞” there and I’ll share it with you for free 🚀
-
 ---
-
 ## Tried for Google → Failed at the 1st round
 Tried for Salesforce → Failed at the 2nd round
 Tried for 10+ other MNCs → Failed at every company
@@ -139,14 +121,11 @@ I practiced DSA at the start but didn’t realize my gaps. I built resumes but d
 
 That’s why I wasted time, lost offers and struggled a lot. But today, you can spot your gaps and get guidance from Day 1 by connecting with Ajay Yadava, an ex-Google SDE.
 
-
 Just get on this call and Ajay will identify your gaps and help with everything
 → You can count on him for everything from resources, live training, resume help, mocks and even referrals.
 
 100+ people have learnt from him and switched to companies like Meta, Microsoft. Your turn now, go book that call - he only has 20 seats ✨
-
 ---
-
 ## Companies List that are HIRING for 100% REMOTE.
 
 1. DuckDuckGo - https://duckduckgo.com
@@ -157,9 +136,7 @@ Just get on this call and Ajay will identify your gaps and help with everything
 7. Sticker Mule - https://stickermule.com
 10. Aha! - https://aha.io
 14. Twilio - https://twilio.com
-
 ---
-
 ## Programming interviews aren't just about skill — they're a test of patience, resilience, and strategy.
 
 Here's how to crack the job interview process 👇

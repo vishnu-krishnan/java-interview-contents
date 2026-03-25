@@ -48,9 +48,7 @@ SaleID Region Product Amount
 4 West Pen 150
 5 West Book 700
 6 West Bag 250
-
 ---
-
 ## Why “N+1 Query Problem” Can Kill Your Application Performance
 
 Your API works fine…
@@ -105,4 +103,3 @@ Pro Tip:
 In backend systems, efficiency is not just about code - it’s about how you talk to your database.
 
 Have you ever debugged an N+1 issue in production?
-
