@@ -1,0 +1,86 @@
+### ITEM 1 ###
+
+𝗠𝗼𝘀𝘁 𝗨𝘀𝗲𝗱 𝗚𝗶𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀
+
+1. 𝐠𝐢𝐭 𝐝𝐢𝐟𝐟: Show file differences not yet staged.
+2. 𝐠𝐢𝐭 𝐜𝐨𝐦𝐦𝐢𝐭 -𝐚 -𝐦 "𝐜𝐨𝐦𝐦𝐢𝐭 𝐦𝐞𝐬𝐬𝐚𝐠𝐞": Commit all tracked changes with a message.
+3. 𝐠𝐢𝐭 𝐜𝐨𝐦𝐦𝐢𝐭 --𝐚𝐦𝐞𝐧𝐝: Modify the last commit.
+4. 𝐠𝐢𝐭 𝐬𝐭𝐚𝐭𝐮𝐬: Show the state of your working directory.
+5. 𝐠𝐢𝐭 𝐚𝐝𝐝 𝐟𝐢𝐥𝐞_𝐩𝐚𝐭𝐡: Add file(s) to the staging area.
+6. 𝐠𝐢𝐭 𝐜𝐡𝐞𝐜𝐤𝐨𝐮𝐭 -𝐛 𝐛𝐫𝐚𝐧𝐜𝐡_𝐧𝐚𝐦𝐞: Create and switch to a new branch.
+7. 𝐠𝐢𝐭 𝐜𝐡𝐞𝐜𝐤𝐨𝐮𝐭 𝐛𝐫𝐚𝐧𝐜𝐡_𝐧𝐚𝐦𝐞: Switch to an existing branch.
+8. 𝐠𝐢𝐭 𝐜𝐡𝐞𝐜𝐤𝐨𝐮𝐭 <𝐜𝐨𝐦𝐦𝐢𝐭>: Switches the working directory to a specific commit.
+9. 𝐠𝐢𝐭 𝐩𝐮𝐬𝐡 𝐨𝐫𝐢𝐠𝐢𝐧 𝐛𝐫𝐚𝐧𝐜𝐡_𝐧𝐚𝐦𝐞: Push a branch to a remote.
+10. 𝐠𝐢𝐭 𝐩𝐮𝐥𝐥: Fetch and merge remote changes.
+11. 𝐠𝐢𝐭 𝐟𝐞𝐭𝐜𝐡: Fetch changes from the remote repository without merging.
+12. 𝐠𝐢𝐭 𝐫𝐞𝐛𝐚𝐬𝐞 -𝐢: Rebase interactively, rewrite commit history.
+13. 𝐠𝐢𝐭 𝐫𝐞𝐛𝐚𝐬𝐞 𝐛𝐫𝐚𝐧𝐜𝐡_𝐧𝐚𝐦𝐞: Rebase the current branch onto another branch.
+14. 𝐠𝐢𝐭 𝐜𝐥𝐨𝐧𝐞: Create a local copy of a remote repo.
+15. 𝐠𝐢𝐭 𝐦𝐞𝐫𝐠𝐞: Merge branches together.
+16. 𝐠𝐢𝐭 𝐥𝐨𝐠 --𝐬𝐭𝐚𝐭: Show commit logs with stats.
+17. 𝐠𝐢𝐭 𝐬𝐭𝐚𝐬𝐡: Stash changes for later.
+18. 𝐠𝐢𝐭 𝐬𝐭𝐚𝐬𝐡 𝐩𝐨𝐩: Apply and remove stashed changes.
+19. 𝐠𝐢𝐭 𝐬𝐡𝐨𝐰 𝐜𝐨𝐦𝐦𝐢𝐭_𝐢𝐝: Show details about a commit.
+20. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 𝐇𝐄𝐀𝐃~1: Undo the last commit, preserving changes locally.
+21. 𝐠𝐢𝐭 𝐛𝐫𝐚𝐧𝐜𝐡 -𝐃 𝐛𝐫𝐚𝐧𝐜𝐡_𝐧𝐚𝐦𝐞: Delete a branch forcefully.
+22. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭: Undo commits by moving branch reference.
+23. 𝐠𝐢𝐭 𝐫𝐞𝐯𝐞𝐫𝐭 𝐜𝐨𝐦𝐦𝐢𝐭_𝐢𝐝: Create a new commit that undoes the changes of a specific commit.
+24. 𝐠𝐢𝐭 𝐜𝐡𝐞𝐫𝐫𝐲-𝐩𝐢𝐜𝐤 𝐜𝐨𝐦𝐦𝐢𝐭_𝐢𝐝: Apply changes from a specific commit.
+24. 𝐠𝐢𝐭 𝐛𝐫𝐚𝐧𝐜𝐡: Lists branches.
+26. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 --𝐬𝐨𝐟𝐭 𝐇𝐄𝐀𝐃^: Undo the last commit, but keep the changes.
+27. 𝐠𝐢𝐭 𝐫𝐞𝐬𝐞𝐭 --𝐡𝐚𝐫𝐝: Resets everything to a previous commit, erasing all uncommitted changes.
+28: 𝐠𝐢𝐭 𝐛𝐫𝐚𝐧𝐜𝐡 --𝐬𝐞𝐭-𝐮𝐩𝐬𝐭𝐫𝐞𝐚𝐦-𝐭𝐨 𝐫𝐞𝐦𝐨𝐭𝐞_𝐛𝐫𝐚𝐧𝐜𝐡: Sets the upstream branch to the specified
+
+
+---
+
+### ITEM 2 ###
+
+From Idea to Launch: The Software Development Process
+
+The software development cycle is a structured process used by development teams to design, develop, and deliver high-quality software. This cycle consists of several key stages, each playing a crucial role in ensuring the success of the software project. Here’s an overview of the typical software development cycle:
+
+𝗞𝗲𝘆 𝗦𝘁𝗮𝗴𝗲𝘀 𝗼𝗳 𝘁𝗵𝗲 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗖𝘆𝗰𝗹𝗲
+
+𝟭. 𝗣𝗹𝗮𝗻𝗻𝗶𝗻𝗴
+
+🔹𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻: Establishes the project's scope, objectives, and requirements.
+🔹𝗔𝗰𝘁𝗶𝘃𝗶𝘁𝗶𝗲𝘀: Involves gathering and analyzing requirements, defining the project roadmap, and allocating resources.
+🔹𝗜𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝗰𝗲: Provides a clear vision and direction, ensuring that the development team and stakeholders are aligned.
+
+𝟮. 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁
+
+🔹𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻: Involves writing the actual code to create the software according to the defined requirements and design.
+🔹𝗔𝗰𝘁𝗶𝘃𝗶𝘁𝗶𝗲𝘀: Includes designing the architecture, coding, and implementation.
+🔹𝗧𝗼𝗼𝗹𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲𝘀: Utilizes version control systems (e.g., Git), coding standards, and collaborative development environments.
+
+𝟯. 𝗕𝘂𝗶𝗹𝗱 & 𝗣𝗮𝗰𝗸
+
+🔹𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻: Converts the code into an executable format that can be deployed and run.
+🔹𝗔𝗰𝘁𝗶𝘃𝗶𝘁𝗶𝗲𝘀: Involves compiling the code, linking libraries, and packaging the software for distribution.
+🔹𝗧𝗼𝗼𝗹𝘀: Uses build automation tools (e.g., Maven, Gradle) to streamline the process and ensure consistency.
+
+𝟰. 𝗧𝗲𝘀𝘁𝗶𝗻𝗴
+
+🔹𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻: Ensures that the software is of high quality and free of defects.
+🔹𝗧𝘆𝗽𝗲𝘀 𝗼𝗳 𝗧𝗲𝘀𝘁𝗶𝗻𝗴: Includes unit testing, integration testing, system testing, and user acceptance testing (UAT).
+🔹𝗧𝗼𝗼𝗹𝘀: Utilizes testing frameworks (e.g., JUnit, Selenium) to automate and execute tests efficiently.
+
+𝟱. 𝗥𝗲𝗹𝗲𝗮𝘀𝗲
+
+🔹𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻: Deploys the software to the production environment and makes it available to users.
+🔹𝗔𝗰𝘁𝗶𝘃𝗶𝘁𝗶𝗲𝘀: Involves deployment planning, release management, and post-release monitoring.
+🔹𝗕𝗲𝘀𝘁 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲𝘀: Follows continuous delivery and continuous deployment (CI/CD) practices to ensure smooth and reliable releases.
+
+𝐈 𝐡𝐨𝐩𝐞 𝐭𝐡𝐢𝐬 𝐡𝐞𝐥𝐩𝐬 𝐲𝐨𝐮 🙌
+
+𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
+
+Use code 𝗝𝗔𝗩𝗔𝟰𝟬
+
+Do save it for future reference and follow &
+Rani Dhage for more! ✨
+
+
+---
+
