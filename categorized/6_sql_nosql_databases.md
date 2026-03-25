@@ -1,5 +1,3 @@
-
-
 ## 🚀 Sharing My Interview Journey: Database Questions Edition 🚀
 During my recent interviews for a Java Fullstack Developer position, I came across several interesting questions—especially around database design and optimization. I’m sharing some of those questions to help with your interview preparation ....
 
@@ -53,66 +51,58 @@ SaleID Region Product Amount
 
 ---
 
+## Why “N+1 Query Problem” Can Kill Your Application Performance
 
+Your API works fine…
+Your database is healthy…
 
-## Java Developer Interview Prep Checklist: Don’t Walk In Unprepared
+But your application is still slow.
 
-Java 8 & Project-Based Questions:
+You might be facing the N+1 Query Problem.
 
-1. What are the new features introduced in Java 8?
-2. What is a Method Reference?
-3. What are Default Methods in interfaces?
-4. Explain Intermediate Operations in Streams.
-5. What is HTTP Status Code 204?
-6. Explain the concept of Microservices in your project.
-7. Difference between HashMap and Hashtable.
-8. Explain the Authentication Layer in your project.
-9. How does JWT (JSON Web Token) work?
-10. What is Garbage Collector and how does it work?
-11. How do you integrate third-party APIs/data in your project?
+What is N+1 Problem?
 
-Core Java:
-1. What is Method Hiding?
-2. Output of:
-System.out.println(Double.MIN_VALUE > 0.0d);
-3. If you add a null value to an empty Set, what will be the size?
-4. What is Garbage Collection?
-5. Can you override a static method in interface?
-6. Internal working of HashMap and how get() works.
-7. Explain SOLID Principles.
+It happens when your application makes:
+ 1 query to fetch a list
+ N additional queries to fetch related data
 
-Spring Boot:
-1. What is @Lazy?
-2. What is @Component?
-3. What is Component Scanning?
-4. How do you handle Exceptions in Spring Boot?
-5. What is JPA?
-6. Explain Bean Scopes.
-7. @RequestParam vs @RequestBody
-8. What is @PathVariable?
-9. What is @GeneratedValue?
+So instead of 1 efficient query, you end up with N+1 database calls.
 
-SQL:
-1. You have a user table with 50 records.
-Write a query to fetch 20 records starting from 5th row (first & last name only).
-Example (MySQL/PostgreSQL):
-SELECT first_name, last_name
-FROM users
-LIMIT 20 OFFSET 4;
-2. Write an INNER JOIN query between two tables.
-Example:
-SELECT u.first_name, u.last_name, o.order_id
-FROM users u
-INNER JOIN orders o
-ON u.id = o.user_id;
+Simple Example
 
-This is a solid checklist for Java developers with 2–5 years of experience.
-If you can confidently explain these with real project examples, you’re already ahead of many candidates.
+You fetch a list of 100 users:
+SELECT * FROM users;
 
-Preparing for interviews? Start revising these today
-𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗝𝗮𝘃𝗮 𝗦𝗽𝗿𝗶𝗻𝗴𝗯𝗼𝗼𝘁 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 𝗚𝘂𝗶𝗱𝗲, 𝟏𝟬𝟬𝟬+ 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘂𝘀𝗶𝗻𝗴 𝗶𝘁. 𝗢𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝟰𝟬% 𝗼𝗳𝗳 𝗳𝗼𝗿 𝗮 𝗹𝗶𝗺𝗶𝘁𝗲𝗱 𝘁𝗶𝗺𝗲!
+Then for each user:
+SELECT * FROM orders WHERE user_id = ?;
 
-Use code 𝗝𝗔𝗩𝗔𝟰𝟬
+Total queries = 101 instead of 1
 
----
+Why It’s Dangerous
+
+Hidden Performance Killer
+ Works fine in development, fails at scale.
+Increases DB Load
+ More queries = more CPU, memory, latency.
+Slows Down APIs
+ Response time increases drastically with data size.
+
+Where It Happens (Java World)
+- Hibernate / JPA lazy loading
+- Improper entity relationships
+- Fetching nested data without optimization
+
+How to Fix It
+Use JOIN FETCH in JPA
+Use DTO projections
+Apply batch fetching
+Analyze queries with logs (hibernate.show_sql)
+
+Pro Tip:
+ If your API gets slower as data grows…
+ It’s often not your logic - it’s your queries.
+
+In backend systems, efficiency is not just about code - it’s about how you talk to your database.
+
+Have you ever debugged an N+1 issue in production?
 
