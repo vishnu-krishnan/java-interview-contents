@@ -111,3 +111,10 @@ Decision Made: Rewrote 27_coding_programs_and_examples.md to maximize density an
 Reason: User requested a concise, interview-ready reference prioritizing density over volume with cleaner structure and robust edge-case highlighting.
 Impact: UX | Maintainability
 Rollback Strategy: Restore previous iteration of 27_coding_programs_and_examples.md.
+
+[2026-03-26] [Flatten Folder Structure]
+Change Type: Major
+Decision Made: Moved all 28 section markdown files directly from `topics/sections/` to the root `java/` folder and cleaned up the empty subdirectories.
+Reason: User requested to properly align the folder structure by moving the section files directly into the root folder.
+Impact: Maintainability | UX
+Rollback Strategy: Move all `[XX]_*.md` files back to `topics/sections/`.
