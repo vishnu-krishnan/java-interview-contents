@@ -69,3 +69,24 @@ Decision Made: Implemented v14 re-alignment script to perform aggressive junk re
 Reason: Files were cluttered with LinkedIn filler (engagement bait, metadata) and topics were misaligned (e.g., Java 8 in Core Java).
 Impact: Data Quality | Maintainability | UX
 Rollback Strategy: Use backup folder `categorized_backup_20260326`.
+
+[2026-03-26] [Java Learning Roadmap — Comprehensive Expansion]
+Change Type: Major
+Decision Made: Rewrote `Java_Learning_Roadmap.md` from 19 sections / 359 lines to 25 sections / 600+ lines with full gap analysis integration.
+Reason: Gap analysis of 14 categorized source files revealed ~65 high-priority missing topics and 8 entirely missing sections (Microservices, Kafka, Design Patterns, Java 21, System Design HLD, Observability, API Design, Docker/K8s).
+Impact: UX | Maintainability | Data Quality
+Rollback Strategy: Git checkout previous version of `Java_Learning_Roadmap.md`.
+
+[2026-03-26] [Java Interview Guide DOCX Integration]
+Change Type: Minor
+Decision Made: Extracted and integrated unique content from `Java Interview Guide.docx` (1.1MB, 3940 paragraphs) into the roadmap. Added: Externalizable, Integer cache pitfall, Wrapper classes, @SpringBootApplication deep dive, Spring Boot startup 9-step sequence, Transaction Propagation table, Optimistic/Pessimistic locking, 10 Production Issues with root causes, REST vs gRPC table, CSRF/mTLS/Vault secrets, and 2 new sections (Section 25: Agile/Scrum; Section 26: Interview Strategy with 3-month plan + annotations reference table).
+Reason: User requested all docx unique content be merged into the roadmap to avoid maintaining two separate documents.
+Impact: UX | Data Quality | Maintainability
+Rollback Strategy: Git checkout previous version of `Java_Learning_Roadmap.md`.
+
+[2026-03-26] [Repository Restructuring & Section Split]
+Change Type: Major
+Decision Made: Deleted categorized/, categorized_backup_20260326/, and scripts/ folders. Moved LinkedIn feed files into docs/. Split Java_Learning_Roadmap.md into 28 individual section files under topics/sections/ (01_core_java.md → 28_learning_resources.md). Kept master roadmap file intact. Updated Architecture.md to reflect final folder layout.
+Reason: User requested clean folder structure with one file per roadmap section for focused study. Old processing scripts and categorized files were no longer needed after content was merged into the roadmap.
+Impact: Maintainability | UX
+Rollback Strategy: Git checkout to restore deleted folders; remove topics/sections/ directory.
