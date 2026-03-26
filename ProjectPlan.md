@@ -30,17 +30,8 @@ Rollback Strategy: Original cleaned file remains as source of truth.
 2. **Phase 2: Deduplication & Quality Filtering (ACTIVE)**
    - Extract individual questions/points from posts.
    - Run deduplication algorithms across the extracted items.
-3. **Phase 3: Topic Categorization (ACTIVE)**
-   - Group deduplicated questions into specific buckets:
-     1. Core Java
-     2. Multithreading
-     3. Advanced Java
-     4. Java 8, 11, and 17 features
-     5. Spring, Hibernate, Spring Boot
-     6. SQL, NoSQL, Databases, JPA
-     7. Microservices, Kafka, RabbitMQ, etc.
-     8. Docker, Kubernetes, etc.
-     9. GIT, Testing
-     10. Java Coding questions
-     11. Java Scenario-based questions
-     12. Career resources
+3. **Phase 3: Topic Categorization (DONE)**
+   - Group deduplicated questions into specific buckets.
+   - Performed global cleanup of LinkedIn-specific filler and engagement bait.
+   - Re-aligned content across 13 granular category files using keyword-density scripts.
+   - Created `13_mixed_interview_reports.md` for company-specific comprehensive lists.

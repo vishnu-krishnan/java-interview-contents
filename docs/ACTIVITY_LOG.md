@@ -62,3 +62,10 @@ Decision Made: Converted all category files from .txt to .md and updated custom 
 Reason: User requested the final output files be formatted formally as proper MarkDown files for better rendering.
 Impact: UX
 Rollback Strategy: Rename files back to .txt.
+
+[2026-03-26] [Global Re-alignment and Deep Cleanup]
+Change Type: Major
+Decision Made: Implemented v14 re-alignment script to perform aggressive junk removal and keyword-based content migration across all categories.
+Reason: Files were cluttered with LinkedIn filler (engagement bait, metadata) and topics were misaligned (e.g., Java 8 in Core Java).
+Impact: Data Quality | Maintainability | UX
+Rollback Strategy: Use backup folder `categorized_backup_20260326`.

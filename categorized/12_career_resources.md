@@ -1,3 +1,25 @@
+## 📌Java Control Flow Statement Cheatsheet. (Explained)
+
+⭕Here is the quick reference guide for control flow statements in Java.
+
+🔵What are control flow statements?
+Control flow statements are the statements in a program which control the flow of execution of a program.
+
+📌There are three types of control flow statements in Java.
+
+🔸Decision Making Statements
+🔹Looping Statements
+🔸Branching Statements
+
+🟢Decision Making Statements :
+Decision making statements determine which statements to execute depending upon the outcome of a supplied condition or an expression.
+
+🟡Looping Statements :
+Looping statements are used to execute a set of statements repeatedly until supplied condition becomes FALSE.
+
+🟤Branching Statements :
+Branching statements or jump statements are used to transfer the control of execution to some other part of the program.
+---
 ## Stop Wasting Searching on Naukri.com , Fiverr , Indeed , Monster and Shine.com
 
 It is overcrowded. Instead of try those websites
@@ -125,43 +147,3 @@ Just get on this call and Ajay will identify your gaps and help with everything
 → You can count on him for everything from resources, live training, resume help, mocks and even referrals.
 
 100+ people have learnt from him and switched to companies like Meta, Microsoft. Your turn now, go book that call - he only has 20 seats ✨
----
-## Companies List that are HIRING for 100% REMOTE.
-
-1. DuckDuckGo - https://duckduckgo.com
-2. TestGorilla - https://testgorilla.com
-3. Follow Up Boss- https://followupboss.com
-4. Whitespectre - https://whitespectre.com
-6. Uscreen - https://uscreen.tv
-7. Sticker Mule - https://stickermule.com
-10. Aha! - https://aha.io
-14. Twilio - https://twilio.com
----
-## Programming interviews aren't just about skill — they're a test of patience, resilience, and strategy.
-
-Here's how to crack the job interview process 👇
-
-✅ Tailor your resume for each job — highlight impact, not just responsibilities.
-
-✅ Include your GitHub, portfolio, and real project links to showcase what you’ve built.
-
-✅ Practice DSA daily — focus on recognizing patterns, not just solving problems.
-
-✅ Understand time & space complexity trade-offs — they matter more than you think.
-
-✅ Use the STAR method for behavioral questions:
-Situation: What was the context?
-Task: What was your responsibility?
-Action: What steps did you take?
-Result: What was the outcome?
-
-✅ In coding rounds, talk through your approach clearly — communication is key.
-
-✅ Write clean, readable, and testable code. It reflects how you think.
-
-✅ For system design, know your scaling, caching, and trade-off fundamentals.
-
-✅ Rejections? Reflect, adapt, and try again — every no gets you closer to a yes.
-
-You're not just preparing for a job — you're sharpening your mindset.
- Keep going 💪
