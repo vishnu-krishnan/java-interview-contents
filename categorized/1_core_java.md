@@ -1,4 +1,97 @@
-## 🚀 30 Days of Java Interview Questions – Day 12
+## Java Learning Roadmap
+
+|-- Java Basics
+| |-- Introduction to Java
+| |-- Setting Up Java Development Environment (JDK, IDEs)
+| |-- Java Syntax and Structure
+| |-- Data Types and Variables
+| |-- Operators and Expressions
+| |-- Control Flow Statements (if-else, switch)
+| |-- Loops (for, while, do-while)
+| |-- Functions and Methods
+| |-- Exception Handling
+|
+|-- Object-Oriented Programming (OOP) in Java
+| |-- Classes and Objects
+| |-- Constructors
+| |-- Inheritance
+| |-- Polymorphism
+| |-- Encapsulation
+| |-- Abstraction
+| |-- Interfaces and Abstract Classes
+| |-- Static and Final Keywords
+| |-- Inner Classes and Anonymous Classes
+|
+|-- Java Collections Framework
+| |-- Arrays vs Collections
+| |-- List (ArrayList, LinkedList, Vector, Stack)
+| |-- Set (HashSet, LinkedHashSet, TreeSet)
+| |-- Map (HashMap, LinkedHashMap, TreeMap, Hashtable)
+| |-- Queue (PriorityQueue, Deque)
+| |-- Iterators and Streams
+|
+|-- Java Concurrency and Multithreading
+| |-- Thread Lifecycle
+| |-- Creating Threads (Thread Class, Runnable Interface)
+| |-- Synchronization and Locks
+| |-- Executor Framework
+| |-- Future and Callable
+|
+|-- Java Input/Output (I/O)
+| |-- File Handling (Reading/Writing Files)
+| |-- Byte Streams and Character Streams
+| |-- Serialization and Deserialization
+|
+|-- Functional Programming in Java
+| |-- Lambda Expressions
+| |-- Functional Interfaces (Predicate, Consumer, Supplier)
+| |-- Streams API
+| |-- Optional Class
+|
+|-- Java Database Connectivity (JDBC)
+| |-- Connecting Java with Databases
+| |-- CRUD Operations in JDBC
+| |-- Connection Pooling
+|
+|-- Web Development with Java
+| |-- Java Servlets
+| |-- JavaServer Pages (JSP)
+| |-- Java Frameworks (Spring Boot, Hibernate)
+|
+|-- Java Build Tools
+| |-- Maven
+| |-- Gradle
+|
+|-- Advanced Java Topics
+| |-- Java Reflection API
+| |-- Java Virtual Machine (JVM) Internals
+| |-- Java Garbage Collection
+| |-- Memory Management
+|
+|-- Testing in Java
+| |-- JUnit
+| |-- Mockito
+|
+|-- Deployment and Cloud
+| |-- Deploying Java Applications
+| |-- Java with Docker
+| |-- Java in Cloud (AWS, Azure, GCP)
+|
+|-- Competitive Programming & DSA in Java
+| |-- Arrays, Strings, Linked Lists
+| |-- Stacks and Queues
+| |-- Trees and Graphs
+| |-- Dynamic Programming
+|
+|-- Java Learning Resources
+| |-- Books: Effective Java, Java: The Complete Reference
+| |-- Online Courses and Platforms: Oracle Java Docs, Udemy, LeetCcode.
+
+Like & repost to educate others. Bookmark💪
+
+keep learning, keep sharing !
+
+## Java Interview Questions
 
 💡 Question:
 What is the final keyword in Java?
@@ -387,99 +480,6 @@ You'll be surprised how much depth is hidden inside it.
 If you see improvements or alternative approaches, drop them in the comments.
 
 Comment “Notification” if you want the complete Java implementation zip, I’ll share it.
----
-## Java Learning Roadmap
-
-|-- Java Basics
-| |-- Introduction to Java
-| |-- Setting Up Java Development Environment (JDK, IDEs)
-| |-- Java Syntax and Structure
-| |-- Data Types and Variables
-| |-- Operators and Expressions
-| |-- Control Flow Statements (if-else, switch)
-| |-- Loops (for, while, do-while)
-| |-- Functions and Methods
-| |-- Exception Handling
-|
-|-- Object-Oriented Programming (OOP) in Java
-| |-- Classes and Objects
-| |-- Constructors
-| |-- Inheritance
-| |-- Polymorphism
-| |-- Encapsulation
-| |-- Abstraction
-| |-- Interfaces and Abstract Classes
-| |-- Static and Final Keywords
-| |-- Inner Classes and Anonymous Classes
-|
-|-- Java Collections Framework
-| |-- Arrays vs Collections
-| |-- List (ArrayList, LinkedList, Vector, Stack)
-| |-- Set (HashSet, LinkedHashSet, TreeSet)
-| |-- Map (HashMap, LinkedHashMap, TreeMap, Hashtable)
-| |-- Queue (PriorityQueue, Deque)
-| |-- Iterators and Streams
-|
-|-- Java Concurrency and Multithreading
-| |-- Thread Lifecycle
-| |-- Creating Threads (Thread Class, Runnable Interface)
-| |-- Synchronization and Locks
-| |-- Executor Framework
-| |-- Future and Callable
-|
-|-- Java Input/Output (I/O)
-| |-- File Handling (Reading/Writing Files)
-| |-- Byte Streams and Character Streams
-| |-- Serialization and Deserialization
-|
-|-- Functional Programming in Java
-| |-- Lambda Expressions
-| |-- Functional Interfaces (Predicate, Consumer, Supplier)
-| |-- Streams API
-| |-- Optional Class
-|
-|-- Java Database Connectivity (JDBC)
-| |-- Connecting Java with Databases
-| |-- CRUD Operations in JDBC
-| |-- Connection Pooling
-|
-|-- Web Development with Java
-| |-- Java Servlets
-| |-- JavaServer Pages (JSP)
-| |-- Java Frameworks (Spring Boot, Hibernate)
-|
-|-- Java Build Tools
-| |-- Maven
-| |-- Gradle
-|
-|-- Advanced Java Topics
-| |-- Java Reflection API
-| |-- Java Virtual Machine (JVM) Internals
-| |-- Java Garbage Collection
-| |-- Memory Management
-|
-|-- Testing in Java
-| |-- JUnit
-| |-- Mockito
-|
-|-- Deployment and Cloud
-| |-- Deploying Java Applications
-| |-- Java with Docker
-| |-- Java in Cloud (AWS, Azure, GCP)
-|
-|-- Competitive Programming & DSA in Java
-| |-- Arrays, Strings, Linked Lists
-| |-- Stacks and Queues
-| |-- Trees and Graphs
-| |-- Dynamic Programming
-|
-|-- Java Learning Resources
-| |-- Books: Effective Java, Java: The Complete Reference
-| |-- Online Courses and Platforms: Oracle Java Docs, Udemy, LeetCcode.
-
-Like & repost to educate others. Bookmark💪
-
-keep learning, keep sharing !
 ---
 ## 🚀 DTO Pattern in Spring Boot — Stop Exposing Your Entities!
 
