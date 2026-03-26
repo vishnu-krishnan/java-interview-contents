@@ -118,3 +118,10 @@ Decision Made: Moved all 28 section markdown files directly from `topics/section
 Reason: User requested to properly align the folder structure by moving the section files directly into the root folder.
 Impact: Maintainability | UX
 Rollback Strategy: Move all `[XX]_*.md` files back to `topics/sections/`.
+
+[2026-03-26] [README Redirection]
+Change Type: Minor
+Decision Made: Added direct linking from the README.md headers to each of the 28 individual section Markdown files.
+Reason: User requested proper redirections from the README to the detailed content files for better navigation.
+Impact: UX | Maintainability
+Rollback Strategy: Revert README.md to previous version.

@@ -5,7 +5,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 📘 1. Core Java
+## 📘 [1. Core Java](01_core_java.md)
 
 - Introduction to Java — JVM, JRE, JDK differences
 - Setting Up Java Development Environment (JDK, IntelliJ, VS Code)
@@ -52,7 +52,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🧱 2. Object-Oriented Programming (OOP) in Java
+## 🧱 [2. Object-Oriented Programming (OOP) in Java](02_oop_in_java.md)
 
 - Classes and Objects
 - Constructors (default, parameterized, copy)
@@ -76,7 +76,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 📦 3. Java Collections Framework
+## 📦 [3. Java Collections Framework](03_collections_framework.md)
 
 - Arrays vs Collections
 - **List**: `ArrayList`, `LinkedList`, `Vector`, `Stack`
@@ -109,7 +109,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🔀 4. Java Concurrency & Multithreading
+## 🔀 [4. Java Concurrency & Multithreading](04_concurrency_and_multithreading.md)
 
 - Thread Lifecycle — NEW → RUNNABLE → BLOCKED → WAITING → TIMED_WAITING → TERMINATED
 - Creating Threads — `Thread` class, `Runnable`, `Callable`
@@ -153,7 +153,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## ⚡ 5. Functional Programming in Java
+## ⚡ [5. Functional Programming in Java](05_functional_programming.md)
 
 - Lambda Expressions — `(params) -> expression`
 - **Functional Interfaces** (`@FunctionalInterface`)
@@ -176,7 +176,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 💾 6. Java Input/Output (I/O)
+## 💾 [6. Java Input/Output (I/O)](06_java_io.md)
 
 - File Handling (`FileReader`, `FileWriter`, `BufferedReader`, `BufferedWriter`)
 - Byte Streams (`InputStream`, `OutputStream`)
@@ -188,7 +188,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## ☕ 7. Java Version Features & Implementations
+## ☕ [7. Java Version Features & Implementations](07_java_version_features.md)
 
 ### ☕ Java 8
 
@@ -248,7 +248,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🚀 8. Advanced Java Topics
+## 🚀 [8. Advanced Java Topics](08_advanced_java_topics.md)
 
 - **JVM Internals**
   - JVM Architecture — Class Loader, Runtime Data Areas, Execution Engine
@@ -275,7 +275,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🎨 9. Design Patterns
+## 🎨 [9. Design Patterns](09_design_patterns.md)
 
 ### Creational Patterns
 - **Singleton** — lazy init, double-checked locking (`volatile`), thread-safe, Enum singleton
@@ -318,7 +318,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🗄️ 10. Java Database Connectivity (JDBC)
+## 🗄️ [10. Java Database Connectivity (JDBC)](10_jdbc.md)
 
 - Connecting Java with Databases (`DriverManager`, `Connection`)
 - `Statement` vs `PreparedStatement` vs `CallableStatement`
@@ -329,7 +329,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🗄️ 11. Databases (SQL & NoSQL)
+## 🗄️ [11. Databases (SQL & NoSQL)](11_databases_sql_nosql.md)
 
 ### 🗃️ SQL & Relational Databases
 
@@ -385,7 +385,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🔗 12. Hibernate & JPA
+## 🔗 [12. Hibernate & JPA](12_hibernate_and_jpa.md)
 
 - ORM (Object-Relational Mapping) Concepts
 - **JPA (Java Persistence API)**
@@ -432,7 +432,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🌿 13. Spring Framework
+## 🌿 [13. Spring Framework](13_spring_framework.md)
 
 - **Spring Core**
   - Inversion of Control (IoC)
@@ -475,7 +475,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🚀 14. Spring Boot
+## 🚀 [14. Spring Boot](14_spring_boot.md)
 
 - Spring Boot vs Spring Framework
 - **`@SpringBootApplication` Deep Dive** — combines 3 annotations:
@@ -561,7 +561,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🌐 15. Web Development & API Design
+## 🌐 [15. Web Development & API Design](15_web_development_and_api_design.md)
 
 - Java Servlets, JavaServer Pages (JSP)
 - **RESTful API Design Principles**
@@ -590,7 +590,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🧪 16. Testing in Java
+## 🧪 [16. Testing in Java](16_testing_in_java.md)
 
 - **Unit Testing**
   - JUnit 5 — `@Test`, `@BeforeEach`, `@AfterEach`, `@Nested`, `@ParameterizedTest`
@@ -612,7 +612,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🔧 17. Java Build Tools & DevOps Basics
+## 🔧 [17. Java Build Tools & DevOps Basics](17_build_tools_and_devops.md)
 
 - **Maven** — POM, lifecycle, plugins, dependency scopes
 - **Gradle** — `build.gradle`, task system, incremental builds
@@ -625,7 +625,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🐳 18. Docker & Kubernetes
+## 🐳 [18. Docker & Kubernetes](18_docker_and_kubernetes.md)
 
 - **Docker**
   - Image vs Container
@@ -649,7 +649,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## ☁️ 19. Deployment and Cloud
+## ☁️ [19. Deployment and Cloud](19_deployment_and_cloud.md)
 
 - Deploying Java Applications — JAR, WAR, containerized
 - **Docker** — (see Section 14)
@@ -664,7 +664,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🌐 20. Microservices Architecture
+## 🌐 [20. Microservices Architecture](20_microservices_architecture.md)
 
 - **Monolith vs Microservices** — tradeoffs, when to choose
 - **Core Principles** — single responsibility, loose coupling, independent deployment
@@ -711,7 +711,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 📨 21. Apache Kafka & Messaging
+## 📨 [21. Apache Kafka & Messaging](21_apache_kafka_and_messaging.md)
 
 ### Apache Kafka
 
@@ -760,7 +760,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🔭 22. Observability & Monitoring
+## 🔭 [22. Observability & Monitoring](22_observability_and_monitoring.md)
 
 - **Logging**
   - SLF4J + Logback / Log4j2
@@ -790,7 +790,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🏗️ 23. System Design (HLD)
+## 🏗️ [23. System Design (HLD)](23_system_design_hld.md)
 
 - **Core Concepts**
   - Horizontal vs Vertical Scaling
@@ -825,7 +825,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🏆 24. Competitive Programming & DSA in Java
+## 🏆 [24. Competitive Programming & DSA in Java](24_dsa_and_competitive_programming.md)
 
 - **Patterns for Problem Solving**
   - Two Pointers — sorted arrays, palindrome
@@ -867,7 +867,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🗓️ 25. Agile, Scrum & Project Management
+## 🗓️ [25. Agile, Scrum & Project Management](25_agile_scrum_project_management.md)
 
 - **Agile Manifesto** (4 values — left side valued MORE, right side still matters)
   - Individuals & interactions > processes & tools
@@ -898,7 +898,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 🧭 26. Interview Preparation Strategy
+## 🧭 [26. Interview Preparation Strategy](26_interview_preparation_strategy.md)
 
 - **3-Month Preparation Plan**
   - **Month 1 — Core DSA Foundations**
@@ -953,7 +953,7 @@ Built for **interview preparation** and **production engineering** at all levels
 
 ---
 
-## 💻 27. Coding Programs & Interview Examples
+## 💻 [27. Coding Programs & Interview Examples](27_coding_programs_and_examples.md)
 
 > Hands-on code problems asked in real Java backend interviews. Organized by topic.
 
@@ -1531,7 +1531,7 @@ class ShapeFactory {
 
 ---
 
-## 📚 28. Java Learning Resources
+## 📚 [28. Java Learning Resources](28_learning_resources.md)
 
 | Type | Resource |
 |---|---|
