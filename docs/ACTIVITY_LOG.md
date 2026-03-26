@@ -90,3 +90,24 @@ Decision Made: Deleted categorized/, categorized_backup_20260326/, and scripts/ 
 Reason: User requested clean folder structure with one file per roadmap section for focused study. Old processing scripts and categorized files were no longer needed after content was merged into the roadmap.
 Impact: Maintainability | UX
 Rollback Strategy: Git checkout to restore deleted folders; remove topics/sections/ directory.
+
+[2026-03-26] [9-Part Section Standardization]
+Change Type: Major
+Decision Made: Applied the 9-part production-grade standard structure to topics 01 through 28 sequentially.
+Reason: Standardize Java roadmap documentation to ensure consistent quality and format across all topics for the backend engineering interview preparation guide.
+Impact: Maintainability | UX | Data Quality
+Rollback Strategy: Git checkout previous version of topics/sections/ directory.
+
+[2026-03-26] [Coding Programs Content Restoration]
+Change Type: Patch
+Decision Made: Re-integrated the "Top 50 Coding Programs" and "6 Golden Rules (DSA, Streams, etc.)" checklists into 27_coding_programs_and_examples.md.
+Reason: The comprehensive tables from the master roadmap were accidentally omitted during the 9-part structural conversion.
+Impact: Data Quality
+Rollback Strategy: Restore previous version of 27_coding_programs_and_examples.md.
+
+[2026-03-26] [27_coding_programs Refinement & Density Upgrade]
+Change Type: Minor
+Decision Made: Rewrote 27_coding_programs_and_examples.md to maximize density and readability for rapid interview revision without breaking the 9-part standard structure.
+Reason: User requested a concise, interview-ready reference prioritizing density over volume with cleaner structure and robust edge-case highlighting.
+Impact: UX | Maintainability
+Rollback Strategy: Restore previous iteration of 27_coding_programs_and_examples.md.

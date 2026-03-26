@@ -1,415 +1,118 @@
 <!-- Part of Java Learning Roadmap — Section 27 -->
 
-## 💻 27. Coding Programs & Interview Examples
-
-> Hands-on code problems asked in real Java backend interviews. Organized by topic.
-
-### 🔷 A. Java 8 Streams — Most Asked Programs
-
-#### 1. Find duplicate elements in a list
-```java
-List<Integer> nums = List.of(1, 2, 3, 2, 4, 3, 5);
-Set<Integer> seen = new HashSet<>();
-List<Integer> duplicates = nums.stream()
-    .filter(n -> !seen.add(n))
-    .distinct()
-    .collect(Collectors.toList());
-// Output: [2, 3]
-```
-
-#### 2. Find the second highest number
-```java
-Optional<Integer> second = nums.stream()
-    .distinct()
-    .sorted(Comparator.reverseOrder())
-    .skip(1)
-    .findFirst();
-```
-
-#### 3. First non-repeating character in a string
-```java
-String input = "swiss";
-Character result = input.chars()
-    .mapToObj(c -> (char) c)
-    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
-    .entrySet().stream()
-    .filter(e -> e.getValue() == 1)
-    .map(Map.Entry::getKey)
-    .findFirst()
-    .orElse(null);
-// Output: 'w'
-```
-
-#### 4. Count character frequency in a string
-```java
-String s = "hello world";
-Map<Character, Long> freq = s.chars()
-    .mapToObj(c -> (char) c)
-    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-```
-
-#### 5. Group employees by department & find max salary per dept
-```java
-Map<String, Optional<Employee>> maxByDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDepartment,
-             Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
-
-// Average salary per department
-Map<String, Double> avgByDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDepartment,
-             Collectors.averagingDouble(Employee::getSalary)));
-
-// Count per department
-Map<String, Long> countByDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
-```
-
-#### 6. Sort employees: first by name, then by marks descending
-```java
-employees.stream()
-    .sorted(Comparator.comparing(Employee::getName)
-        .thenComparing(Comparator.comparingDouble(Employee::getSalary).reversed()))
-    .collect(Collectors.toList());
-```
-
-#### 7. Reverse words in a sentence
-```java
-String sentence = "My name is Tom";
-String reversed = Arrays.stream(sentence.split(" "))
-    .collect(Collectors.collectingAndThen(Collectors.toList(), list -> {
-        Collections.reverse(list);
-        return String.join(" ", list);
-    }));
-// Output: "Tom is name My"
-```
-
-#### 8. Fibonacci using Stream.iterate (Java 8)
-```java
-Stream.iterate(new long[]{0, 1}, f -> new long[]{f[1], f[0] + f[1]})
-    .limit(10)
-    .map(f -> f[0])
-    .forEach(System.out::println);
-// Output: 0 1 1 2 3 5 8 13 21 34
-```
-
-#### 9. Flatten a list of lists
-```java
-List<List<Integer>> nested = List.of(List.of(1, 2), List.of(3, 4), List.of(5));
-List<Integer> flat = nested.stream()
-    .flatMap(Collection::stream)
-    .collect(Collectors.toList());
-```
-
-#### 10. Partition numbers into even and odd
-```java
-Map<Boolean, List<Integer>> partitioned = nums.stream()
-    .collect(Collectors.partitioningBy(n -> n % 2 == 0));
-// true  → [2, 4]   false → [1, 3, 5]
-```
+# 💻 27. Coding Programs & Interview Examples
 
 ---
 
-### 🔷 B. String Programs
+## 1. Definition
+This section bridges theoretical algorithms with practical Java fluency, testing your mastery of **Java 8 Streams, Lambdas, Collections, and Concurrency**.
 
-#### 11. Palindrome check — recursive
-```java
-public boolean isPalindrome(String s, int left, int right) {
-    if (left >= right) return true;
-    if (s.charAt(left) != s.charAt(right)) return false;
-    return isPalindrome(s, left + 1, right - 1);
-}
-// Call: isPalindrome("racecar", 0, s.length() - 1) → true
-```
+### The Golden Rules for Live Coding
+1.  **Never Use an IDE:** Practice writing code in a plain text editor (Notepad/Google Doc). Interviews expect you to know standard library methods (`String.substring(int, int)`) without auto-complete.
+2.  **Declare Types Properly:** Don't write pseudo-code unless instructed. Use `Map<String, Integer>` instead of just `Map()`.
+3.  **Handle Nulls:** In real Java systems, inputs are often `null`. Write `if (input == null || input.isEmpty())` before processing a String.
+4.  **Know the Complexity:** Streams are not magical; they run `O(N)` loops. Know the time/space complexity of every stream operation.
 
-#### 12. Anagram check
-```java
-public boolean isAnagram(String a, String b) {
-    char[] ca = a.toCharArray(); char[] cb = b.toCharArray();
-    Arrays.sort(ca); Arrays.sort(cb);
-    return Arrays.equals(ca, cb);
-}
-// HashMap approach: O(n) time, O(1) space (limited alphabet)
-```
+---
 
-#### 13. Count character occurrences
-```java
-Map<Character, Integer> map = new LinkedHashMap<>();
-for (char c : "hello world".toCharArray())
-    map.merge(c, 1, Integer::sum);
-// Output: h=1, e=1, l=3, o=2, ' '=1, w=1, r=1, d=1
-```
+## 2. Why It Exists
+* **Syntax Fluency:** Distinguishes modern engineers (1-line `Collectors.groupingBy()`) from legacy coders (15-line nested `for` loops).
+* **Deep Mechanics:** Tests knowledge beyond pure logic to expose JVM understanding (e.g., thread starvation, object pooling, GC overhead).
 
-#### 14. String compression ("aaabbc" → "a3b2c1")
+---
+
+## 3. How It Works Internally
+* **Stream Object Allocation:** `list.stream().map(String::toUpperCase).collect(toList())` allocates a new Object on the Heap for every element. For 1M records, this triggers massive Garbage Collection. A primitive `for` loop is mathematically superior for latency-critical paths.
+* **Singleton `volatile` Trap:** Without `volatile`, thread A might cache a partially constructed Singleton in its L1 CPU cache. `volatile` enforces a "Happens-Before" memory boundary, flushing read/writes directly to Main RAM.
+
+---
+
+## 4. Code Examples
+
+### 4.1 Canonical Snippets
+**Java 8: First Non-Repeating Character** (Finding 'w' in "swiss")
 ```java
-public String compress(String s) {
-    StringBuilder sb = new StringBuilder();
-    int i = 0;
-    while (i < s.length()) {
-        char c = s.charAt(i); int count = 0;
-        while (i < s.length() && s.charAt(i) == c) { i++; count++; }
-        sb.append(c).append(count);
-    }
-    return sb.toString();
+public Character firstNonRepeating(String s) {
+    if (s == null || s.isEmpty()) return null;
+    return s.chars().mapToObj(c -> (char) c)
+            .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+            .entrySet().stream()
+            .filter(e -> e.getValue() == 1L)
+            .map(Map.Entry::getKey).findFirst().orElse(null);
 }
 ```
 
-#### 15. Balanced parentheses
+**Concurrency: Thread-Safe Singleton (Double-Checked Locking)**
 ```java
-public boolean isBalanced(String s) {
-    Deque<Character> stack = new ArrayDeque<>();
-    for (char c : s.toCharArray()) {
-        if ("({[".indexOf(c) >= 0) stack.push(c);
-        else {
-            if (stack.isEmpty()) return false;
-            char top = stack.pop();
-            if (c == ')' && top != '(') return false;
-            if (c == '}' && top != '{') return false;
-            if (c == ']' && top != '[') return false;
+public class DBConnection {
+    private static volatile DBConnection instance; // volatile prevents instruction re-ordering
+    private DBConnection() {}
+    public static DBConnection getInstance() {
+        if (instance == null) {
+            synchronized (DBConnection.class) {
+                if (instance == null) instance = new DBConnection();
+            }
         }
+        return instance;
     }
-    return stack.isEmpty();
 }
 ```
+
+### 4.2 The Top 50 Reference Directory (Java 8+)
+| # | Problem | Key API / Pattern |
+|---|---|---|
+| 1-2 | Find/Remove duplicates | `filter(!seen.add(n))` / `.distinct()` |
+| 3-4 | First non-repeating / Freq | `groupingBy(..., LinkedHashMap::new, counting())` |
+| 5-8 | Sort / 2nd Highest | `.distinct().sorted(reverseOrder()).skip(1).findFirst()` |
+| 9-11 | Filter Evens / Uppercase | `.filter(n -> n % 2 == 0)` / `.map(String::toUpperCase)` |
+| 12-14 | Flatten / Join / Max Len | `flatMap(Collection::stream)` / `joining(",")` / `max(comparingInt)` |
+| 15-18 | Group / Max Salary by Dept | `groupingBy(getDept, maxBy(comparingDouble))` |
+| 19-21 | Partition Evens / Sum | `partitioningBy(n%2==0)` / `mapToInt(i->i).sum()` |
+| 22-26 | Common / Sort Map / Nulls | `filter(set::contains)` / `comparingByValue()` / `filter(Objects::nonNull)` |
+| 27-29 | Word Count / Group by Len | `split("\\s+").length` / `groupingBy(String::length)` |
+| 30-31 | Merge Lists / Missing Num | `Stream.concat(l1, l2)` / XOR Trick (`n*(n+1)/2 - sum`) |
+| 32-35 | Two Sum / Binary Search | `HashMap O(n)` / Left-Right Pointers `O(log n)` |
+| 36-40 | LRU / Sliding Window | `LinkedHashMap(cap, 0.75f, true)` / Single-pass `O(n)` |
+| 41-43 | Deadlock / Immutable Class | Lock in same order / `final` + `List.copyOf()` |
+| 44-48 | Optional / Virtual Threads | `ofNullable().map().orElse()` / `newVirtualThreadPerTaskExecutor()` |
+| 49-50 | Record DTO / Search API | `record User(String name){}` / `@GetMapping + @RequestParam` |
 
 ---
 
-### 🔷 C. Collections & Data Structures
-
-#### 16. LRU Cache using LinkedHashMap
-```java
-class LRUCache<K, V> extends LinkedHashMap<K, V> {
-    private final int capacity;
-    LRUCache(int capacity) {
-        super(capacity, 0.75f, true); // accessOrder = true
-        this.capacity = capacity;
-    }
-    @Override
-    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
-        return size() > capacity;
-    }
-}
-```
-
-#### 17. Remove duplicates from a list (preserve order)
-```java
-List<Integer> unique = new ArrayList<>(new LinkedHashSet<>(list));
-// Or with streams:
-List<Integer> unique2 = list.stream().distinct().collect(Collectors.toList());
-```
-
-#### 18. Sort a Map by value
-```java
-Map<String, Integer> sorted = map.entrySet().stream()
-    .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-             (e1, e2) -> e1, LinkedHashMap::new));
-```
-
-#### 19. Find common elements between two lists
-```java
-List<Integer> common = list1.stream()
-    .filter(new HashSet<>(list2)::contains)
-    .collect(Collectors.toList());
-```
-
-#### 20. Comparable vs Comparator
-```java
-// Comparable — natural order INSIDE the class
-class Person implements Comparable<Person> {
-    public int compareTo(Person o) { return this.age - o.age; }
-}
-
-// Comparator — external/multiple sort orders
-list.sort(Comparator.comparing(Person::getName)
-    .thenComparing(Comparator.comparingInt(Person::getAge).reversed()));
-```
+## 5. Interview Questions & Traps
+| Question | Answer |
+|---|---|
+| **Why `LinkedHashMap` for consecutive counting?** | `HashMap` randomly scrambles iteration order based on hashes. `LinkedHashMap` preserves exact insertion chronology, ensuring `.findFirst()` is accurate. |
+| **Complexity of `groupingBy`?** | Space: `O(N)` (creates a new Map). Time: `O(N)` (single pass iteration). |
+| **Why not put `synchronized` on `getInstance()`?** | Method-level synchronization blocks *every* read request eternally. Double-checked locking only synchronizes exactly once during the initial bare creation. |
 
 ---
 
-### 🔷 D. DSA Classics
+## 6. Common Mistakes
 
-#### 21. Two Sum — O(n) with HashMap
-```java
-public int[] twoSum(int[] nums, int target) {
-    Map<Integer, Integer> map = new HashMap<>(); // value → index
-    for (int i = 0; i < nums.length; i++) {
-        int complement = target - nums[i];
-        if (map.containsKey(complement))
-            return new int[]{map.get(complement), i};
-        map.put(nums[i], i);
-    }
-    return new int[]{};
-}
-// Time: O(n) | Space: O(n)
-```
-
-#### 22. Three Sum — O(n²) with sort + two pointers
-```java
-public List<List<Integer>> threeSum(int[] nums) {
-    Arrays.sort(nums);
-    List<List<Integer>> result = new ArrayList<>();
-    for (int i = 0; i < nums.length - 2; i++) {
-        if (i > 0 && nums[i] == nums[i - 1]) continue; // skip duplicates
-        int left = i + 1, right = nums.length - 1;
-        while (left < right) {
-            int sum = nums[i] + nums[left] + nums[right];
-            if (sum == 0) { result.add(List.of(nums[i], nums[left++], nums[right--])); }
-            else if (sum < 0) left++;
-            else right--;
-        }
-    }
-    return result;
-}
-```
-
-#### 23. Binary Search
-```java
-public int binarySearch(int[] arr, int target) {
-    int left = 0, right = arr.length - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2; // avoids overflow
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] < target) left = mid + 1;
-        else right = mid - 1;
-    }
-    return -1; // not found
-}
-```
-
-#### 24. Find missing number (XOR trick)
-```java
-public int missingNumber(int[] nums) {
-    int xor = nums.length;
-    for (int i = 0; i < nums.length; i++)
-        xor ^= i ^ nums[i];
-    return xor;
-}
-// Alternative: n*(n+1)/2 - Arrays.stream(nums).sum()
-```
-
-#### 25. Sliding window — maximum subarray sum of size k
-```java
-public int maxSum(int[] arr, int k) {
-    int windowSum = 0, maxSum = 0;
-    for (int i = 0; i < k; i++) windowSum += arr[i];
-    maxSum = windowSum;
-    for (int i = k; i < arr.length; i++) {
-        windowSum += arr[i] - arr[i - k];
-        maxSum = Math.max(maxSum, windowSum);
-    }
-    return maxSum;
-}
-```
+*   **Shared Mutable State in Parallel Streams:** Appending to a generic `ArrayList` inside a `.parallelStream()` causes silent missing data or `ConcurrentModificationException`. **Fix:** Use `ConcurrentHashMap` or return pure collections.
+*   **Assuming Array Sizes:** Hardcoding `int[] res = new int[5]` assumes constraints. **Fix:** Use dynamic `ArrayList` mapping.
+*   **Modifying Fixed Arrays:** Invoking `.add()` on `Arrays.asList("A", "B")` throws `UnsupportedOperationException`. **Fix:** Wrap it: `new ArrayList<>(Arrays.asList(...))`.
 
 ---
 
-### 🔷 E. Concurrency Programs
-
-#### 26. Deadlock — example and fix
-```java
-// DEADLOCK: Thread1 locks A→B, Thread2 locks B→A
-synchronized(lockA) { synchronized(lockB) { /* Thread 1 */ } }
-synchronized(lockB) { synchronized(lockA) { /* Thread 2 */ } }
-
-// FIX: Always acquire locks in the SAME order
-synchronized(lockA) { synchronized(lockB) { /* both threads */ } }
-
-// Or use tryLock with timeout (no indefinite blocking)
-if (lockA.tryLock(50, MILLISECONDS) && lockB.tryLock(50, MILLISECONDS)) {
-    try { doWork(); } finally { lockA.unlock(); lockB.unlock(); }
-}
-```
-
-#### 27. ThreadLocal — proper usage with cleanup
-```java
-static ThreadLocal<MyObject> tl = new ThreadLocal<>();
-
-// BAD: no cleanup → memory leak in thread pools
-tl.set(new MyObject()); doWork();
-
-// GOOD: always remove in finally
-try {
-    tl.set(new MyObject());
-    doWork();
-} finally {
-    tl.remove(); // critical — prevents memory leak
-}
-```
-
-#### 28. Virtual Threads (Java 21) — 1 million tasks
-```java
-try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-    IntStream.range(0, 1_000_000).forEach(i ->
-        executor.submit(() -> {
-            Thread.sleep(Duration.ofSeconds(1)); // blocks cheaply
-            return i;
-        })
-    );
-} // 1 million virtual threads, NOT 1 million OS threads
-```
+## 7. Real-World Usage
+*   **Mapping:** Converting 10,000 DB `Entity` records to `ResponseDTO`s before dropping them across the REST API JSON wire.
+*   **Grouping:** Aggregation tasks (e.g., feeding a stream of 1M credit card transactions into a `groupingBy(Merchant)` pipeline to calculate total ad-spend).
+*   **Double-Checked Locking:** Instantiating extremely heavy configuration objects (AWS S3 Clients, HikariDB Pools) strictly once.
 
 ---
 
-### 🔷 F. Spring Boot REST API Programs
-
-#### 29. REST controller — GET by ID and search by name
-```java
-@RestController
-@RequestMapping("/api/persons")
-public class PersonController {
-    @Autowired private PersonRepository repo;
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Person> getById(@PathVariable Long id) {
-        return repo.findById(id)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
-    }
-
-    @GetMapping("/search")
-    public List<Person> getByName(@RequestParam String name) {
-        return repo.findByNameContainingIgnoreCase(name);
-    }
-}
-```
-
-#### 30. Immutable class using Java 16+ Record
-```java
-public record Employee(String name, List<String> roles) {
-    public Employee {
-        if (name == null || name.isBlank())
-            throw new IllegalArgumentException("Name required");
-        roles = List.copyOf(roles); // defensive copy — immutable
-    }
-}
-// Usage:
-Employee e = new Employee("Alice", List.of("Dev", "Lead"));
-e.roles().add("PM"); // throws UnsupportedOperationException ✅
-```
-
-#### 31. Factory Pattern with switch expression (Java 17+)
-```java
-class ShapeFactory {
-    public Shape get(String type) {
-        return switch (type) {
-            case "CIRCLE"   -> new Circle();
-            case "RECTANGLE"-> new Rectangle();
-            default         -> throw new IllegalArgumentException("Unknown: " + type);
-        };
-    }
-}
-```
+## 8. Practice Tasks
+1.  **Chaining:** Create a 1-line stream that filters an array of numbers, multiplies by 10, removes duplicates, and sorts descending.
+2.  **String Parsing:** Given raw text `"The cat in the hat!"`, remove punctuation, cast lowercase, and stream the top 3 frequent words.
+3.  **Concurrency Ruin:** Create 2 threads. T1 locks A then sleeps and locks B. T2 locks B then sleeps and locks A. Observe the JVM freeze to truly understand Deadlocks.
 
 ---
 
-### 🔷 G. Golden Rules for Coding Problems
+## 9. Quick Revision: The Golden Reference
 
----
-
-#### 🏆 G1. DSA Pattern Recognition — 10 Rules
-
-> Hear the problem → recognize the pattern → pick the right tool. Every time.
-
+### 9.1 DSA Pattern Recognition — 10 Rules
 | # | If the problem says... | Use this |
 |---|---|---|
 | 1 | Top / min / max **K elements** among N | **Heap** (`PriorityQueue`) |
@@ -423,10 +126,7 @@ class ShapeFactory {
 | 9 | **Search or manipulate** a set of strings | **Trie** is the best structure |
 | 10 | LinkedList, **no extra space** allowed | **Fast & Slow Pointer** approach |
 
----
-
-#### ⚡ G2. Java Streams — Golden Rules
-
+### 9.2 Java Streams — Golden Rules
 | # | Rule | Reason |
 |---|---|---|
 | 1 | **Never modify the source** inside a stream | Causes `ConcurrentModificationException` |
@@ -445,135 +145,59 @@ class ShapeFactory {
 | 14 | `peek()` is for debugging only — never business logic | Terminal ops may not run on all elements |
 | 15 | `reduce(identity, accumulator)` for fold operations | Sum, product, max without boxing |
 
----
-
-#### 🔤 G3. String Problems — Golden Rules
-
-| # | Rule | Example / Hint |
+### 9.3 String Problems — Golden Rules
+| # | Rule | Hint |
 |---|---|---|
 | 1 | Use `StringBuilder` for building strings in loops | `String +` in loop = O(n²), `StringBuilder` = O(n) |
 | 2 | Anagram check → sort both, or use `int[26]` freq array | `Arrays.sort(a) == Arrays.sort(b)` |
 | 3 | Palindrome → **two pointers** (left, right converging) | Avoids creating a reversed copy |
-| 4 | First non-repeating → `LinkedHashMap` (insertion-order + count) | Preserves order while counting |
-| 5 | Duplicate characters → `HashSet.add()` returns `false` if duplicate | `if (!seen.add(c)) duplicates.add(c)` |
-| 6 | Substring search → use `String.contains()` or `indexOf()` | Don't write KMP for interviews unless asked |
+| 4 | First non-repeating → `LinkedHashMap` | Preserves order while counting |
+| 5 | Duplicate characters → `HashSet.add()` returns `false` | `if (!seen.add(c)) duplicates.add(c)` |
+| 6 | Substring search → use `String.contains()` or `indexOf()` | Don't write KMP unless asked |
 | 7 | Word frequency → `Map.merge(word, 1, Integer::sum)` | Cleaner than `getOrDefault + put` |
 | 8 | Reverse words → `split(" ")` + reverse array + `String.join` | Or use `Deque` as a stack |
-| 9 | Remove duplicate chars preserving order → `LinkedHashSet` | `new LinkedHashSet<>(Arrays.asList(chars))` |
-| 10 | char↔int conversion → `(char) c` and `c - 'a'` for indexing | `'a'` = 97; use for freq array indexing |
-| 11 | **Never** compare Strings with `==` — always `.equals()` | `==` checks reference, not content |
-| 12 | `s.chars()` returns `IntStream` — cast to `(char)` for Stream ops | `s.chars().mapToObj(c -> (char) c)` |
+| 9 | Remove duplicate chars preserving order | `new LinkedHashSet<>(Arrays.asList(chars))` |
+| 10 | char↔int conversion → `(char) c` and `c - 'a'` | `'a'` = 97; use for freq array indexing |
+| 11 | **Never** compare Strings with `==` | Always `.equals()` |
+| 12 | `s.chars()` returns `IntStream` | Cast to `(char)` for Stream ops |
 
----
-
-#### 📦 G4. Collections — Golden Rules
-
+### 9.4 Collections — Golden Rules
 | # | Rule | Why |
 |---|---|---|
-| 1 | **HashMap** for O(1) lookup, **TreeMap** for sorted order | Don't use TreeMap when order doesn't matter — 5× slower |
-| 2 | **LinkedHashMap** when you need insertion order + O(1) | Foundation for LRU Cache |
+| 1 | **HashMap** for O(1), **TreeMap** for sorted | Don't use TreeMap when order doesn't matter (5× slower) |
+| 2 | **LinkedHashMap** for insertion order + O(1) | Foundation for LRU Cache |
 | 3 | **HashSet** to track seen elements in O(1) | Replaces nested loops for duplicates |
-| 4 | `computeIfAbsent(key, k -> new ArrayList<>())` for grouping | Cleaner than `getOrDefault + put` |
-| 5 | `Map.merge(key, 1, Integer::sum)` for counting | Replaces 3-line `getOrDefault` pattern |
+| 4 | `computeIfAbsent(key, k -> new ArrayList<>())` | Cleaner than `getOrDefault + put` |
+| 5 | `Map.merge(key, 1, Integer::sum)` | Replaces 3-line map-counting code |
 | 6 | Use **`Deque`** (`ArrayDeque`) instead of `Stack` | `Stack` is legacy + synchronized |
 | 7 | Fail-fast iterators → never `list.remove()` inside `for-each` | Use `Iterator.remove()` or `removeIf()` |
-| 8 | `Collections.unmodifiableList()` vs `List.of()` | `List.of()` throws on add/set, `unmodifiable` wraps existing |
-| 9 | **`ConcurrentHashMap`** for multi-threaded maps | `HashMap` is not thread-safe; `Hashtable` is deprecated |
-| 10 | **`CopyOnWriteArrayList`** for read-heavy, write-rare concurrent lists | Safe iteration; writes create a full copy |
-| 11 | `PriorityQueue` default = min-heap; reverse for max-heap | `new PriorityQueue<>(Comparator.reverseOrder())` |
-| 12 | `equals()` + `hashCode()` must be consistent for Map keys | If `equals()` is overridden, override `hashCode()` too |
+| 8 | `Collections.unmodifiableList()` vs `List.of()` | `List.of()` throws on add/set |
+| 9 | **`ConcurrentHashMap`** for multi-threaded maps | `HashMap` is not thread-safe |
+| 10 | **`CopyOnWriteArrayList`** for read-heavy | Safe concurrent iteration |
+| 11 | `PriorityQueue` default = min-heap | Use `Comparator.reverseOrder()` for max-heap |
+| 12 | `equals()` + `hashCode()` contract | If `equals()` is overridden, override `hashCode()` |
 
----
-
-#### 🔀 G5. Concurrency — Golden Rules
-
+### 9.5 Concurrency — Golden Rules
 | # | Rule | Why |
 |---|---|---|
-| 1 | **Prefer `ReentrantLock` over `synchronized`** for complex locking | Supports `tryLock`, `lockInterruptibly`, fairness |
-| 2 | **Always** call `ThreadLocal.remove()` in `finally` | Thread pools reuse threads → stale data leak |
-| 3 | **`volatile`** = visibility only, NOT atomicity | Use `AtomicInteger` for atomic increments |
-| 4 | **Lock ordering** prevents deadlock | Always acquire `lockA` before `lockB` in all threads |
-| 5 | Use `ConcurrentHashMap` — never `Collections.synchronizedMap()` | `synchronizedMap` locks entire map; CHM is segment-locked |
-| 6 | Use **`CompletableFuture`** for async pipelines | Avoid raw `Thread` or legacy `Future.get()` blocking |
-| 7 | `parallelStream()` uses **ForkJoinPool** (shared) | Can starve other tasks; use custom pool for isolation |
-| 8 | **Virtual Threads** (Java 21) — never use `synchronized` inside | Pins the carrier thread; use `ReentrantLock` instead |
-| 9 | `CountDownLatch` = wait for N events (one-time); `CyclicBarrier` = N threads meet repeatedly | Choose based on reuse need |
-| 10 | Design stateless services whenever possible | No shared state = no concurrency bugs |
+| 1 | **Prefer `ReentrantLock` over `synchronized`** | Supports `tryLock`, fairness |
+| 2 | **Always** call `ThreadLocal.remove()` in `finally` | Prevents stale data leak in thread pools |
+| 3 | **`volatile`** = visibility only, NOT atomicity | Use `AtomicInteger` to increment |
+| 4 | **Lock ordering** prevents deadlock | Acquire `lockA` before `lockB` universally |
+| 5 | Use `ConcurrentHashMap` over `Collections.synchronizedMap()` | CHM uses segment-locks |
+| 6 | Use **`CompletableFuture`** for async pipelines | Avoid raw `Thread` blocking |
+| 7 | `parallelStream()` uses shared ForkJoinPool | Starvation risk; use custom pool |
+| 8 | **Virtual Threads** (Java 21) — avoid `synchronized` | It pins the carrier thread; use `ReentrantLock` |
 
----
-
-#### 🗄️ G6. SQL Interview — Golden Rules
-
+### 9.6 SQL Interview — Golden Rules
 | # | Rule | Hint |
 |---|---|---|
-| 1 | **Nth highest salary** → `DENSE_RANK()` or subquery with `LIMIT OFFSET` | `DENSE_RANK() OVER (ORDER BY salary DESC) = N` |
+| 1 | **Nth highest salary** → `DENSE_RANK()` | `DENSE_RANK() OVER (ORDER BY salary DESC) = N` |
 | 2 | **Duplicates** → `GROUP BY + HAVING COUNT(*) > 1` | Never `DISTINCT` to find duplicates |
-| 3 | **Find employees with no manager** → `LEFT JOIN + IS NULL` | Or `NOT IN (SELECT manager_id ...)` |
-| 4 | **Running total / cumulative sum** → `SUM() OVER (ORDER BY ...)` | Window function, not grouped |
-| 5 | **Rank with gaps** → `RANK()`; **no gaps** → `DENSE_RANK()` | `ROW_NUMBER()` = always unique |
-| 6 | **Delete duplicates, keep one** → `DELETE WHERE id NOT IN (SELECT MIN(id) GROUP BY ...)` | Use CTE for clarity |
-| 7 | **Self join** for hierarchical data | `e1 JOIN e2 ON e1.manager_id = e2.id` |
-| 8 | `WHERE` filters **rows**; `HAVING` filters **groups** | `HAVING` runs after `GROUP BY` |
-| 9 | **Index** on columns used in `WHERE`, `JOIN`, `ORDER BY` | Never index low-cardinality columns (like boolean) |
-| 10 | `EXPLAIN` / `EXPLAIN ANALYZE` before optimizing | See the query plan — find seq scans to fix |
-
-
-
-### 🔷 H. Top 50 Coding Programs — Quick Reference List (Java 8+)
-
-> Practice these in order. All solvable with Streams + Collections.
-
-| # | Problem | Key API/Pattern |
-|---|---|---|
-| 1 | Find duplicates in a list | `filter(!seen.add(n))` |
-| 2 | Remove duplicates | `.distinct()` or `LinkedHashSet` |
-| 3 | First non-repeating character | `groupingBy` + `LinkedHashMap` + `counting()` |
-| 4 | Frequency of each character | `chars().mapToObj().groupingBy()` |
-| 5 | Reverse a string | `new StringBuilder(s).reverse()` |
-| 6 | Sort list of integers | `.sorted()` |
-| 7 | Sort employees by salary | `Comparator.comparingDouble()` |
-| 8 | Second highest number | `.distinct().sorted(reversed).skip(1).findFirst()` |
-| 9 | Filter even numbers | `.filter(n -> n % 2 == 0)` |
-| 10 | Filter odd numbers | `.filter(n -> n % 2 != 0)` |
-| 11 | Convert list to uppercase | `.map(String::toUpperCase)` |
-| 12 | Flatten list of lists | `.flatMap(Collection::stream)` |
-| 13 | Join strings with delimiter | `Collectors.joining(", ")` |
-| 14 | Find longest string | `.max(Comparator.comparingInt(String::length))` |
-| 15 | Group by department | `Collectors.groupingBy(Employee::getDept)` |
-| 16 | Count per department | `groupingBy + counting()` |
-| 17 | Max salary per department | `groupingBy + maxBy()` |
-| 18 | Avg salary per department | `groupingBy + averagingDouble()` |
-| 19 | Partition even/odd | `Collectors.partitioningBy(n -> n % 2 == 0)` |
-| 20 | Top 3 earners | `.sorted(reversed).limit(3)` |
-| 21 | Calculate sum | `.mapToInt(i -> i).sum()` or `reduce(0, Integer::sum)` |
-| 22 | Check contains duplicates | `stream().count() != distinct().count()` |
-| 23 | Find common elements | `.filter(new HashSet<>(list2)::contains)` |
-| 24 | Convert list to map | `Collectors.toMap(key, value)` |
-| 25 | Sort map by value | `.sorted(Map.Entry.comparingByValue())` |
-| 26 | Filter nulls | `.filter(Objects::nonNull)` |
-| 27 | Count words in sentence | `s.trim().split("\\s+").length` |
-| 28 | Reverse words in sentence | `Stream.of(split).collect + Collections.reverse` |
-| 29 | Group strings by length | `groupingBy(String::length)` |
-| 30 | Merge two lists | `Stream.concat(l1.stream(), l2.stream())` |
-| 31 | Find missing number | XOR trick or `n*(n+1)/2 - sum` |
-| 32 | Two Sum | `HashMap<value, index>` — O(n) |
-| 33 | Binary Search | Left/right pointers — O(log n) |
-| 34 | Palindrome check | Two-pointer or recursive |
-| 35 | Anagram check | `Arrays.sort` both or `HashMap` frequency |
-| 36 | Balanced parentheses | Stack-based |
-| 37 | LRU Cache | `LinkedHashMap(capacity, 0.75f, true)` |
-| 38 | Fibonacci (Stream) | `Stream.iterate(new long[]{0,1}, ...)` |
-| 39 | Sliding window max sum | Single-pass O(n) |
-| 40 | String compression | Pointer-based counter |
-| 41 | Deadlock example + fix | Lock ordering / `tryLock` |
-| 42 | Thread-safe Singleton | `volatile` + double-checked locking or Enum |
-| 43 | Immutable class | `final` class + `final` fields + `List.copyOf()` |
-| 44 | Custom Comparator chaining | `comparing().thenComparing()` |
-| 45 | Parallel stream pitfall | Shared mutable state → `ConcurrentHashMap` |
-| 46 | `Optional` chaining | `ofNullable().map().orElse()` |
-| 47 | `CompletableFuture` chain | `supplyAsync().thenApply().exceptionally()` |
-| 48 | Virtual Threads (Java 21) | `Executors.newVirtualThreadPerTaskExecutor()` |
-| 49 | Record as DTO | `record UserDTO(String name, String email) {}` |
-| 50 | Spring Boot REST GET+SEARCH | `@GetMapping + ResponseEntity + @RequestParam` |
-
----
+| 3 | **Employees with no manager** | `LEFT JOIN + IS NULL` or `NOT IN` |
+| 4 | **Running cumulative sum** | `SUM() OVER (ORDER BY ...)` |
+| 5 | **Rank with gaps** → `RANK()` | **No gaps** → `DENSE_RANK()` |
+| 6 | **Delete duplicates, keep one** | `DELETE WHERE id NOT IN (SELECT MIN(id) GROUP BY ...)` |
+| 7 | `WHERE` filters **rows**, `HAVING` filters **groups** | `HAVING` runs after `GROUP BY` |
+| 8 | **Index** columns in `WHERE`/`JOIN`/`ORDER BY` | Never index boolean columns |
+| 9 | `EXPLAIN` / `EXPLAIN ANALYZE` before optimizing | Find and fix full sequential scans |

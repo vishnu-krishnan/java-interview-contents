@@ -1,37 +1,29 @@
 # Project Plan: LinkedIn Java Interview Prep
 
 **Project Name:** LinkedIn_Java_Interview_Prep
-**Project Type:** R&D
-**Starting Phase:** Phase 1: Data Cleaning & Extraction
+**Project Type:** Mature
+**Current State:** Roadmap Finalized (28 Sections)
 
 ## Initial Scope
-- Clean a raw LinkedIn feed copy-paste file (`LinkedIn feeds.txt`).
+- Clean a raw LinkedIn feed copy-paste file (`linkedin_feeds_raw.txt`).
 - Remove personal details, navigation menus, and LinkedIn UI artifacts.
 - Preserve all post contents exactly as they appear (including duplicates).
-- Prepare the data for further deduplication and categorization in subsequent phases.
+- Prepare the data for further deduplication and categorization into a comprehensive roadmap.
 
 ## Phases
 1. **Phase 1: Data Parsing & Extraction (DONE)**
    - Implement Python scripts for robust parsing of LinkedIn feed patterns.
    - Clean profile metadata and UI clutter.
-[2026-03-25] [Data Extraction]
-Change Type: Minor
-Decision Made: Implemented Python regex-based extractor to clean LinkedIn feed text.
-Reason: Manually cleaning 10k lines is impossible; automated parsing ensures consistency.
-Impact: UX | Data Quality
-Rollback Strategy: Re-run script from original source file.
-
-[2026-03-25] [Categorization]
-Change Type: Minor
-Decision Made: Implementing keyword-based classifier to sort posts into category-specific files.
-Reason: Organized study material is easier to consume than a single long file.
-Impact: Maintainability | UX
-Rollback Strategy: Original cleaned file remains as source of truth.
-2. **Phase 2: Deduplication & Quality Filtering (ACTIVE)**
+2. **Phase 2: Deduplication & Quality Filtering (DONE)**
    - Extract individual questions/points from posts.
    - Run deduplication algorithms across the extracted items.
-3. **Phase 3: Topic Categorization (DONE)**
-   - Group deduplicated questions into specific buckets.
-   - Performed global cleanup of LinkedIn-specific filler and engagement bait.
-   - Re-aligned content across 13 granular category files using keyword-density scripts.
-   - Created `13_mixed_interview_reports.md` for company-specific comprehensive lists.
+3. **Phase 3: Topic Categorization & Restructuring (DONE)**
+   - Expanded from 13 granular categories to a 28-section comprehensive roadmap.
+   - Merged unique content from `Java Interview Guide.docx`.
+   - Re-aligned content into individual deep-dive reference files under `topics/sections/`.
+   - Centralized all topics into `topics/Java_Learning_Roadmap.md` as the master source of truth.
+   - Archived source documents in `docs/`.
+4. **Phase 4: Content Enrichment & Verification (ACTIVE)**
+   - Conduct a Gap Analysis to ensure all high-value Q&A from `linkedin_feeds_cleaned.txt` is mapped to its respective section.
+   - Finalize deep-dive content in each of the 28 section files.
+   - Standardize formatting across all reference notes.
