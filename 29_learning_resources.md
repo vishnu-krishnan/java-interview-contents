@@ -1,6 +1,6 @@
-<!-- Part of Java Learning Roadmap — Section 28 -->
+<!-- Part of Java Learning Roadmap — Section 29 -->
 
-# 📚 28. Java Learning Resources
+# 📚 29. Java Learning Resources
 
 ---
 

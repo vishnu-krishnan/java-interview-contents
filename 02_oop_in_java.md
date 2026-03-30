@@ -27,15 +27,52 @@ Java's OOP model is built on four core pillars:
 
 ## 3. How It Works Internally
 
-### 3.1 Object Creation Flow
-When you write `new MyClass()`:
-1.  **Memory Allocation:** The JVM allocates memory on the Heap for the new object.
-2.  **Zeroing:** All instance variables are set to their default values (`null`, `0`, `false`).
-3.  **Constructor Execution:** The constructor is called to execute initialization logic.
-4.  **Reference Assignment:** The memory address of the new object on the Heap is assigned to the reference variable on the Stack.
+### 3.1 Object Creation & Lifecycle
 
-### 3.2 Dynamic Method Dispatch (Runtime Polymorphism)
-During runtime, if an overridden method is called through a parent class reference, the JVM looks at the **actual object type** on the heap, not the reference type. It uses the **vtable** (virtual method table) to resolve which method implementation to execute.
+**Core Idea:**
+A class is just a set of instructions (blueprint), while an object is the actual "house" built on the heap memory.
+
+**Deep Dive:**
+When you write `new MyClass()`:
+1.  **Memory Allocation:** The JVM allocates space on the Heap based on the class definition.
+2.  **Zeroing:** All instance variables are set to defaults (`null`, `0`, `false`).
+3.  **Constructor Chain:** The JVM calls the constructor. The first line of every constructor is an implicit `super()`, linking the child object to its parent's state.
+4.  **Reference Assignment:** The memory address is returned and stored in a reference variable on the Stack.
+
+**Advanced Insight:**
+**Object Header.** Every object on the heap has a "Mark Word" (storing lock info and GC age) and a "Klass Pointer" (pointing to its class metadata). This header adds 12-16 bytes of overhead to every single object you create.
+
+**Pitfall:**
+**Leaking 'this' in a Constructor.** Never pass `this` to another method inside your constructor. The object is not fully initialized yet, and the other method might see partially initialized fields, leading to unpredictable bugs.
+
+**Production Tip:**
+Avoid creating large objects (like database connections or thread pools) inside loops. Use the **Singleton** or **Factory** pattern to reuse instances.
+
+**Interview Trap:**
+"Can a class have multiple constructors?"
+**Answer:** Yes. This is **Constructor Overloading**. But remember, only one can be the "primary" one; others often call it using `this(...)`.
+
+### 3.2 Polymorphism (Dynamic Method Dispatch)
+
+**Core Idea:**
+"One name, many forms." It allows you to treat specialized objects (Dog, Cat) as general ones (Animal) without losing their unique behaviors.
+
+**Deep Dive:**
+*   **Compile-time (Overloading):** The compiler decides which method to call based on the parameters.
+*   **Runtime (Overriding):** The JVM decides which method to call based on the **actual object** on the heap, not the variable's type.
+
+**Advanced Insight:**
+**vtable (Virtual Method Table).** The JVM maintains a vtable for every class. When you call an overridden method, the JVM looks up the vtable of the object's class at runtime to find the correct memory address of the method implementation.
+
+**Pitfall:**
+**Overriding 'private' or 'static' methods.** You cannot override them. If you try, you are just "hiding" the parent method. The parent reference will still call the parent's version, which is a common source of bugs.
+
+**Production Tip:**
+Favor **Composition over Inheritance**. Inheritance creates tight coupling. If you just need a utility from another class, inject it as a field (Composition) rather than extending the entire class.
+
+**Interview Trap:**
+"If a parent class has a private method and the child 'overrides' it, which one is called?"
+**Answer:** The parent's method is called through a parent reference. Private methods are not visible to subclasses, so polymorphism does not apply to them.
 
 ### 3.3 Method Overloading vs Overriding
 
@@ -47,15 +84,27 @@ During runtime, if an overridden method is called through a parent class referen
 | **Return Type** | Can be different | Must be same (or covariant) |
 | **Binding** | Static binding | Dynamic binding |
 
-### 3.4 Abstract Class vs Interface (Java 8+)
+### 3.4 Abstraction (Abstract Class vs Interface)
 
-| Feature | Abstract Class | Interface |
-|---|---|---|
-| **State** | Can have instance variables (state) | Variables are inherently `public static final` |
-| **Constructors** | Can have constructors | Cannot have constructors |
-| **Methods** | Abstract + Concrete methods | Abstract + `default` + `static` methods (Java 8) |
-| **Inheritance**| A class can extend only ONE abstract class | A class can implement MULTIPLE interfaces |
-| **Use Case** | Share core logic/state among related classes | Define a contract for completely unrelated classes |
+**Core Idea:**
+Defining "what" should be done without saying "how." An interface is a contract; an abstract class is a partial blueprint.
+
+**Deep Dive:**
+*   **Interface (Contract):** Use when you want to define a behavior that many unrelated classes can share (e.g., `Comparable`, `Serializable`).
+*   **Abstract Class (Hierarchy):** Use when you want to share common state (fields) and core logic among closely related classes (e.g., `AbstractList`).
+
+**Advanced Insight:**
+**Default Methods (Java 8+).** Interfaces can now have logic. This was added to allow "Interface Evolution"—adding new functionality to an existing interface (like `Collection.stream()`) without breaking all existing implementations.
+
+**Pitfall:**
+Creating an interface with too many methods. This violates the **Interface Segregation Principle (ISP)**. Clients should not be forced to implement methods they don't need.
+
+**Production Tip:**
+Always program to an **Interface**, not an **Implementation**. Instead of `ArrayList<String> list = ...`, use `List<String> list = ...`. This makes your code modular and easy to mock during testing.
+
+**Interview Trap:**
+"Can an interface have instance variables?"
+**Answer:** No. Variables in an interface are implicitly `public static final` (constants). They belong to the interface itself, not to any object that implements it.
 
 ---
 
@@ -108,26 +157,30 @@ public class Main {
 }
 ```
 
-### 4.3 SOLID Principles Example (Dependency Inversion)
-```java
-// BAD: High-level class tightly coupled to a low-level implementation
-class PaymentService {
-    private StripeGateway gateway = new StripeGateway(); 
-}
+### 4.4 SOLID Principles & The Architect's View
 
-// GOOD: Depend on abstractions (Interface)
-interface PaymentGateway { void process(); }
-class StripeGateway implements PaymentGateway { public void process() {} }
-class PayPalGateway implements PaymentGateway { public void process() {} }
+**Core Idea:**
+Five rules that prevent your code from becoming a "Spaghetti Monster" as it grows.
 
-class PaymentService {
-    private PaymentGateway gateway;
-    // Dependency Injection allows easy swapping of implementations
-    public PaymentService(PaymentGateway gateway) { 
-        this.gateway = gateway; 
-    }
-}
-```
+**Deep Dive:**
+1.  **S - Single Responsibility:** A class should have only one reason to change.
+2.  **O - Open/Closed:** Open for extension, closed for modification (use Inheritance/Interfaces).
+3.  **L - Liskov Substitution:** You should be able to replace a parent with a child without breaking the app.
+4.  **I - Interface Segregation:** Small, specific interfaces are better than one "Fat" interface.
+5.  **D - Dependency Inversion:** Depend on abstractions (Interfaces), not concrete classes.
+
+**Advanced Insight:**
+**Composition over Inheritance (Circular Dependencies).** Inheritance can lead to deep hierarchies that are impossible to test. Modern frameworks (like Spring) use **Dependency Injection (DI)** to handle "Composition" automatically for you.
+
+**Pitfall:**
+**Over-Engineering.** Don't apply all SOLID principles on Day 1 for a tiny 10-line script. Start simple and refactor into SOLID as the complexity grows.
+
+**Production Tip:**
+The **Dependency Inversion Principle** is the heart of Spring. By injecting interfaces, you can swap a `MockDatabase` for a `RealDatabase` without changing a single line of business logic.
+
+**Interview Trap:**
+"What happens if a Child class violates Liskov Substitution?"
+**Answer:** It usually throws an `UnsupportedOperationException`. For example, if `Square` extends `Rectangle` but throws an error when you try to set height and width independently, it's a violation because it breaks the "Rectangle" contract.
 
 ---
 

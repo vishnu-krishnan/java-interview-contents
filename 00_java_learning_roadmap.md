@@ -1531,7 +1531,19 @@ class ShapeFactory {
 
 ---
 
-## 📚 [28. Java Learning Resources](28_learning_resources.md)
+## 📈 [28. Time and Space Complexity in Java](28_complexity_analysis.md)
+
+- Introduction to Big O notation — growth rate vs speed (Good vs Bad)
+- **Time Complexity** — $O(1)$, $O(\log n)$, $O(n)$, $O(n \log n)$, $O(n^2)$
+- **Space Complexity** — Heap vs Stack memory, Object Overhead
+- Complexity of Java Collections (`ArrayList`, `HashMap`, etc.)
+- Complexity of Sorting and Searching (`Arrays.sort`, `binarySearch`)
+- **Amortized Analysis** — `ArrayList.add()` mechanics
+- Production scenarios — hidden $O(n^2)$ and `Memory Leak` patterns
+
+---
+
+## 📚 [29. Java Learning Resources](29_learning_resources.md)
 
 | Type | Resource |
 |---|---|
