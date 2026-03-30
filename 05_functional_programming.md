@@ -116,6 +116,48 @@ Lambdas are almost as fast as direct method calls. Don't avoid them for "perform
 | **`Consumer<T>`** | `accept(T)`| Side effects. | Logging, Async event publishing. |
 | **`Supplier<T>`** | `get()` | On-demand creation. | Lazy DB connection, Factory patterns. |
 
+### 5.2 Code Examples: The Big Four in Action
+
+#### 1. Predicate<T> (The Validator)
+**Logic:** Takes one input, returns `boolean`. Used for filtering and validation.
+```java
+Predicate<String> isValidEmail = s -> s.contains("@") && s.endsWith(".com");
+System.out.println(isValidEmail.test("user@example.com")); // true
+
+// Production Use Case: Chaining filters
+list.stream().filter(isValidEmail.and(s -> s.length() > 5)).collect(toList());
+```
+
+#### 2. Function<T, R> (The Transformer)
+**Logic:** Takes input `T`, returns output `R`. Used for mapping data.
+```java
+Function<String, Integer> wordLength = s -> s.length();
+Integer size = wordLength.apply("Antigravity"); // 11
+
+// Production Use Case: Entity to DTO mapping
+Function<User, UserDTO> toDto = u -> new UserDTO(u.getId(), u.getName());
+```
+
+#### 3. Consumer<T> (The Side-Effect)
+**Logic:** Takes input `T`, returns `void`. Used for actions with side effects (logging, DB writes).
+```java
+Consumer<String> logger = msg -> System.out.println("LOG: " + msg);
+logger.accept("Transaction Started");
+
+// Production Use Case: Processing items in a loop/stream
+list.forEach(logger);
+```
+
+#### 4. Supplier<T> (The Producer)
+**Logic:** Takes NO input, returns output `T`. Used for lazy constant generation or object creation.
+```java
+Supplier<Double> randomValue = () -> Math.random();
+System.out.println(randomValue.get());
+
+// Production Use Case: Lazy initialization or Factory patterns
+Supplier<MyConnection> connection = () -> new MyConnection(url, user, pass);
+```
+
 *   > [!ADVANCED INSIGHT]
     *   **Advanced Insight:** Specialized interfaces like **`UnaryOperator<T>`** (input/output same type) and **`BinaryOperator<T>`** (two inputs, one output of same type) are often preferred for clarity and performance optimizations in reduction operations.
 
