@@ -174,7 +174,18 @@ list.sort((s1, s2) -> s2.compareTo(s1));
 list.sort(Comparator.comparingInt(String::length).reversed());
 ```
 
-#### 2. Runnable & Callable (Task Execution)
+list.sort(Comparator.comparingInt(String::length).reversed());
+```
+
+#### 2. Comparable<T> (Internal Natural Order)
+**Method:** `int compareTo(T o)`
+While usually implemented by a class (like `String` or `Integer`), it is technically a Functional Interface.
+```java
+Comparable<String> checker = s -> "Antigravity".compareTo(s);
+System.out.println(checker.compareTo("Java")); // Positive value (A > J in sorting order)
+```
+
+#### 3. Runnable & Callable (Task Execution)
 **Runnable:** `void run()`. No return, no checked exceptions. Default for basic `Thread`.
 **Callable<V>:** `V call() throws Exception`. Returns result and handles exceptions. Used with `ExecutorService`.
 ```java
