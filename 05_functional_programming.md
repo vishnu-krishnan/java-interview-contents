@@ -158,8 +158,58 @@ System.out.println(randomValue.get());
 Supplier<MyConnection> connection = () -> new MyConnection(url, user, pass);
 ```
 
+### 5.3 Legacy & Extended Functional Interfaces
+
+While the "Big Four" cover 90% of cases, Java provides specialized interfaces for common tasks.
+
+#### 1. Comparator<T> (Custom Sorting)
+**Method:** `int compare(T o1, T o2)`
+**Logic:** Returns negative if `o1 < o2`, zero if equal, positive if `o1 > o2`.
+```java
+List<String> list = Arrays.asList("Apple", "Banana", "Kiwi");
+// Lambda sorting (Descending)
+list.sort((s1, s2) -> s2.compareTo(s1)); 
+
+// Modern Production Tip: Use Comparator.comparing()
+list.sort(Comparator.comparingInt(String::length).reversed());
+```
+
+#### 2. Runnable & Callable (Task Execution)
+**Runnable:** `void run()`. No return, no checked exceptions. Default for basic `Thread`.
+**Callable<V>:** `V call() throws Exception`. Returns result and handles exceptions. Used with `ExecutorService`.
+```java
+// Runnable (Simple task)
+new Thread(() -> System.out.println("Processing async task")).start();
+
+// Callable (Used with complex futures)
+Callable<String> fetchTask = () -> {
+    Thread.sleep(1000);
+    return "API Success";
+};
+```
+
+#### 3. The "Bi" Variants (Processing Pairs)
+Use these when one input isn't enough.
+
+| Interface | Method | Use Case |
+|---|---|---|
+| **`BiPredicate<T, U>`** | `test(T, U)` | Testing condition against two objects (e.g., comparing user/password). |
+| **`BiFunction<T, U, R>`**| `apply(T, U)`| Transforming two inputs into one result (e.g., merging two objects). |
+| **`BiConsumer<T, U>`** | `accept(T, U)`| Processing key-value pairs in a `Map.forEach()`. |
+
+**Example (BiConsumer):**
+```java
+Map<String, Integer> map = Map.of("Alice", 1, "Bob", 2);
+map.forEach((k, v) -> System.out.println(k + ": " + v));
+```
+
+#### 4. UnaryOperator<T> & BinaryOperator<T>
+**Core Idea:** Specialized cases of `Function` where all types are the same.
+*   **`UnaryOperator<T>`:** One input, same type output. (e.g., `String::toUpperCase`).
+*   **`BinaryOperator<T>`:** Two inputs, same type output. (e.g., `sum`, `max`).
+
 *   > [!ADVANCED INSIGHT]
-    *   **Advanced Insight:** Specialized interfaces like **`UnaryOperator<T>`** (input/output same type) and **`BinaryOperator<T>`** (two inputs, one output of same type) are often preferred for clarity and performance optimizations in reduction operations.
+    *   **Advanced Insight:** Using specialized interfaces like `BinaryOperator` is numerically more efficient in parallel streams because they help the compiler optimize the "Reduction" phase without unnecessary type casting.
 
 ### 5.1 The "Checked Exception" Problem
 *   **Production Tip:** Java's core FIs do not allow checked exceptions. 
