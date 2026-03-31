@@ -4,7 +4,9 @@
 
 ---
 
-### 1.1 The Architect's Blueprint (Creational, Structural, Behavioral)
+## 1. Definition
+ 
+ ### 1.1 The Architect's Blueprint (Creational, Structural, Behavioral)
 
 **Core Idea:**
 Design Patterns are "Proven recipes for software architecture." They aren't code you Copy-Paste; they are templates you adapt to solve a specific problem (like object creation or communication).

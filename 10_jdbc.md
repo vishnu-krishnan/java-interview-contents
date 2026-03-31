@@ -4,7 +4,9 @@
 
 ---
 
-### 1.1 The Bridge to the Data (JDBC Architecture)
+## 1. Definition
+ 
+ ### 1.1 The Bridge to the Data (JDBC Architecture)
 
 **Core Idea:**
 JDBC is the "Universal Translator." It allows your Java app to talk to $any$ database (SQL Server, MySQL, Oracle) using the same set of Java commands.
@@ -182,7 +184,7 @@ In Spring Boot, never manage transactions manually with JDBC. Use `@Transactiona
 
 ---
 
-### 4.3 Connection Pooling (The Performance Engine)
+## 6. Connection Pooling (The Performance Engine)
 
 **Core Idea:**
 Opening a DB connection is like "Hiring a new employee"—it's slow and expensive. A Connection Pool is a "Staff Room" of 10 employees already hired and waiting to work.

@@ -1,4 +1,4 @@
-<!-- Part of Java Learning Roadmap — Section 29 -->
+<!-- Part of Java Learning Roadmap — Section 28 -->
 
 # 📉 28. Time and Space Complexity in Java
 
@@ -133,7 +133,7 @@ Always prefer $O(1)$ or $O(\log n)$ for search operations in high-traffic APIs. 
 
 ---
 
-## 2. Space Complexity
+## 3. Space Complexity
 
 **Core Idea:**
 Describes how much extra memory (RAM) an algorithm needs as the input size grows.
@@ -158,7 +158,7 @@ When processing large datasets, use **Streams** or **Iterators** to maintain $O(
 
 ---
 
-## 3. Complexity of Java Collections
+## 4. Complexity of Java Collections
 
 **Core Idea:**
 Choosing the right shelf for your books. Some shelves are great for quick retrieval, others for easy adding.
@@ -187,7 +187,7 @@ For collections that are read millions of times, use `ArrayList`. For collection
 
 ---
 
-## 4. Complexity of Java Algorithms
+## 5. Complexity of Java Algorithms
 
 ### 4.1 Sorting
 
@@ -217,7 +217,7 @@ For sorting billions of items, standard `Arrays.sort` is single-threaded. Use **
 
 ---
 
-## 5. Master Mental Models
+## 6. Master Mental Models
 
 *   **The Car Trip:** Time complexity is "How long will the drive take as the distance grows?" Space complexity is "How much luggage do I need to pack as the number of passengers grows?"
 *   **The Library:** Finding a book by its ID (index) is $O(1)$. Walking through every shelf to find a book by its cover is $O(n)$. Using the card catalog (HashMap) is $O(1)$ average.

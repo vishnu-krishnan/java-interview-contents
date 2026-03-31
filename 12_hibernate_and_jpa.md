@@ -4,7 +4,9 @@
 
 ---
 
-### 1.1 The ORM Landscape (JPA vs. Hibernate)
+## 1. Definition
+ 
+ ### 1.1 The ORM Landscape (JPA vs. Hibernate)
 
 **Core Idea:**
 JPA is the **Rulebook** (interfaces). Hibernate is the **Player** (the code that actually does the work). You write code using JPA rules so you can switch players if needed, though Hibernate is the world champion.

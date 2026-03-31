@@ -168,67 +168,6 @@ Do **NOT** pool Virtual Threads. Just create them using `Executors.newVirtualThr
 
 ---
 
-## 4. Code Examples
-
-### 4.1 Java 11: `var` and String Methods
-```java
-// var infers type from the right side. Only works for LOCAL variables.
-var users = new ArrayList<String>(); 
-var client = HttpClient.newHttpClient();
-
-// Java 11 String tools
-System.out.println("  ".isBlank());           // true
-System.out.println("Java\n11".lines().count()); // 2
-System.out.println("Ha".repeat(3));           // HaHaHa
-```
-
-### 4.2 Java 17: Records & Text Blocks
-```java
-// Immutable DTO in one line
-public record UserResponse(Long id, String username) {}
-
-UserResponse res = new UserResponse(1L, "admin");
-System.out.println(res.username()); // Accessor
-
-// Text Blocks for JSON/SQL (No escaping quotes!)
-String query = """
-    SELECT id, email 
-    FROM users 
-    WHERE status = 'ACTIVE' 
-    ORDER BY created_at DESC
-    """;
-```
-
-### 4.3 Java 17/21: Pattern Matching (instanceof & switch)
-```java
-Object obj = "Hello Java 21";
-
-// Java 17: instanceof pattern matching
-if (obj instanceof String s && s.length() > 5) {
-    System.out.println(s.toUpperCase());
-}
-
-// Java 21: switch pattern matching (Exhaustive, no breaks needed)
-String description = switch (obj) {
-    case Integer i -> "An integer: " + i;
-    case String s  -> "A string of length: " + s.length();
-    case null      -> "Null value!";
-    default        -> "Unknown object type";
-};
-```
-
-### 4.4 Java 21: Sequenced Collections
-```java
-// Uniform interface to access first/last elements
-SequencedCollection<String> list = new ArrayList<>();
-list.add("First");
-list.add("Middle");
-list.add("Last");
-
-System.out.println(list.getFirst()); // "First"
-System.out.println(list.getLast());  // "Last"
-```
-
 ### 3.4 Lambda Expressions (Java 8) — The Functional Shift
 
 **Core Idea:**
@@ -309,7 +248,70 @@ Combine Text Blocks with **`String.formatted()`**. It’s much cleaner than usin
 "How does the JVM decide how much indentation to remove in a Text Block?"
 **Answer:** It uses the "Common Indentation" across all lines. The leftmost character of any non-empty line (including the closing `"""`) determines the margin.
 
-| Question | Answer |
+## 4. Code Examples
+
+### 4.1 Java 11: `var` and String Methods
+```java
+// var infers type from the right side. Only works for LOCAL variables.
+var users = new ArrayList<String>(); 
+var client = HttpClient.newHttpClient();
+
+// Java 11 String tools
+System.out.println("  ".isBlank());           // true
+System.out.println("Java\n11".lines().count()); // 2
+System.out.println("Ha".repeat(3));           // HaHaHa
+```
+
+### 4.2 Java 17: Records & Text Blocks
+```java
+// Immutable DTO in one line
+public record UserResponse(Long id, String username) {}
+
+UserResponse res = new UserResponse(1L, "admin");
+System.out.println(res.username()); // Accessor
+
+// Text Blocks for JSON/SQL (No escaping quotes!)
+String query = """
+    SELECT id, email 
+    FROM users 
+    WHERE status = 'ACTIVE' 
+    ORDER BY created_at DESC
+    """;
+```
+
+### 4.3 Java 17/21: Pattern Matching (instanceof & switch)
+```java
+Object obj = "Hello Java 21";
+
+// Java 17: instanceof pattern matching
+if (obj instanceof String s && s.length() > 5) {
+    System.out.println(s.toUpperCase());
+}
+
+// Java 21: switch pattern matching (Exhaustive, no breaks needed)
+String description = switch (obj) {
+    case Integer i -> "An integer: " + i;
+    case String s  -> "A string of length: " + s.length();
+    case null      -> "Null value!";
+    default        -> "Unknown object type";
+};
+```
+
+### 4.4 Java 21: Sequenced Collections
+```java
+// Uniform interface to access first/last elements
+SequencedCollection<String> list = new ArrayList<>();
+list.add("First");
+list.add("Middle");
+list.add("Last");
+
+System.out.println(list.getFirst()); // "First"
+System.out.println(list.getLast());  // "Last"
+```
+
+## 5. Interview Questions
+ 
+ | Question | Answer |
 |---|---|
 | Can you extend a `Record`? | **No**. Records are implicitly `final` and already extend `java.lang.Record`. Java does not support multiple inheritance. You *can* implement interfaces, though. |
 | Where can you use `var`? | Only for **local variables** inside methods with an immediate initializer. You cannot use it for class fields, method parameters, or method return types. |

@@ -4,7 +4,9 @@
 
 ---
 
-### 1.1 The Advanced Ecosystem (JVM, GC, Reflection)
+## 1. Definition
+ 
+ ### 1.1 The Advanced Ecosystem (JVM, GC, Reflection)
 
 **Core Idea:**
 Advanced Java is about understanding the "Physics" of the JVM. It’s moving from "How do I write code?" to "How does this code actually execute on hardware?"
@@ -125,59 +127,6 @@ Always enable **GC Logging** (`-Xlog:gc*`). You can't fix what you can't measure
 
 ---
 
-## 4. Code Examples
-
-### 4.1 Simulating a Memory Leak (OutOfMemoryError)
-Java *does* have memory leaks if you hold onto object references forever!
-```java
-// BAD: Static list never gets cleared. 
-// GC cannot touch these objects because 'leakyList' still references them.
-public class MemoryLeak {
-    private static final List<byte[]> leakyList = new ArrayList<>();
-
-    public static void main(String[] args) {
-        while (true) {
-            leakyList.add(new byte[1048576]); // Add 1MB arrays forever
-        }
-    }
-}
-// Eventually throws: java.lang.OutOfMemoryError: Java heap space
-```
-
-### 4.2 Reflection & The Magic of Frameworks
-
-**Core Idea:**
-Reflection is "Self-Awareness." It allows a Java program to look at its own classes and methods while it's running and say, "Tell me what's inside you, even if it's private."
-
-**Why it matters:**
-Without Reflection, modern Java would be dead. We wouldn't have Spring (Inversion of Control), Hibernate (Mapping Java to SQL), or JUnit (Running test methods). 
-
-**When to use:**
-*   Building a dynamic "Plugin" architecture.
-*   Writing generic code that needs to work with any object without knowing its type.
-
-**When NOT to use:**
-*   In standard business logic. It breaks **Type Safety**—you won't know code is broken until it crashes at runtime.
-
-**Example (Spring @Autowired):**
-Spring uses Reflection to look at your class, find every field with `@Autowired`, and then manually use `field.set(this, dependency)` to inject the bean, even if the field was `private`.
-
-**Deep Dive:**
-The primary classes are `Class`, `Method`, `Field`, and `Constructor`. Reflection allows you to bypass access modifiers (`setAccessible(true)`) and instantiate objects via `newInstance()`.
-
-**Advanced Insight:**
-**Dynamic Proxies.** This is "Advanced Reflection." You can create a "Ghost" object at runtime that implements an interface. When someone calls a method on the ghost, it calls an `InvocationHandler`. This is how **Spring AOP** and **Feign Clients** work.
-
-**Pitfall:**
-**Performance Overhead.** Reflection is roughly 10x slower than direct method calls because the JVM cannot perform "Inlining" or optimizations and has to do security/access checks every time.
-
-**Production Tip:**
-If you must use Reflection in a loop, **Cache the `Method` or `Field` object**. The lookup (`getDeclaredField`) is the most expensive part.
-
-**Interview Trap:**
-"Can Reflection break the Singleton pattern?"
-**Answer:** **Yes.** You can use Reflection to get the private constructor, call `setAccessible(true)`, and create a second instance of a supposedly "Singleton" class. To prevent this, you should use an **`enum`** for your singletons.
-
 ### 3.3 The JIT Compiler (Just-In-Time) — The Speed Demon
 
 **Core Idea:**
@@ -252,7 +201,60 @@ If you see a `StackOverflowError` in production, check for **Recursive Calls** w
 "Where do static variables live?"
 **Answer:** Prior to Java 8, in the **PermGen**. Since Java 8, they live in the **Metaspace** (part of Native Memory), though the actual *objects* they point to still live on the Heap.
 
-### 4.4 Dynamic JAR Loading (External Code Access)
+## 4. Code Examples
+
+### 4.1 Simulating a Memory Leak (OutOfMemoryError)
+Java *does* have memory leaks if you hold onto object references forever!
+```java
+// BAD: Static list never gets cleared. 
+// GC cannot touch these objects because 'leakyList' still references them.
+public class MemoryLeak {
+    private static final List<byte[]> leakyList = new ArrayList<>();
+
+    public static void main(String[] args) {
+        while (true) {
+            leakyList.add(new byte[1048576]); // Add 1MB arrays forever
+        }
+    }
+}
+// Eventually throws: java.lang.OutOfMemoryError: Java heap space
+```
+
+### 4.2 Reflection & The Magic of Frameworks
+
+**Core Idea:**
+Reflection is "Self-Awareness." It allows a Java program to look at its own classes and methods while it's running and say, "Tell me what's inside you, even if it's private."
+
+**Why it matters:**
+Without Reflection, modern Java would be dead. We wouldn't have Spring (Inversion of Control), Hibernate (Mapping Java to SQL), or JUnit (Running test methods). 
+
+**When to use:**
+*   Building a dynamic "Plugin" architecture.
+*   Writing generic code that needs to work with any object without knowing its type.
+
+**When NOT to use:**
+*   In standard business logic. It breaks **Type Safety**—you won't know code is broken until it crashes at runtime.
+
+**Example (Spring @Autowired):**
+Spring uses Reflection to look at your class, find every field with `@Autowired`, and then manually use `field.set(this, dependency)` to inject the bean, even if the field was `private`.
+
+**Deep Dive:**
+The primary classes are `Class`, `Method`, `Field`, and `Constructor`. Reflection allows you to bypass access modifiers (`setAccessible(true)`) and instantiate objects via `newInstance()`.
+
+**Advanced Insight:**
+**Dynamic Proxies.** This is "Advanced Reflection." You can create a "Ghost" object at runtime that implements an interface. When someone calls a method on the ghost, it calls an `InvocationHandler`. This is how **Spring AOP** and **Feign Clients** work.
+
+**Pitfall:**
+**Performance Overhead.** Reflection is roughly 10x slower than direct method calls because the JVM cannot perform "Inlining" or optimizations and has to do security/access checks every time.
+
+**Production Tip:**
+If you must use Reflection in a loop, **Cache the `Method` or `Field` object**. The lookup (`getDeclaredField`) is the most expensive part.
+
+**Interview Trap:**
+"Can Reflection break the Singleton pattern?"
+**Answer:** **Yes.** You can use Reflection to get the private constructor, call `setAccessible(true)`, and create a second instance of a supposedly "Singleton" class. To prevent this, you should use an **`enum`** for your singletons.
+
+### 4.3 Dynamic JAR Loading (External Code Access)
 
 **Core Idea:**
 Loading code "on the fly." Instead of knowing every class at compile time, you can reach out to a `.jar` file on your hard drive, load it, and execute its methods while the app is running.
@@ -291,7 +293,7 @@ Always use an **Interface** for dynamic code. Your main app should have a `com.a
 
 ---
 
-### 5. Interview Questions
+## 5. Interview Questions
 
 | Question | Answer |
 |---|---|
